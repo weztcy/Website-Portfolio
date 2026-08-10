@@ -18,7 +18,7 @@ const highlights = [
   },
   {
     icon: Code2,
-    text: "Frontend Developer",
+    text: "Web Developer",
   },
   {
     icon: Palette,

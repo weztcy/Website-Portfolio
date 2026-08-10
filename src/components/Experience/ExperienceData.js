@@ -1,21 +1,25 @@
+import disdukcapilLogo from "../../assets/images/experience/disdukcapil_semarang.png";
+import freelance_copywriter from "../../assets/images/experience/freelance_copywriter.png";
+import bank_mandiri from "../../assets/images/experience/bank_mandiri.png";
+
 const experienceData = [
   {
     id: 1,
 
-    company: "PT Digital Indonesia",
+    company: "Dinas Kependudukan dan Pencatatan Sipil Kota Semarang",
 
-    logo: "/company-logo/digital-indonesia.png",
+    logo: disdukcapilLogo,
 
-    position: "Frontend Developer",
+    position: "Web Developer",
 
-    duration: "January 2025 - June 2025",
+    duration: "August 2024 - October 2024",
 
     location: "Semarang, Indonesia",
 
     responsibilities: [
-      "Developed responsive web applications using React and modern frontend technologies.",
-      "Created reusable components to improve development efficiency and maintainability.",
-      "Collaborated with the team to improve user experience and website performance.",
+      "Designed the UI/UX of the PRAJAGAMER website to enhance user experience and improve user interaction.",
+      "Developed the PRAJAGAMER website as an internship registration platform, streamlining the registration process and improving registration efficiency by 60%.",
+      "Managed hardware inventory and handled administrative tasks to support daily operations and ensure optimal equipment availability.",
     ],
   },
 
@@ -23,20 +27,20 @@ const experienceData = [
   {
     id: 2,
 
-    company: "Bank Technology Solution",
+    company: "Freelance",
 
-    logo: "/company-logo/bank-technology.png",
+    logo: freelance_copywriter,
 
-    position: "IT Support Intern",
+    position: "Copywriter",
 
-    duration: "August 2024 - December 2024",
+    duration: "July 2025 - March 2026",
 
-    location: "Jakarta, Indonesia",
+    location: "Semarang, Indonesia",
 
     responsibilities: [
-      "Provided technical support and troubleshooting for hardware and software issues.",
-      "Maintained computer systems and ensured operational readiness.",
-      "Documented IT assets and assisted daily technical operations.",
+      "Wrote articles, blog posts, product descriptions, advertising materials, and copy for social media, websites, and landing pages based on client requirements.",
+      "Adapted writing style to match the target audience and brand identity, creating engaging and effective content.",
+      "Conducted topic research and revised content based on client feedback to ensure quality, accuracy, and overall effectiveness.",
     ],
   },
 
@@ -44,20 +48,20 @@ const experienceData = [
   {
     id: 3,
 
-    company: "Creative Studio Agency",
+    company: "PT Bank Mandiri (Persero) Tbk.",
 
-    logo: "/company-logo/creative-studio.png",
+    logo: bank_mandiri,
 
-    position: "UI/UX Designer Intern",
+    position: "Bank Teller",
 
-    duration: "February 2024 - July 2024",
+    duration: "March 2026 - August 2026",
 
-    location: "Remote",
+    location: "Tangerang Selatan, Indonesia",
 
     responsibilities: [
-      "Designed user interfaces based on user needs and project requirements.",
-      "Created wireframes and prototypes using UI/UX design tools.",
-      "Improved user experience through design evaluation and feedback.",
+      "Processed cash deposits, withdrawals, transfers, bill payments, and other banking transactions accurately, efficiently, and in accordance with bank procedures.",
+      "Assisted customers by answering inquiries, providing information about Bank Mandiri's products and services, and ensuring a positive customer experience.",
+      "Verified daily transactions, maintained cash security, and prepared financial activity reports in compliance with audit standards and bank policies.",
     ],
   },
 ];

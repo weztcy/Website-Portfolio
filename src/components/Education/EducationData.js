@@ -1,68 +1,65 @@
+import dian_nuswantoro from "../../assets/images/education/dian_nuswantoro.png";
+
 const educationData = [
   {
     id: 1,
 
-    institution: "Universitas Dian Nuswantoro",
+    institution: "Dian Nuswantoro University",
 
-    logo: "/education-logo/udinus.png",
+    logo: dian_nuswantoro,
 
     major: "Bachelor of Informatics Engineering",
 
-    gpa: "3.79",
+    gpa: "3.70",
 
     period: "August 2021 - July 2025",
 
     activities: [
-      "Completed various software development projects using modern programming technologies.",
-      "Developed web-based applications and implemented database management systems.",
-      "Learned software engineering, data analysis, machine learning, and UI/UX design concepts.",
+      "Selected for Kelas Unggulan '2021, an exclusive program for top-performing students majoring in Informatics Engineering.",
+      "Developed web-based applications, responsive UI/UX designs, machine learning, and data analysis projects.",
+      "Actively participated in campus organizations and workshops to enhance soft skills, including communication, teamwork, time management, and effective problem-solving.",
     ],
   },
 
+  //   {
+  //     id: 2,
 
-//   {
-//     id: 2,
+  //     institution: "Online Learning Platform",
 
-//     institution: "Online Learning Platform",
+  //     logo: "/education-logo/online-course.png",
 
-//     logo: "/education-logo/online-course.png",
+  //     major: "Professional Certification Program",
 
-//     major: "Professional Certification Program",
+  //     gpa: "4.00",
 
-//     gpa: "4.00",
+  //     period: "January 2025 - March 2025",
 
-//     period: "January 2025 - March 2025",
+  //     activities: [
+  //       "Completed professional courses related to data analytics and web development.",
+  //       "Improved technical skills through practical assignments and real-world projects.",
+  //       "Applied programming knowledge to solve various technology problems.",
+  //     ],
+  //   },
 
-//     activities: [
-//       "Completed professional courses related to data analytics and web development.",
-//       "Improved technical skills through practical assignments and real-world projects.",
-//       "Applied programming knowledge to solve various technology problems.",
-//     ],
-//   },
+  //   {
+  //     id: 3,
 
+  //     institution: "Independent Study Program",
 
-//   {
-//     id: 3,
+  //     logo: "/education-logo/independent-study.png",
 
-//     institution: "Independent Study Program",
+  //     major: "Technology and Software Development",
 
-//     logo: "/education-logo/independent-study.png",
+  //     gpa: "4.00",
 
-//     major: "Technology and Software Development",
+  //     period: "June 2024 - December 2024",
 
-//     gpa: "4.00",
-
-//     period: "June 2024 - December 2024",
-
-//     activities: [
-//       "Participated in independent learning programs focused on software development.",
-//       "Built applications and improved problem-solving skills through hands-on practice.",
-//       "Collaborated with others to complete technology-based projects.",
-//     ],
-//   },
-
-
+  //     activities: [
+  //       "Participated in independent learning programs focused on software development.",
+  //       "Built applications and improved problem-solving skills through hands-on practice.",
+  //       "Collaborated with others to complete technology-based projects.",
+  //     ],
+  //   },
 ];
-
 
 export default educationData;
