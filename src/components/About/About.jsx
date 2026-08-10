@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 
-import AboutContent from "./AboutContent";
+import AboutHeading from "./AboutHeading";
+import AboutDescription from "./AboutDescription";
+import SkillHighlights from "./SkillHighlights";
 import QuickInfo from "./QuickInfo";
 import AboutStats from "./AboutStats";
 import BackgroundPattern from "./BackgroundPattern";
@@ -13,33 +15,24 @@ export default function About() {
         relative
         overflow-hidden
         py-24
-
         lg:py-32
       "
     >
       {/* Background */}
-
       <BackgroundPattern />
-
 
       <div
         className="
           relative
           z-10
-
           mx-auto
           max-w-7xl
-
           px-6
-
           sm:px-8
-
           lg:px-10
         "
       >
-
         {/* Section Header */}
-
         <motion.div
           initial={{
             opacity: 0,
@@ -78,9 +71,7 @@ export default function About() {
               text-4xl
               font-black
               text-slate-900
-
               dark:text-white
-
               md:text-5xl
             "
           >
@@ -88,32 +79,51 @@ export default function About() {
           </h2>
         </motion.div>
 
+        {/* About Heading - Full Width */}
+        <div className="w-full">
+          <AboutHeading />
+        </div>
 
-
-        {/* Main About */}
-
+        {/* Main About Content */}
         <div
           className="
+            mt-6
             grid
-
-            items-stretch
-
             gap-14
 
             lg:grid-cols-[1.25fr_0.75fr]
-
+            lg:items-stretch
             lg:gap-20
           "
         >
+          {/* Left Side */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            className="
+              w-full
+              self-start
+            "
+          >
+            <AboutDescription />
 
-          {/* Left Content */}
+            <SkillHighlights />
+          </motion.div>
 
-          <AboutContent />
-
-
-
-          {/* Right Quick Info */}
-
+          {/* Right Side */}
           <motion.div
             initial={{
               opacity: 0,
@@ -125,30 +135,22 @@ export default function About() {
             }}
             viewport={{
               once: true,
-              amount: 0.3,
+              amount: 0.2,
             }}
             transition={{
               duration: 0.8,
             }}
             className="
               flex
-
-              h-full
-
               w-full
-
               items-center
             "
           >
             <QuickInfo />
           </motion.div>
-
         </div>
 
-
-
         {/* Divider */}
-
         <motion.div
           initial={{
             opacity: 0,
@@ -167,35 +169,21 @@ export default function About() {
           }}
           className="
             mx-auto
-
             mt-24
-
             h-px
-
             w-full
-
             origin-center
-
             bg-gradient-to-r
-
             from-transparent
-
             via-slate-300
-
             to-transparent
-
             dark:via-slate-700
           "
         />
 
-
-
         {/* Stats */}
-
         <AboutStats />
-
       </div>
-
     </section>
   );
 }
