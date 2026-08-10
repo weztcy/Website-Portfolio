@@ -278,7 +278,7 @@ export default function PublicationCard({
           "
         >
           <JournalIcon
-            size={21}
+            size={36}
             className="
               sm:h-6
               sm:w-6
