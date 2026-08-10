@@ -1,60 +1,35 @@
 import { motion } from "motion/react";
 
-import {
-  technicalSkills,
-} from "./SkillsData";
+import { technicalSkills } from "./SkillsData";
 
 import TechnicalSkillCard from "./TechnicalSkillCard";
 
-
 export default function TechnicalSkills() {
-
-
   return (
-
     <div>
-
-
-
       {/* Section Header */}
 
       <motion.div
-
         initial={{
-          opacity:0,
-          y:30,
+          opacity: 0,
+          y: 30,
         }}
-
-
         whileInView={{
-          opacity:1,
-          y:0,
+          opacity: 1,
+          y: 0,
         }}
-
-
-
         viewport={{
-          once:true,
+          once: true,
         }}
-
-
-
         transition={{
-          duration:0.7,
+          duration: 0.7,
         }}
-
-
-
         className="
           mb-12
 
           text-center
         "
-
       >
-
-
-
         {/* <p
 
           className="
@@ -77,12 +52,7 @@ export default function TechnicalSkills() {
 
         </p> */}
 
-
-
-
-
         <h3
-
           className="
             mt-4
 
@@ -103,16 +73,9 @@ export default function TechnicalSkills() {
 
             md:text-4xl
           "
-
         >
-
           Technical Skills
-
         </h3>
-
-
-
-
 
         {/* <p
 
@@ -142,22 +105,11 @@ export default function TechnicalSkills() {
           digital solutions.
 
         </p> */}
-
-
-
       </motion.div>
-
-
-
-
-
-
 
       {/* Technical Skill Cards */}
 
-
       <div
-
         className="
           grid
 
@@ -175,35 +127,11 @@ export default function TechnicalSkills() {
 
           xl:grid-cols-3
         "
-
       >
-
-
-
-        {
-          technicalSkills.map(
-            (category)=>(
-              
-              <TechnicalSkillCard
-
-                key={category.id}
-
-                category={category}
-
-              />
-
-            )
-          )
-        }
-
-
-
+        {technicalSkills.map((category) => (
+          <TechnicalSkillCard key={category.id} category={category} />
+        ))}
       </div>
-
-
-
     </div>
-
   );
-
 }

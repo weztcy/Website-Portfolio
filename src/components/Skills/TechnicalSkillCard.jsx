@@ -1,53 +1,28 @@
 import { motion } from "motion/react";
 
-
-export default function TechnicalSkillCard({
-  category,
-}) {
-
-
+export default function TechnicalSkillCard({ category }) {
   const CategoryIcon = category.icon;
 
-
-
   return (
-
     <motion.div
-
-
       initial={{
-        opacity:0,
-        y:50,
+        opacity: 0,
+        y: 50,
       }}
-
-
-
       whileInView={{
-        opacity:1,
-        y:0,
+        opacity: 1,
+        y: 0,
       }}
-
-
-
       viewport={{
-        once:true,
-        amount:0.2,
+        once: true,
+        amount: 0.2,
       }}
-
-
-
       transition={{
-        duration:0.6,
+        duration: 0.6,
       }}
-
-
-
       whileHover={{
-        y:-10,
+        y: -10,
       }}
-
-
-
       className="
         group
 
@@ -99,17 +74,10 @@ export default function TechnicalSkillCard({
 
         dark:bg-slate-900/80
       "
-
     >
-
-
-
-
-
       {/* Hover Glow */}
 
       <div
-
         className="
           pointer-events-none
 
@@ -149,40 +117,24 @@ export default function TechnicalSkillCard({
 
           dark:to-violet-500/10
         "
-
       />
-
-
-
-
-
-
 
       {/* Category Header */}
 
       <div
-
         className="
           relative
 
           z-10
         "
-
       >
-
-
-
         {/* Icon */}
 
-
         <motion.div
-
           whileHover={{
-            rotate:10,
-            scale:1.1,
+            rotate: 10,
+            scale: 1.1,
           }}
-
-
           className="
             flex
 
@@ -217,26 +169,13 @@ export default function TechnicalSkillCard({
 
             shadow-lg
           "
-
         >
-
-          <CategoryIcon
-            size={28}
-          />
-
+          <CategoryIcon size={28} />
         </motion.div>
-
-
-
-
-
-
 
         {/* Category Name */}
 
-
         <h4
-
           className="
             mt-6
 
@@ -253,9 +192,7 @@ export default function TechnicalSkillCard({
 
             dark:text-white
           "
-
         >
-
           <span
             className="
               bg-gradient-to-r
@@ -271,28 +208,14 @@ export default function TechnicalSkillCard({
               text-transparent
             "
           >
-
             {category.title}
-
           </span>
-
-
         </h4>
-
-
       </div>
-
-
-
-
-
-
 
       {/* Skill List */}
 
-
       <div
-
         className="
           relative
 
@@ -310,36 +233,17 @@ export default function TechnicalSkillCard({
 
           gap-3
         "
-
       >
+        {category.skills.map((skill, index) => {
+          const SkillIcon = skill.icon;
 
-
-
-        {
-          category.skills.map(
-            (skill,index)=>{
-
-
-              const SkillIcon =
-                skill.icon;
-
-
-              return (
-
-                <motion.div
-
-
-                  key={index}
-
-
-
-                  whileHover={{
-                    scale:1.05,
-                  }}
-
-
-
-                  className="
+          return (
+            <motion.div
+              key={index}
+              whileHover={{
+                scale: 1.05,
+              }}
+              className="
                     flex
 
                     items-center
@@ -411,21 +315,12 @@ export default function TechnicalSkillCard({
 
                     dark:hover:bg-slate-700
                   "
-
-                >
-
-
-                  {
-                    SkillIcon ? (
-
-                      <SkillIcon
-                        size={15}
-                      />
-
-                    ) : (
-
-                      <span
-                        className="
+            >
+              {SkillIcon ? (
+                <SkillIcon size={15} />
+              ) : (
+                <span
+                  className="
                           h-2
 
                           w-2
@@ -434,33 +329,14 @@ export default function TechnicalSkillCard({
 
                           bg-blue-500
                         "
-                      />
+                />
+              )}
 
-                    )
-                  }
-
-
-
-                  {skill.name}
-
-
-
-                </motion.div>
-
-              );
-
-            }
-          )
-        }
-
-
+              {skill.name}
+            </motion.div>
+          );
+        })}
       </div>
-
-
-
-
     </motion.div>
-
   );
-
 }

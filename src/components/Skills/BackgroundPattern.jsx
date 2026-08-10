@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 
-
 const polygons = [
   {
     size: "h-44 w-44",
@@ -31,13 +30,8 @@ const polygons = [
   },
 ];
 
-
-
 export default function BackgroundPattern() {
-
-
   return (
-
     <div
       className="
         absolute
@@ -51,9 +45,6 @@ export default function BackgroundPattern() {
         pointer-events-none
       "
     >
-
-
-
       {/* Base Background */}
 
       <div
@@ -68,38 +59,21 @@ export default function BackgroundPattern() {
         "
       />
 
-
-
-
-
       {/* Animated Mesh Gradient */}
 
       <motion.div
-
         animate={{
-          backgroundPosition:[
-            "0% 50%",
-            "100% 50%",
-            "0% 50%",
-          ],
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
 
-          scale:[
-            1,
-            1.15,
-            1,
-          ],
+          scale: [1, 1.15, 1],
         }}
-
-
         transition={{
-          duration:30,
+          duration: 30,
 
-          repeat:Infinity,
+          repeat: Infinity,
 
-          ease:"easeInOut",
+          ease: "easeInOut",
         }}
-
-
         className="
           absolute
 
@@ -133,64 +107,28 @@ export default function BackgroundPattern() {
         "
       />
 
-
-
-
-
-
-
       {/* Floating Polygon */}
 
-      {
-        polygons.map(
-          (polygon,index)=>(
+      {polygons.map((polygon, index) => (
+        <motion.div
+          key={index}
+          animate={{
+            y: [0, -40, 0],
 
-            <motion.div
+            rotate: [0, 20, 0],
 
-              key={index}
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 12 + index * 2,
 
+            repeat: Infinity,
 
-              animate={{
+            delay: polygon.delay,
 
-                y:[
-                  0,
-                  -40,
-                  0,
-                ],
-
-                rotate:[
-                  0,
-                  20,
-                  0,
-                ],
-
-                scale:[
-                  1,
-                  1.1,
-                  1,
-                ],
-
-              }}
-
-
-              transition={{
-
-                duration:
-                  12 + index * 2,
-
-                repeat:
-                  Infinity,
-
-                delay:
-                  polygon.delay,
-
-                ease:
-                  "easeInOut",
-
-              }}
-
-
-              className={`
+            ease: "easeInOut",
+          }}
+          className={`
                 absolute
 
                 ${polygon.position}
@@ -219,48 +157,24 @@ export default function BackgroundPattern() {
 
                 dark:bg-blue-500/10
               `}
-            />
-
-          )
-        )
-      }
-
-
-
-
-
-
+        />
+      ))}
 
       {/* Abstract Lines */}
 
       <motion.div
-
         animate={{
-          x:[
-            -100,
-            100,
-            -100,
-          ],
+          x: [-100, 100, -100],
 
-          rotate:[
-            0,
-            10,
-            0,
-          ],
+          rotate: [0, 10, 0],
         }}
-
-
         transition={{
+          duration: 25,
 
-          duration:25,
+          repeat: Infinity,
 
-          repeat:Infinity,
-
-          ease:"easeInOut",
-
+          ease: "easeInOut",
         }}
-
-
         className="
           absolute
 
@@ -291,16 +205,9 @@ export default function BackgroundPattern() {
         "
       />
 
-
-
-
-
-
-
       {/* Dot Matrix */}
 
       <div
-
         className="
           absolute
 
@@ -318,19 +225,11 @@ export default function BackgroundPattern() {
 
           [background-size:35px_35px]
         "
-
       />
-
-
-
-
-
-
 
       {/* Bottom Fade */}
 
       <div
-
         className="
           absolute
 
@@ -351,13 +250,7 @@ export default function BackgroundPattern() {
 
           dark:to-slate-950/80
         "
-
       />
-
-
-
-
     </div>
-
   );
 }

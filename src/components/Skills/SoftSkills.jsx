@@ -1,15 +1,12 @@
 import { motion } from "motion/react";
 
-import {
-  softSkills,
-} from "./SkillsData";
+import { softSkills } from "./SkillsData";
 
 import SoftSkillCard from "./SoftSkillCard";
 
 export default function SoftSkills() {
   return (
     <div>
-
       {/* Section Header */}
       <motion.div
         initial={{
@@ -31,7 +28,6 @@ export default function SoftSkills() {
           text-center
         "
       >
-
         {/* 
         <p
           className="
@@ -74,7 +70,6 @@ export default function SoftSkills() {
           effectively.
         </p>
         */}
-
       </motion.div>
 
       {/* Soft Skill List */}
@@ -94,13 +89,9 @@ export default function SoftSkills() {
         "
       >
         {softSkills.map((skill) => (
-          <SoftSkillCard
-            key={skill.id}
-            skill={skill}
-          />
+          <SoftSkillCard key={skill.id} skill={skill} />
         ))}
       </div>
-
     </div>
   );
 }

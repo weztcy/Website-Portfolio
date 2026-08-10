@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 
-
 // import BackgroundPattern from "./BackgroundPattern";
 import BackgroundPattern from "../About/BackgroundPattern";
 
@@ -8,18 +7,10 @@ import SoftSkills from "./SoftSkills";
 
 import TechnicalSkills from "./TechnicalSkills";
 
-
-
 export default function Skills() {
-
-
   return (
-
     <section
-
       id="skills"
-
-
       className="
         relative
 
@@ -31,24 +22,12 @@ export default function Skills() {
 
         lg:py-32
       "
-
     >
-
-
-
-
       {/* Background */}
 
       <BackgroundPattern />
 
-
-
-
-
-
-
       <div
-
         className="
           relative
 
@@ -74,59 +53,31 @@ export default function Skills() {
 
           lg:px-10
         "
-
       >
-
-
-
-
-
-
-
         {/* Main Header */}
 
-
         <motion.div
-
-
           initial={{
-            opacity:0,
-            y:40,
+            opacity: 0,
+            y: 40,
           }}
-
-
-
           whileInView={{
-            opacity:1,
-            y:0,
+            opacity: 1,
+            y: 0,
           }}
-
-
-
           viewport={{
-            once:true,
+            once: true,
           }}
-
-
-
           transition={{
-            duration:0.8,
+            duration: 0.8,
           }}
-
-
-
           className="
             mb-20
 
             text-center
           "
-
         >
-
-
-
           <p
-
             className="
               text-sm
 
@@ -142,20 +93,11 @@ export default function Skills() {
 
               text-blue-500
             "
-
           >
-
             My Abilities
-
           </p>
 
-
-
-
-
-
           <h2
-
             className="
               mt-5
 
@@ -177,20 +119,11 @@ export default function Skills() {
 
               md:text-5xl
             "
-
           >
-
             Skills & Expertise
-
           </h2>
 
-
-
-
-
-
           <p
-
             className="
               mx-auto
 
@@ -215,66 +148,33 @@ export default function Skills() {
 
               dark:text-slate-400
             "
-
           >
-
-            A combination of interpersonal abilities
-            and technical knowledge that I continuously
-            improve to create effective digital solutions.
-
+            A combination of interpersonal abilities and technical knowledge
+            that I continuously improve to create effective digital solutions.
           </p>
-
-
-
         </motion.div>
-
-
-
-
-
-
-
 
         {/* Soft Skills */}
 
         <SoftSkills />
 
-
-
-
-
-
-
         {/* Divider */}
 
         <motion.div
-
           initial={{
-            opacity:0,
-            scaleX:0,
+            opacity: 0,
+            scaleX: 0,
           }}
-
-
-
           whileInView={{
-            opacity:1,
-            scaleX:1,
+            opacity: 1,
+            scaleX: 1,
           }}
-
-
-
           viewport={{
-            once:true,
+            once: true,
           }}
-
-
-
           transition={{
-            duration:0.8,
+            duration: 0.8,
           }}
-
-
-
           className="
             my-20
 
@@ -301,33 +201,12 @@ export default function Skills() {
 
             to-transparent
           "
-
         />
-
-
-
-
-
-
-
 
         {/* Technical Skills */}
 
         <TechnicalSkills />
-
-
-
-
-
-
       </div>
-
-
-
-
-
     </section>
-
   );
-
 }

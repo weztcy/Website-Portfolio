@@ -1,47 +1,31 @@
 import { motion } from "motion/react";
 
-
 export default function SoftSkillCard({ skill }) {
-
   const Icon = skill.icon;
 
-
   return (
-
     <motion.div
-
       initial={{
-        opacity:0,
-        y:30,
-        scale:0.95,
+        opacity: 0,
+        y: 30,
+        scale: 0.95,
       }}
-
-
       whileInView={{
-        opacity:1,
-        y:0,
-        scale:1,
+        opacity: 1,
+        y: 0,
+        scale: 1,
       }}
-
-
       viewport={{
-        once:true,
-        amount:0.3,
+        once: true,
+        amount: 0.3,
       }}
-
-
       whileHover={{
-        y:-6,
-        scale:1.05,
+        y: -6,
+        scale: 1.05,
       }}
-
-
       transition={{
-        duration:0.5,
+        duration: 0.5,
       }}
-
-
-
       className="
         group
 
@@ -99,15 +83,10 @@ export default function SoftSkillCard({ skill }) {
 
         dark:bg-slate-900/80
       "
-
     >
-
-
-
       {/* Icon */}
 
       <div
-
         className="
           flex
 
@@ -146,25 +125,13 @@ export default function SoftSkillCard({ skill }) {
 
           group-hover:rotate-12
         "
-
       >
-
-        <Icon
-          size={20}
-        />
-
-
+        <Icon size={20} />
       </div>
-
-
-
-
-
 
       {/* Skill Name */}
 
       <span
-
         className="
           whitespace-nowrap
 
@@ -180,18 +147,9 @@ export default function SoftSkillCard({ skill }) {
 
           dark:text-slate-200
         "
-
       >
-
         {skill.name}
-
       </span>
-
-
-
-
     </motion.div>
-
   );
-
 }
