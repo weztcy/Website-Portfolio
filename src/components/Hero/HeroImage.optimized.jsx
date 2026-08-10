@@ -2,6 +2,461 @@ import { motion } from "motion/react";
 import profile from "../../assets/images/profile.png";
 
 /* =========================================================
+   PREMIUM DOT DATA
+   10 x 10 square dots
+========================================================= */
+
+const DOTS = Array.from({ length: 100 }, (_, index) => {
+  const row = Math.floor(index / 10);
+  const col = index % 10;
+
+  const centerX = 4.5;
+  const centerY = 4.5;
+
+  const distance = Math.sqrt(
+    Math.pow(col - centerX, 2) +
+    Math.pow(row - centerY, 2)
+  );
+
+  return {
+    id: index,
+    row,
+    col,
+    distance,
+
+    // dibuat deterministic agar tidak berubah setiap render
+    delay: ((index * 7) % 20) * 0.06,
+
+    duration: 2.8 + ((index * 11) % 15) * 0.1,
+
+    x:
+      ((index * 13) % 3) === 0
+        ? 3
+        : ((index * 13) % 3) === 1
+        ? -3
+        : 0,
+
+    y:
+      ((index * 17) % 3) === 0
+        ? -4
+        : ((index * 17) % 3) === 1
+        ? 4
+        : 0,
+  };
+});
+
+/* =========================================================
+   PREMIUM DOT PATTERN
+========================================================= */
+
+function PremiumDotPattern() {
+  return (
+    <div
+      className="
+        pointer-events-none
+        absolute
+        inset-0
+        z-[2]
+        overflow-hidden
+        rounded-full
+      "
+    >
+      {/* ===============================================
+          DEEP BACKGROUND
+      =============================================== */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.8,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.2,
+          delay: 0.15,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="
+          absolute
+          inset-0
+          rounded-full
+
+          bg-gradient-to-br
+          from-blue-500/10
+          via-transparent
+          to-cyan-400/10
+
+          dark:from-blue-500/10
+          dark:to-cyan-400/5
+        "
+      />
+
+      {/* ===============================================
+          SUBTLE TECH GRID
+      =============================================== */}
+
+      <motion.div
+        // initial={{
+        //   opacity: 0,
+        //   scale: 0.9,
+        //   rotate: -3,
+        // }}
+        // animate={{
+        //   opacity: 1,
+        //   scale: 1,
+        //   rotate: 0,
+        // }}
+        // transition={{
+        //   duration: 1.3,
+        //   delay: 0.25,
+        //   ease: [0.16, 1, 0.3, 1],
+        // }}
+        // className="
+        //   absolute
+        //   inset-[7%]
+        //   rounded-full
+        //   opacity-30
+        // "
+        // style={{
+        //   backgroundImage: `
+        //     linear-gradient(
+        //       rgba(59, 130, 246, 0.18) 1px,
+        //       transparent 1px
+        //     ),
+        //     linear-gradient(
+        //       90deg,
+        //       rgba(59, 130, 246, 0.18) 1px,
+        //       transparent 1px
+        //     )
+        //   `,
+        //   backgroundSize: "34px 34px",
+
+        //   maskImage:
+        //     "radial-gradient(circle, black 10%, rgba(0,0,0,.9) 52%, transparent 82%)",
+
+        //   WebkitMaskImage:
+        //     "radial-gradient(circle, black 10%, rgba(0,0,0,.9) 52%, transparent 82%)",
+        // }}
+      />
+
+      {/* ===============================================
+          SQUARE DOT FIELD
+      =============================================== */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.82,
+          rotate: -4,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          rotate: 0,
+        }}
+        transition={{
+          duration: 1.25,
+          delay: 0.3,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="
+          absolute
+          inset-[9%]
+
+          grid
+          grid-cols-10
+          grid-rows-10
+
+          place-items-center
+        "
+        style={{
+          maskImage:
+            "radial-gradient(circle, black 12%, black 55%, rgba(0,0,0,.55) 72%, transparent 91%)",
+
+          WebkitMaskImage:
+            "radial-gradient(circle, black 12%, black 55%, rgba(0,0,0,.55) 72%, transparent 91%)",
+        }}
+      >
+        {DOTS.map((dot) => (
+          <motion.span
+            key={dot.id}
+            initial={{
+              opacity: 0,
+              scale: 0,
+              rotate: -45,
+            }}
+            animate={{
+              opacity: [
+                0.08,
+                0.22,
+                0.8,
+                0.28,
+                0.65,
+                0.12,
+              ],
+
+              scale: [
+                0.45,
+                0.75,
+                1.15,
+                0.7,
+                1,
+                0.5,
+              ],
+
+              rotate: [
+                0,
+                20,
+                45,
+                20,
+                0,
+              ],
+
+              x: [
+                0,
+                dot.x,
+                -dot.x / 2,
+                0,
+              ],
+
+              y: [
+                0,
+                dot.y,
+                -dot.y / 2,
+                0,
+              ],
+            }}
+            transition={{
+              opacity: {
+                duration: dot.duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: dot.delay,
+              },
+
+              scale: {
+                duration: dot.duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: dot.delay,
+              },
+
+              rotate: {
+                duration: dot.duration + 1,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: dot.delay,
+              },
+
+              x: {
+                duration: dot.duration + 0.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: dot.delay,
+              },
+
+              y: {
+                duration: dot.duration + 0.6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: dot.delay,
+              },
+            }}
+            className="
+              block
+
+              h-[4px]
+              w-[4px]
+
+              rounded-[1px]
+
+              bg-blue-500/80
+
+              shadow-[0_0_7px_rgba(59,130,246,0.55)]
+
+              md:h-[6px]
+              md:w-[6px]
+
+              dark:bg-blue-400/80
+            "
+          />
+        ))}
+      </motion.div>
+
+      {/* ===============================================
+          RADIAL ENERGY PULSE 1
+      =============================================== */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.4,
+        }}
+        animate={{
+          opacity: [0, 0.35, 0],
+          scale: [0.45, 1.15, 1.3],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeOut",
+          delay: 0.8,
+        }}
+        className="
+          absolute
+
+          left-1/2
+          top-1/2
+
+          h-[55%]
+          w-[55%]
+
+          -translate-x-1/2
+          -translate-y-1/2
+
+          rounded-full
+
+          border
+          border-blue-400/40
+        "
+      />
+
+      {/* ===============================================
+          RADIAL ENERGY PULSE 2
+      =============================================== */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.3,
+        }}
+        animate={{
+          opacity: [0, 0.22, 0],
+          scale: [0.3, 1, 1.25],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeOut",
+          delay: 2.2,
+        }}
+        className="
+          absolute
+
+          left-1/2
+          top-1/2
+
+          h-[68%]
+          w-[68%]
+
+          -translate-x-1/2
+          -translate-y-1/2
+
+          rounded-full
+
+          border
+          border-cyan-400/30
+        "
+      />
+
+      {/* ===============================================
+          PREMIUM SCANNER LIGHT
+      =============================================== */}
+
+      <motion.div
+        initial={{
+          x: "-160%",
+          opacity: 0,
+        }}
+        animate={{
+          x: ["-160%", "160%"],
+          opacity: [0, 0.5, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatDelay: 1.5,
+          ease: "easeInOut",
+          delay: 1.4,
+        }}
+        className="
+          absolute
+
+          -top-[15%]
+          bottom-[-15%]
+
+          left-0
+
+          w-[28%]
+
+          rotate-[18deg]
+
+          bg-gradient-to-r
+          from-transparent
+          via-blue-300/20
+          to-transparent
+
+          blur-xl
+        "
+      />
+
+      {/* ===============================================
+          CENTER LIGHT
+      =============================================== */}
+
+      <motion.div
+        animate={{
+          opacity: [0.2, 0.42, 0.2],
+          scale: [0.9, 1.08, 0.9],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          absolute
+
+          left-1/2
+          top-1/2
+
+          h-[50%]
+          w-[50%]
+
+          -translate-x-1/2
+          -translate-y-1/2
+
+          rounded-full
+
+          bg-blue-400/20
+
+          blur-[45px]
+        "
+      />
+
+      {/* ===============================================
+          EDGE FADE
+      =============================================== */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-full
+        "
+        style={{
+          background:
+            "radial-gradient(circle, transparent 45%, rgba(59,130,246,0.025) 65%, rgba(15,23,42,0.08) 100%)",
+        }}
+      />
+    </div>
+  );
+}
+
+/* =========================================================
    HERO IMAGE
 ========================================================= */
 
@@ -517,6 +972,9 @@ export default function HeroImage() {
             dark:border-blue-400/20
           "
         >
+          {/* Premium animated background */}
+          <PremiumDotPattern />
+
           {/* Photo */}
           <motion.img
             initial={{
