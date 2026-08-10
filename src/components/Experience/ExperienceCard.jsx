@@ -185,7 +185,7 @@ export default function ExperienceCard({ data }) {
 
     gap-2
 
-    text-sm
+    text-lg
 
     text-slate-500
 
