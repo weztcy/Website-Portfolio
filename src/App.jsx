@@ -14,61 +14,22 @@ import Footer from "./components/Footer/Footer";
 export default function App() {
   return (
     <>
-      <div
-        className="
-          h-screen
-          overflow-y-auto
-          scroll-smooth
-          scroll-pt-10
-          [overscroll-behavior-y:contain]
-        "
-      >
-        <main>
-          <section>
-            <Hero />
-          </section>
+      <Navbar />
 
-          <section>
-            <About />
-          </section>
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Skills />
+        <Certification />
+        <Publication />
+        <Projects />
+        <Language />
+        <Contact />
+      </main>
 
-          <section>
-            <Experience />
-          </section>
-
-          <section>
-            <Education />
-          </section>
-
-          <section>
-            <Skills />
-          </section>
-
-          <section>
-            <Certification />
-          </section>
-
-          <section>
-            <Publication />
-          </section>
-
-          <section>
-            <Projects />
-          </section>
-
-          <section>
-            <Language />
-          </section>
-
-          <section>
-            <Contact />
-          </section>
-        </main>
-
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <Footer />
     </>
   );
 }
