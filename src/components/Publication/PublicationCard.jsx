@@ -206,7 +206,7 @@ export default function PublicationCard({
 
           max-w-full
 
-          text-lg
+          text-xl
 
           font-black
           leading-snug
@@ -255,8 +255,8 @@ export default function PublicationCard({
         <div
           className="
             flex
-            h-10
-            w-10
+            h-11
+            w-11
             shrink-0
 
             items-center
@@ -298,7 +298,7 @@ export default function PublicationCard({
 
           <p
             className="
-              text-sm
+              text-base
               font-semibold
 
               text-slate-800
@@ -316,7 +316,7 @@ export default function PublicationCard({
             className="
               mt-1
 
-              text-xs
+              text-sm
 
               text-slate-500
 
