@@ -64,9 +64,7 @@ export default function App() {
             <Contact />
         </main>
 
-        <footer className="snap-start">
-          <Footer />
-        </footer>
+          <Footer />  
       </div>
     </>
   );
