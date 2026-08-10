@@ -31,45 +31,37 @@ export default function App() {
         "
       >
         <main>
-          <section className="snap-start">
+
             <Hero />
-          </section>
+
 
           <section className="snap-start">
             <About />
           </section>
 
-          <section className="snap-start">
+          
             <Experience />
-          </section>
 
-          <section className="snap-start">
+          
             <Education />
-          </section>
 
-          <section className="snap-start">
+          
             <Skills />
-          </section>
 
-          <section className="snap-start">
+          
             <Certification />
-          </section>
 
-          <section className="snap-start">
+          
             <Publication />
-          </section>
 
-          <section className="snap-start">
+          
             <Projects />
-          </section>
 
-          <section className="snap-start">
+          
             <Language />
-          </section>
 
-          <section className="snap-start">
+          
             <Contact />
-          </section>
         </main>
 
         <footer className="snap-start">
