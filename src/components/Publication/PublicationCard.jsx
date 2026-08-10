@@ -255,8 +255,8 @@ export default function PublicationCard({
         <div
           className="
             flex
-            h-11
-            w-11
+            h-18
+            w-18
             shrink-0
 
             items-center
