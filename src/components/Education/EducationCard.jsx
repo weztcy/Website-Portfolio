@@ -228,7 +228,7 @@ export default function EducationCard({ data }) {
 
               <h3
                 className="
-                  text-xl
+                  text-2xl
                   font-bold
 
                   text-slate-900
@@ -249,7 +249,7 @@ export default function EducationCard({ data }) {
               className="
                 mt-4
 
-                text-base
+                text-lg
 
                 font-bold
 
