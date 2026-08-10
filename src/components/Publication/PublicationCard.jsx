@@ -147,7 +147,7 @@ export default function PublicationCard({
             px-3
             py-1.5
 
-            text-xs
+            text-sm
             font-bold
 
             text-blue-700
@@ -177,7 +177,7 @@ export default function PublicationCard({
             px-3
             py-1.5
 
-            text-xs
+            text-sm
             font-bold
 
             text-violet-700
