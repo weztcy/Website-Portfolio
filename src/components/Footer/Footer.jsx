@@ -203,7 +203,7 @@ export default function Footer() {
           >
 
 
-            © {new Date().getFullYear()} Yohans Dimas Pratama.
+            © {new Date().getFullYear()} Yohanes Dimas Pratama.
 
             <br />
 
