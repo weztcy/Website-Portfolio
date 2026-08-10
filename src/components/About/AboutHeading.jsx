@@ -72,7 +72,7 @@ export default function AboutHeading() {
         className="
           mt-6
 
-          text-[22px]
+          text-[26px]
           font-black
           leading-[1.15]
 

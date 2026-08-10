@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -12,59 +14,83 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
+  const scrollContainerRef = useRef(null);
+  const aboutRef = useRef(null);
+  const isScrollingRef = useRef(false);
+
+  const handleHeroWheel = (e) => {
+    // Hanya tangkap scroll KE BAWAH
+    if (e.deltaY <= 0) return;
+
+    if (isScrollingRef.current) return;
+
+    e.preventDefault();
+
+    const container = scrollContainerRef.current;
+    const about = aboutRef.current;
+
+    if (!container || !about) return;
+
+    isScrollingRef.current = true;
+
+    container.scrollTo({
+      top: about.offsetTop,
+      behavior: "smooth",
+    });
+
+    setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 700);
+  };
+
   return (
     <>
-      <Navbar />
-
       <div
+        ref={scrollContainerRef}
         className="
           h-screen
           overflow-y-auto
-
           scroll-smooth
-          snap-y
-          snap-proximity
-
-          scroll-pt-10
-
           [overscroll-behavior-y:contain]
         "
       >
         <main>
-
+          {/* =========================
+              HERO
+          ========================== */}
+          <section onWheel={handleHeroWheel}>
             <Hero />
+          </section>
 
-
-          <section className="snap-start">
+          {/* =========================
+              ABOUT
+              NORMAL SCROLL
+          ========================== */}
+          <section ref={aboutRef}>
             <About />
           </section>
 
-          
-            <Experience />
+          {/* =========================
+              SEMUA NORMAL SCROLL
+          ========================== */}
+          <Experience />
 
-          
-            <Education />
+          <Education />
 
-          
-            <Skills />
+          <Skills />
 
-          
-            <Certification />
+          <Certification />
 
-          
-            <Publication />
+          <Publication />
 
-          
-            <Projects />
+          <Projects />
 
-          
-            <Language />
+          <Language />
 
-          
-            <Contact />
+          <Contact />
         </main>
 
-          <Footer />  
+        <Footer />
       </div>
     </>
   );
