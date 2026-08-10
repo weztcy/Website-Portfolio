@@ -23,11 +23,11 @@ export default function AnimatedText() {
     const currentWord = words[wordIndex];
 
 
-    let speed = 50;
+    let speed = 100;
 
 
     if (phase === "deleting") {
-      speed = 25;
+      speed = 50;
     }
 
 
