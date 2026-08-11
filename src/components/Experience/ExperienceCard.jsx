@@ -188,7 +188,7 @@ export default function ExperienceCard({ data }) {
                 gap-2
 
                 text-sm
-                sm:text-lg
+                sm:text-sm
 
                 text-slate-500
 
@@ -196,7 +196,7 @@ export default function ExperienceCard({ data }) {
               "
             >
               <CalendarDays
-                size={15}
+                size={18}
                 className="text-blue-500"
               />
 

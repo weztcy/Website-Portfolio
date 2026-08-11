@@ -6,12 +6,10 @@ export default function Logo() {
       href="#home"
       initial={{
         opacity: 0,
-
         x: -20,
       }}
       animate={{
         opacity: 1,
-
         x: 0,
       }}
       transition={{
@@ -22,27 +20,31 @@ export default function Logo() {
       }}
       className="
         text-2xl
-
         font-bold
-
         tracking-wide
-
-
-        bg-gradient-to-r
-
-        from-blue-600
-
-        via-cyan-500
-
-        to-violet-500
-
-
-        bg-clip-text
-
-        text-transparent
       "
     >
-      Dimas
+      {/* Dimas */}
+      <span
+        className="
+          text-blue-500
+
+          dark:text-white
+        "
+      >
+        Dimas
+      </span>
+
+      {/* Dot */}
+      <span
+        className="
+          text-black
+
+          dark:text-blue-400
+        "
+      >
+        .
+      </span>
     </motion.a>
   );
 }
