@@ -269,7 +269,7 @@ export default function ProjectModal({
               my-auto
 
               w-full
-              max-w-6xl
+              max-w-7xl
 
               overflow-hidden
 

@@ -112,7 +112,7 @@ export default function CertificateModal({
               relative
               my-auto
               w-full
-              max-w-6xl
+              max-w-7xl
               overflow-hidden
               rounded-2xl
               border
