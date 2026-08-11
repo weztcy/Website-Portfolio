@@ -15,23 +15,34 @@ import BackgroundPattern from "../About/BackgroundPattern";
 
 import ProjectCard from "./ProjectCard";
 
-import ProjectModal from "./ProjectModal";
+import ProjectModal from "./ProjectModal/ProjectModal";
 
 import {
   projects,
 } from "./ProjectsData";
 
-
 export default function Projects() {
   const [showAll, setShowAll] =
     useState(false);
-
 
   const [
     selectedProject,
     setSelectedProject,
   ] = useState(null);
 
+  /*
+  |--------------------------------------------------------------------------
+  | SORT PROJECTS
+  |--------------------------------------------------------------------------
+  */
+
+  // Urutkan project berdasarkan ID
+  // dari terbesar ke terkecil.
+  // Contoh: 100, 99, 98 ... 1
+  // Array asli "projects" tidak diubah.
+  const sortedProjects = [...projects].sort(
+    (a, b) => b.id - a.id
+  );
 
   /*
   |--------------------------------------------------------------------------
@@ -41,9 +52,8 @@ export default function Projects() {
 
   const displayedProjects =
     showAll
-      ? projects
-      : projects.slice(0, 3);
-
+      ? sortedProjects
+      : sortedProjects.slice(0, 3);
 
   return (
     <section
@@ -63,7 +73,6 @@ export default function Projects() {
       ========================================================== */}
 
       <BackgroundPattern />
-
 
       <div
         className="
@@ -126,7 +135,6 @@ export default function Projects() {
             Portfolio Showcase
           </p>
 
-
           {/* Title */}
 
           <h2
@@ -146,7 +154,6 @@ export default function Projects() {
           >
             My Projects
           </h2>
-
 
           {/* Description */}
 
@@ -172,7 +179,6 @@ export default function Projects() {
             and problem-solving approaches.
           </p>
         </motion.div>
-
 
         {/* =======================================================
             PROJECT CARDS
@@ -210,7 +216,6 @@ export default function Projects() {
             )
           )}
         </div>
-
 
         {/* =======================================================
             SHOW MORE BUTTON
@@ -300,7 +305,6 @@ export default function Projects() {
                 ? "Show Less"
                 : "Show More"}
 
-
               {showAll ? (
                 <ChevronUp
                   size={20}
@@ -314,7 +318,6 @@ export default function Projects() {
           </motion.div>
         )}
       </div>
-
 
       {/* =========================================================
           PROJECT MODAL

@@ -19,7 +19,7 @@ export const projects = [
 
     icon: Monitor,
 
-    title: "PRAJAGAMER",
+    title: "Diabetes Classification Model Using KNN with Implementation of Various Data Normalization Techniques",
 
     date: "2025",
 

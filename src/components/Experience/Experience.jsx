@@ -9,14 +9,16 @@ import BackgroundPattern from "../About/BackgroundPattern";
 export default function Experience() {
   const [showAll, setShowAll] = useState(false);
 
-  // Membalik urutan data tanpa mengubah array asli
-  // Data terakhir akan muncul paling atas
-  const reversedExperience = [...experienceData].reverse();
+  // Urutkan data berdasarkan ID dari terbesar ke terkecil
+  // Array asli experienceData tidak diubah
+  const sortedExperience = [...experienceData].sort(
+    (a, b) => b.id - a.id
+  );
 
-  // Default hanya menampilkan 3 experience terbaru
+  // Default hanya menampilkan 3 experience dengan ID terbesar
   const displayedExperience = showAll
-    ? reversedExperience
-    : reversedExperience.slice(0, 3);
+    ? sortedExperience
+    : sortedExperience.slice(0, 3);
 
   return (
     <section
@@ -106,13 +108,15 @@ export default function Experience() {
 
         {/* Experience List */}
         <div className="space-y-8">
-          {displayedExperience.map((experience, index) => (
-            <ExperienceCard
-              key={experience.id}
-              data={experience}
-              index={index}
-            />
-          ))}
+          {displayedExperience.map(
+            (experience, index) => (
+              <ExperienceCard
+                key={experience.id}
+                data={experience}
+                index={index}
+              />
+            )
+          )}
         </div>
 
         {/* Show More Button */}
@@ -137,7 +141,9 @@ export default function Experience() {
           >
             <motion.button
               type="button"
-              onClick={() => setShowAll((prev) => !prev)}
+              onClick={() =>
+                setShowAll((prev) => !prev)
+              }
               whileHover={{
                 scale: 1.05,
               }}
