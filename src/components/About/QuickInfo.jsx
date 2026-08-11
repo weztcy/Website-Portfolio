@@ -211,7 +211,7 @@ export default function QuickInfo() {
                 relative
                 z-10
 
-                text-3xl
+                text-2xl
                 font-bold
                 leading-snug
 
