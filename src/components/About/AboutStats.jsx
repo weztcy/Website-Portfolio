@@ -308,7 +308,7 @@ function StatCard({
 
           <h3
             className="
-              text-3xl
+              text-4xl
 
               font-black
 
