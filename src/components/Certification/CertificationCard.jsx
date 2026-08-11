@@ -1,22 +1,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-import {
-  CalendarDays,
-} from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 import CertificatePreview from "./CertificatePreview";
 
-
-export default function CertificationCard({
-  certificate,
-  index,
-  onOpen,
-}) {
-
-  const [isHovered, setIsHovered] =
-    useState(false);
-
+export default function CertificationCard({ certificate, index, onOpen }) {
+  const [isHovered, setIsHovered] = useState(false);
 
   /*
   |--------------------------------------------------------------------------
@@ -25,13 +15,10 @@ export default function CertificationCard({
   */
 
   const handleOpen = () => {
-
     if (!certificate) return;
 
     onOpen(certificate);
-
   };
-
 
   /*
   |--------------------------------------------------------------------------
@@ -40,82 +27,58 @@ export default function CertificationCard({
   */
 
   const handleKeyDown = (event) => {
-
-    if (
-      event.key === "Enter" ||
-      event.key === " "
-    ) {
-
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
 
       handleOpen();
-
     }
-
   };
 
-
   return (
-
     <motion.div
-
       initial={{
         opacity: 0,
         y: 50,
       }}
-
       whileInView={{
         opacity: 1,
         y: 0,
       }}
-
       viewport={{
         once: true,
         amount: 0.2,
       }}
-
       transition={{
         duration: 0.6,
         delay: index * 0.12,
         ease: "easeOut",
       }}
-
       whileHover={{
-  y: -10,
+        y: -10,
 
-  transition: {
-    duration: 0.5,
-    delay: 0,
-    ease: "easeOut",
-  },
-}}
-
+        transition: {
+          duration: 0.5,
+          delay: 0,
+          ease: "easeOut",
+        },
+      }}
       onMouseEnter={() => {
         setIsHovered(true);
       }}
-
       onMouseLeave={() => {
         setIsHovered(false);
       }}
-
       onFocus={() => {
         setIsHovered(true);
       }}
-
       onBlur={() => {
         setIsHovered(false);
       }}
-
       onClick={handleOpen}
-
       onKeyDown={handleKeyDown}
-
       role="button"
-
       tabIndex={0}
-
       aria-label={`View certificate: ${certificate.title}`}
-
       className="
         group
 
@@ -163,44 +126,31 @@ export default function CertificationCard({
 
         dark:focus-visible:ring-offset-slate-950
       "
-
     >
-
-
       {/* =========================================================
           CERTIFICATE PREVIEW
       ========================================================== */}
 
       <CertificatePreview
-
         certificate={certificate}
-
         isHovered={isHovered}
-
         onOpen={onOpen}
-
       />
-
 
       {/* =========================================================
           BOTTOM CONTENT
       ========================================================== */}
 
       <div
-
         className="
           mt-6
         "
-
       >
-
-
         {/* =======================================================
             ORGANIZATION
         ======================================================== */}
 
         <span
-
           className="
             inline-flex
 
@@ -228,28 +178,21 @@ export default function CertificationCard({
 
             shadow-md
           "
-
         >
-
           <span
             className="
               truncate
             "
           >
-
             {certificate.organization}
-
           </span>
-
         </span>
-
 
         {/* =======================================================
             TITLE
         ======================================================== */}
 
         <h3
-
           className="
             mt-4
 
@@ -257,34 +200,30 @@ export default function CertificationCard({
 
             text-lg
 
-            font-bold
+            font-black
 
             text-slate-900
 
             transition-all
-
             duration-300
 
-            group-hover:text-blue-600
+            group-hover:bg-gradient-to-r
+            group-hover:from-blue-600
+            group-hover:to-cyan-500
+            group-hover:bg-clip-text
+            group-hover:text-transparent
 
             dark:text-white
-
-            dark:group-hover:text-cyan-400
           "
-
         >
-
           {certificate.title}
-
         </h3>
-
 
         {/* =======================================================
             DATE
         ======================================================== */}
 
         <div
-
           className="
             mt-5
 
@@ -302,9 +241,7 @@ export default function CertificationCard({
 
             dark:text-slate-400
           "
-
         >
-
           <CalendarDays
             size={17}
             className="
@@ -317,23 +254,16 @@ export default function CertificationCard({
               whitespace-nowrap
             "
           >
-
             {certificate.date}
-
           </span>
-
         </div>
-
-
       </div>
-
 
       {/* =========================================================
           DECORATIVE HOVER GLOW
       ========================================================== */}
 
       <div
-
         className="
           pointer-events-none
 
@@ -361,12 +291,7 @@ export default function CertificationCard({
 
           group-hover:opacity-100
         "
-
       />
-
-
     </motion.div>
-
   );
-
 }

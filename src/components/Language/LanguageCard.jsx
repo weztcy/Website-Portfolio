@@ -36,7 +36,7 @@ export default function LanguageCard({
       percentageValue,
       language.percentage,
       {
-        duration: 1.4,
+        duration: 1,
         delay: withDelay ? index * 0.2 : 0,
         ease: "easeOut",
       }
@@ -58,7 +58,7 @@ export default function LanguageCard({
         amount: 0.3,
       }}
       transition={{
-        duration: 0.6,
+        duration: 0.5,
         delay: index * 0.15,
       }}
 
@@ -259,7 +259,7 @@ export default function LanguageCard({
               width: `${language.percentage}%`,
             }}
             transition={{
-              duration: 1.4,
+              duration: 1,
 
               // Delay hanya pada animasi pertama
               delay:

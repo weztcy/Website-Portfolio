@@ -253,9 +253,7 @@ export default function ProjectCard({
 
             group-hover:from-blue-600
             group-hover:to-cyan-500
-
             group-hover:bg-clip-text
-
             group-hover:text-transparent
 
             dark:text-white

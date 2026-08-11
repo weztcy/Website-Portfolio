@@ -224,7 +224,7 @@ export default function PublicationCard({
 
           sm:mt-6
           sm:max-w-[85%]
-          sm:text-2xl
+          sm:text-xl
           sm:leading-snug
 
           dark:text-white
@@ -303,7 +303,7 @@ export default function PublicationCard({
 
               text-slate-800
 
-              sm:text-xl
+              sm:text-lg
 
               dark:text-slate-200
             "
