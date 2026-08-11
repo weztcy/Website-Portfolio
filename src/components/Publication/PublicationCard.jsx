@@ -272,16 +272,16 @@ export default function PublicationCard({
 
             shadow-md
 
-            sm:h-12
-            sm:w-12
+            sm:h-14
+            sm:w-14
             sm:rounded-2xl
           "
         >
           <JournalIcon
             size={36}
             className="
-              sm:h-6
-              sm:w-6
+              sm:h-8
+              sm:w-8
             "
           />
         </div>
@@ -303,7 +303,7 @@ export default function PublicationCard({
 
               text-slate-800
 
-              sm:text-base
+              sm:text-xl
 
               dark:text-slate-200
             "
@@ -320,7 +320,7 @@ export default function PublicationCard({
 
               text-slate-500
 
-              sm:text-sm
+              sm:text-lg
 
               dark:text-slate-400
             "

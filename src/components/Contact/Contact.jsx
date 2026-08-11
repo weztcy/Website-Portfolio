@@ -1,37 +1,19 @@
 import { motion } from "motion/react";
 
-import {
-  Mail,
-  Sparkles,
-} from "lucide-react";
-
+import { Mail, Sparkles } from "lucide-react";
 
 // import BackgroundPattern from "./BackgroundPattern";
 import BackgroundPattern from "../About/BackgroundPattern";
 
 import ContactForm from "./ContactForm";
 
-import BackToTop from "./BackToTop";
-
-
-
 
 
 export default function Contact() {
-
-
   return (
-
     <>
-
-
       <section
-
-
         id="contact"
-
-
-
         className="
           relative
 
@@ -45,34 +27,12 @@ export default function Contact() {
 
           lg:py-32
         "
-
-
       >
-
-
-
-
-
-
-
-
-
         {/* Background */}
-
 
         <BackgroundPattern />
 
-
-
-
-
-
-
-
-
         <div
-
-
           className="
             relative
 
@@ -88,78 +48,33 @@ export default function Contact() {
 
             lg:px-10
           "
-
-
         >
-
-
-
-
-
-
-
           {/* Header */}
 
-
-
           <motion.div
-
-
-
             initial={{
+              opacity: 0,
 
-              opacity:0,
-
-              y:40,
-
+              y: 40,
             }}
-
-
-
             whileInView={{
+              opacity: 1,
 
-              opacity:1,
-
-              y:0,
-
+              y: 0,
             }}
-
-
-
             viewport={{
-
-              once:true,
-
+              once: true,
             }}
-
-
-
             transition={{
-
-              duration:0.7,
-
+              duration: 0.7,
             }}
-
-
-
             className="
               mb-14
 
               text-center
             "
-
-
           >
-
-
-
-
-
-
-
             <div
-
-
               className="
                 mb-5
 
@@ -167,15 +82,8 @@ export default function Contact() {
 
                 justify-center
               "
-
-
             >
-
-
-
               <div
-
-
                 className="
                   flex
 
@@ -212,36 +120,13 @@ export default function Contact() {
 
                   dark:text-cyan-300
                 "
-
-
               >
-
-
-
-                <Sparkles size={16}/>
-
-
+                <Sparkles size={16} />
                 Let's Connect
-
-
-
               </div>
-
-
-
             </div>
 
-
-
-
-
-
-
-
-
             <h2
-
-
               className="
                 text-4xl
 
@@ -259,27 +144,11 @@ export default function Contact() {
 
                 md:text-5xl
               "
-
-
             >
-
-
               Contact Me
-
-
             </h2>
 
-
-
-
-
-
-
-
-
             <p
-
-
               className="
                 mx-auto
 
@@ -300,116 +169,43 @@ export default function Contact() {
 
                 dark:text-slate-400
               "
-
-
             >
-
-
-              Have a project, collaboration opportunity,
-              or just want to say hello?
-
-              Feel free to send me a message.
-
-
+              Have a project, collaboration opportunity, or just want to say
+              hello? Feel free to send me a message.
             </p>
-
-
-
-
-
-
           </motion.div>
-
-
-
-
-
-
-
-
-
-
-
-
 
           {/* Contact Form */}
 
-
-
           <div
-
-
             className="
 w-full
   max-w-[450px]
   mx-auto
             "
-
-
           >
-
-
             <ContactForm />
-
-
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
           {/* Email Info */}
 
-
-
           <motion.div
-
-
-
             initial={{
+              opacity: 0,
 
-              opacity:0,
-
-              y:30,
-
+              y: 30,
             }}
-
-
-
             whileInView={{
+              opacity: 1,
 
-              opacity:1,
-
-              y:0,
-
+              y: 0,
             }}
-
-
-
             viewport={{
-
-              once:true,
-
+              once: true,
             }}
-
-
-
             transition={{
-
-              delay:0.3,
-
+              delay: 0.3,
             }}
-
-
-
             className="
               mt-12
 
@@ -419,19 +215,8 @@ w-full
 
               justify-center
             "
-
-
           >
-
-
-
-
-
-
-
             <div
-
-
               className="
                 flex
 
@@ -478,86 +263,21 @@ w-full
 
                 dark:text-slate-300
               "
-
-
             >
-
-
-
               <Mail
-
                 size={22}
-
                 className="
                   text-blue-500
                 "
-
               />
 
-
-
-
-
-              <span>
-
-
-                Available for opportunities and collaborations
-
-
-              </span>
-
-
-
-
-
+              <span>Available for opportunities and collaborations</span>
             </div>
-
-
-
-
-
-
-
           </motion.div>
-
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
       </section>
 
 
-
-
-
-
-
-      {/* Back To Top Button */}
-
-
-      <BackToTop />
-
-
-
-
-
     </>
-
-
   );
-
 }

@@ -10,12 +10,15 @@ import Projects from "./components/Projects/Projects";
 import Language from "./components/Language/Language";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import BackToTop from "./components/BackToTop";
+
 
 export default function App() {
   return (
     <>
       <Navbar />
-
+      {/* Back To Top Button */}
+      <BackToTop />
       <main>
         <Hero />
         <About />

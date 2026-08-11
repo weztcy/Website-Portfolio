@@ -1,10 +1,47 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import {
+  motion,
+  animate,
+  useMotionValue,
+  useTransform,
+} from "motion/react";
 
 export default function LanguageCard({
   language,
   index,
 }) {
   const Icon = language.icon;
+
+  const [progressKey, setProgressKey] = useState(0);
+  const [hasEntered, setHasEntered] = useState(false);
+
+  // Nilai animasi percentage
+  const percentageValue = useMotionValue(0);
+
+  // Bulatkan hasilnya menjadi integer
+  const roundedPercentage = useTransform(
+    percentageValue,
+    (latest) => Math.round(latest)
+  );
+
+  // Jalankan ulang progress + count up
+  const restartAnimation = (withDelay = false) => {
+    // Restart progress bar
+    setProgressKey((prev) => prev + 1);
+
+    // Restart angka dari 0
+    percentageValue.set(0);
+
+    animate(
+      percentageValue,
+      language.percentage,
+      {
+        duration: 1.4,
+        delay: withDelay ? index * 0.2 : 0,
+        ease: "easeOut",
+      }
+    );
+  };
 
   return (
     <motion.div
@@ -24,6 +61,22 @@ export default function LanguageCard({
         duration: 0.6,
         delay: index * 0.15,
       }}
+
+      /* Pertama kali masuk viewport */
+      onViewportEnter={() => {
+        if (!hasEntered) {
+          setHasEntered(true);
+          restartAnimation(true);
+        }
+      }}
+
+      /* Ulangi ketika hover */
+      onHoverStart={() => {
+        if (hasEntered) {
+          restartAnimation(false);
+        }
+      }}
+
       whileHover={{
         y: -10,
         scale: 1.03,
@@ -71,8 +124,6 @@ export default function LanguageCard({
 
       {/* =========================
           ICON + LANGUAGE + LEVEL
-          Mobile  : Horizontal
-          Desktop : Vertical
       ========================== */}
       <div
         className="
@@ -80,7 +131,6 @@ export default function LanguageCard({
           flex
           items-center
           gap-4
-
           sm:block
         "
       >
@@ -111,21 +161,18 @@ export default function LanguageCard({
 
         {/* Language + Level */}
         <div className="min-w-0 sm:mt-6">
-          {/* Language */}
           <h3
             className="
               text-xl
               font-black
               text-slate-900
               dark:text-white
-
               sm:text-2xl
             "
           >
             {language.language}
           </h3>
 
-          {/* Level Badge */}
           <div
             className="
               mt-2
@@ -151,7 +198,9 @@ export default function LanguageCard({
         </div>
       </div>
 
-      {/* Progress */}
+      {/* =========================
+          PROGRESS
+      ========================== */}
       <div className="relative mt-7">
         <div
           className="
@@ -171,18 +220,26 @@ export default function LanguageCard({
             Proficiency
           </span>
 
+          {/* Animated Percentage */}
           <span
             className="
+              flex
+              items-center
               text-sm
               font-bold
               text-slate-700
               dark:text-slate-200
             "
           >
-            {language.percentage}%
+            <motion.span>
+              {roundedPercentage}
+            </motion.span>
+
+            <span>%</span>
           </span>
         </div>
 
+        {/* Progress Background */}
         <div
           className="
             h-3
@@ -192,19 +249,24 @@ export default function LanguageCard({
             dark:bg-slate-800
           "
         >
+          {/* Animated Progress */}
           <motion.div
+            key={progressKey}
             initial={{
               width: 0,
             }}
-            whileInView={{
+            animate={{
               width: `${language.percentage}%`,
-            }}
-            viewport={{
-              once: true,
             }}
             transition={{
               duration: 1.4,
-              delay: index * 0.2,
+
+              // Delay hanya pada animasi pertama
+              delay:
+                progressKey === 1
+                  ? index * 0.2
+                  : 0,
+
               ease: "easeOut",
             }}
             className={`

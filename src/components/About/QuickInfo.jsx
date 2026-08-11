@@ -10,7 +10,7 @@ const quickInfo = [
   {
     icon: MapPin,
     title: "Based In",
-    value: "Semarang, Jawa Tengah, Indonesia",
+    value: "Semarang, Indonesia",
     iconColor: "text-blue-500",
     glow: "hover:shadow-blue-500/20",
   },
