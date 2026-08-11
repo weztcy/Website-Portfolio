@@ -81,8 +81,14 @@ export default function CertificationCard({
       }}
 
       whileHover={{
-        y: -10,
-      }}
+  y: -10,
+
+  transition: {
+    duration: 0.5,
+    delay: 0,
+    ease: "easeOut",
+  },
+}}
 
       onMouseEnter={() => {
         setIsHovered(true);

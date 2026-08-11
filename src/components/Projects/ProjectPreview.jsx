@@ -1,54 +1,58 @@
-import { motion } from "motion/react";
+import {
+  useEffect,
+  useState,
+} from "react";
 
 import {
-  ExternalLink,
-} from "lucide-react";
+  motion,
+} from "motion/react";
 
+import {
+  Maximize2,
+} from "lucide-react";
 
 
 export default function ProjectPreview({
   project,
-  onOpen,
+  isHovered,
 }) {
+  const [imageError, setImageError] =
+    useState(false);
 
 
-  const Icon = project.icon;
+  const previewImage =
+    project?.images?.[0];
 
+
+  const hasPreviewImage =
+    Boolean(previewImage) &&
+    !imageError;
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | RESET IMAGE ERROR
+  |--------------------------------------------------------------------------
+  |
+  | Ketika project berubah, status error gambar
+  | dikembalikan ke kondisi awal.
+  |
+  */
+
+  useEffect(() => {
+    setImageError(false);
+  }, [previewImage]);
 
 
   return (
-
     <motion.div
-
-
-      whileHover={{
-
-        scale:1.03,
-
+      animate={{
+        scale: isHovered ? 1.03 : 1,
       }}
-
-
-
       transition={{
-
-        duration:0.35,
-
+        duration: 0.35,
+        ease: "easeOut",
       }}
-
-
-
-      onClick={() => {
-
-        if(onOpen){
-
-          onOpen(project);
-
-        }
-
-      }}
-
-
-
       className="
         group
 
@@ -56,192 +60,223 @@ export default function ProjectPreview({
 
         aspect-[16/10]
 
-        cursor-pointer
-
         overflow-hidden
 
         rounded-2xl
 
-        bg-slate-200
+        bg-slate-100
 
         shadow-lg
 
         dark:bg-slate-800
       "
-
     >
-
-
-
-
-
-
-
-      {/* Project Image */}
-
-
-      <img
-
-
-        src={project.image}
-
-
-        alt={project.title}
-
-
-
-        className="
-          h-full
-
-          w-full
-
-          object-cover
-
-
-
-          transition-transform
-
-
-
-          duration-500
-
-
-
-          group-hover:scale-110
-        "
-
-
-      />
-
-
-
-
-
-
-
-
-
-      {/* Hover Overlay */}
-
-
-
-      <div
-
-        className="
-          absolute
-
-
-          inset-0
-
-
-
-          flex
-
-
-
-          items-center
-
-
-
-          justify-center
-
-
-
-          bg-slate-950/0
-
-
-
-          transition-all
-
-
-
-          duration-500
-
-
-
-          group-hover:bg-slate-950/60
-        "
-
-      >
-
-
-
-
-
-        <motion.div
-
-
-          initial={{
-
-            opacity:0,
-
-            y:20,
-
-          }}
-
-
-
-          whileHover={{
-
-            opacity:1,
-
-            y:0,
-
-          }}
-
-
-
+      {/* =========================================================
+          PROJECT IMAGE
+      ========================================================== */}
+
+      {hasPreviewImage ? (
+        <img
+          src={previewImage}
+          alt={project.title}
+          loading="lazy"
+          draggable="false"
+          onError={() =>
+            setImageError(true)
+          }
+          className="
+            h-full
+            w-full
+
+            select-none
+
+            object-cover
+
+            transition-transform
+            duration-500
+            ease-out
+
+            group-hover:scale-105
+          "
+        />
+      ) : (
+        /* =====================================================
+            IMAGE FALLBACK
+        ====================================================== */
+
+        <div
           className="
             flex
 
+            h-full
+            w-full
 
             flex-col
 
-
-
             items-center
-
-
+            justify-center
 
             gap-3
 
+            bg-gradient-to-br
+            from-slate-100
+            to-slate-200
 
+            px-5
+
+            text-center
+
+            text-slate-400
+
+            dark:from-slate-800
+            dark:to-slate-900
+            dark:text-slate-500
+          "
+        >
+          <div>
+            <p
+              className="
+                text-sm
+
+                font-semibold
+
+                text-slate-500
+
+                dark:text-slate-400
+              "
+            >
+              Project Preview
+            </p>
+
+            <p
+              className="
+                mt-1
+
+                text-xs
+
+                text-slate-400
+
+                dark:text-slate-500
+              "
+            >
+              Image unavailable
+            </p>
+          </div>
+        </div>
+      )}
+
+
+      {/* =========================================================
+          IMAGE GRADIENT
+      ========================================================== */}
+
+      <div
+        className="
+          pointer-events-none
+
+          absolute
+          inset-0
+
+          bg-gradient-to-t
+
+          from-slate-950/20
+          via-transparent
+          to-transparent
+        "
+      />
+
+
+      {/* =========================================================
+          HOVER OVERLAY
+      ========================================================== */}
+
+      <motion.div
+        animate={{
+          opacity: isHovered ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.3,
+        }}
+        className="
+          pointer-events-none
+
+          absolute
+          inset-0
+
+          z-10
+
+          flex
+
+          items-center
+          justify-center
+
+          bg-slate-950/60
+
+          backdrop-blur-[2px]
+        "
+      >
+        <motion.div
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            y: isHovered ? 0 : 18,
+            scale: isHovered ? 1 : 0.9,
+          }}
+          transition={{
+            duration: 0.3,
+            type: "spring",
+            stiffness: 300,
+            damping: 22,
+          }}
+          className="
+            flex
+
+            flex-col
+
+            items-center
+
+            gap-3
 
             text-white
           "
-
         >
+          {/* View Details Icon */}
 
-
-
-          {/* <div
-
+          <div
             className="
+              flex
+
+              h-14
+              w-14
+
+              items-center
+              justify-center
+
               rounded-full
 
-              bg-white/20
+              border
+              border-white/20
 
-              p-4
+              bg-white/15
+
+              shadow-xl
 
               backdrop-blur-md
+
+              transition-transform
+              duration-300
+
+              group-hover:scale-105
             "
-
           >
-
-            <ExternalLink
-
-              size={28}
-
+            <Maximize2
+              size={25}
             />
-
-          </div> */}
-
+          </div>
 
 
+          {/* View Details Text */}
 
-
-          {/* <span
-
+          <span
             className="
               text-sm
 
@@ -249,118 +284,11 @@ export default function ProjectPreview({
 
               tracking-wide
             "
-
           >
-
-            View Project
-
-          </span> */}
-
-
-
-
+            View Details
+          </span>
         </motion.div>
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* Project Icon */}
-
-
-
-      {/* <div
-
-
-        className="
-          absolute
-
-
-          right-4
-
-
-          top-4
-
-
-
-          flex
-
-
-
-          h-11
-
-
-
-          w-11
-
-
-
-          items-center
-
-
-
-          justify-center
-
-
-
-          rounded-xl
-
-
-
-          bg-white/80
-
-
-
-          text-blue-600
-
-
-
-          shadow-lg
-
-
-
-          backdrop-blur-md
-
-
-
-          dark:bg-slate-900/80
-
-
-
-          dark:text-cyan-400
-        "
-
-
-      >
-
-        <Icon size={23}/>
-
-
-      </div> */}
-
-
-
-
-
-
-
-
-
+      </motion.div>
     </motion.div>
-
-
   );
-
 }

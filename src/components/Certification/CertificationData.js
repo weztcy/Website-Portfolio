@@ -27,12 +27,94 @@ export const certifications = [
       "Data Cleaning & Preprocessing",
       "Data Visualization",
       "Exploratory Data Analysis",
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
     ],
   },
 
 
   {
     id: 2,
+
+    images: [
+      toefl,
+    ],
+
+    organization: "MySkill",
+
+    title: "Data Analyst Certification",
+
+    date: "August 2025",
+
+    detailLabel: "Highlights",
+
+    details: [
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+    ],
+  },
+  {
+    id: 3,
+
+    images: [
+      toefl,
+    ],
+
+    organization: "MySkill",
+
+    title: "Data Analyst Certification",
+
+    date: "August 2025",
+
+    detailLabel: "Highlights",
+
+    details: [
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+    ],
+  },
+  {
+    id: 4,
+
+    images: [
+      toefl,
+    ],
+
+    organization: "MySkill",
+
+    title: "Data Analyst Certification",
+
+    date: "August 2025",
+
+    detailLabel: "Highlights",
+
+    details: [
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+    ],
+  },
+  {
+    id: 5,
 
     images: [
       toefl,
