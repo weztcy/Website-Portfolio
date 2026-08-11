@@ -1,83 +1,43 @@
 import { motion } from "motion/react";
 
-import {
-  CalendarDays,
-} from "lucide-react";
-
+import { CalendarDays } from "lucide-react";
 
 import ProjectPreview from "./ProjectPreview";
 
-
-
 export default function ProjectCard({
-
   project,
 
   index,
 
   onOpen,
-
 }) {
-
-
   const Icon = project.icon;
 
-
-
   return (
-
     <motion.div
-
-
-
       initial={{
+        opacity: 0,
 
-        opacity:0,
-
-        y:50,
-
+        y: 50,
       }}
-
-
-
       whileInView={{
+        opacity: 1,
 
-        opacity:1,
-
-        y:0,
-
+        y: 0,
       }}
-
-
-
       viewport={{
+        once: true,
 
-        once:true,
-
-        amount:0.2,
-
+        amount: 0.2,
       }}
-
-
-
       transition={{
+        duration: 0.6,
 
-        duration:0.6,
-
-        delay:index * 0.12,
-
+        delay: index * 0.12,
       }}
-
-
-
       whileHover={{
-
-        y:-10,
-
+        y: -10,
       }}
-
-
-
       className="
         group
 
@@ -135,60 +95,21 @@ export default function ProjectCard({
 
         dark:bg-slate-900/60
       "
-
-
     >
-
-
-
-
-
-
-
-
-
       {/* Project Preview */}
 
-
-      <ProjectPreview
-
-        project={project}
-
-        onOpen={onOpen}
-
-      />
-
-
-
-
-
-
-
-
+      <ProjectPreview project={project} onOpen={onOpen} />
 
       {/* Content */}
 
-
-
       <div
-
         className="
           mt-6
         "
-
       >
-
-
-
-
-
-
-
         {/* Row 1 Icon + Date */}
 
-
         <div
-
           className="
             flex
 
@@ -196,16 +117,10 @@ export default function ProjectCard({
 
             justify-between
           "
-
         >
-
-
-
           {/* Project Icon */}
 
-
           <div
-
             className="
               flex
 
@@ -240,27 +155,13 @@ export default function ProjectCard({
 
               shadow-md
             "
-
           >
-
-            <Icon size={21}/>
-
-
+            <Icon size={21} />
           </div>
-
-
-
-
-
-
-
-
 
           {/* Date */}
 
-
           <div
-
             className="
               flex
 
@@ -278,38 +179,16 @@ export default function ProjectCard({
 
               dark:text-slate-400
             "
-
           >
+            <CalendarDays size={16} />
 
-            <CalendarDays size={16}/>
-
-
-            <span>
-
-              {project.date}
-
-            </span>
-
-
+            <span>{project.date}</span>
           </div>
-
-
-
         </div>
-
-
-
-
-
-
-
-
 
         {/* Title */}
 
-
         <h3
-
           className="
             mt-5
 
@@ -355,27 +234,13 @@ export default function ProjectCard({
 
             dark:text-white
           "
-
         >
-
           {project.title}
-
-
         </h3>
-
-
-
-
-
-
-
-
 
         {/* Description */}
 
-
         <p
-
           className="
             mt-3
 
@@ -398,27 +263,13 @@ export default function ProjectCard({
 
             dark:text-slate-400
           "
-
         >
-
           {project.description}
-
-
         </p>
-
-
-
-
-
-
-
-
 
         {/* Technologies */}
 
-
         <div
-
           className="
             mt-6
 
@@ -431,24 +282,11 @@ export default function ProjectCard({
 
             gap-2
           "
-
         >
-
-
-
-          {
-            project.technologies.map(
-              (tech)=>(
-
-
-                <span
-
-
-                  key={tech.name}
-
-
-
-                  className={`
+          {project.technologies.map((tech) => (
+            <span
+              key={tech.name}
+              className={`
                     rounded-full
 
                     px-3
@@ -461,42 +299,12 @@ export default function ProjectCard({
 
                     ${tech.color}
                   `}
-
-
-
-                >
-
-                  {tech.name}
-
-
-                </span>
-
-
-              )
-            )
-          }
-
-
-
-
+            >
+              {tech.name}
+            </span>
+          ))}
         </div>
-
-
-
-
-
-
-
-
       </div>
-
-
-
-
-
-
     </motion.div>
-
   );
-
 }

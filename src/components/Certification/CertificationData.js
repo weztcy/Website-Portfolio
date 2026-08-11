@@ -1,11 +1,42 @@
-export const certifications = [
+import webdev1 from "../../assets/certificates/webdev1.jpg";
+import webdev2 from "../../assets/certificates/webdev2.jpg";
+import toefl from "../../assets/certificates/toefl.jpg";
+// import webDeveloperPage1 from "../../assets/certificates/web-developer.png";
+// import machineLearningPage1 from "../../assets/certificates/machine-learning.png";
+// import uiuxPage1 from "../../assets/certificates/uiux.png";
 
+export const certifications = [
   {
     id: 1,
 
-    type: "image",
+    images: [
+      webdev2,
+      webdev1,
+    ],
 
-    file: "/certificates/data-analyst.png",
+    organization: "MySkill",
+
+    title: "Microsoft Excel Fullstack: Basic, Intermediate, Advance",
+
+    date: "August 2025",
+
+    detailLabel: "Highlights",
+
+    details: [
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+    ],
+  },
+
+
+  {
+    id: 2,
+
+    images: [
+      toefl,
+    ],
 
     organization: "MySkill",
 
@@ -13,75 +44,13 @@ export const certifications = [
 
     date: "August 2025",
 
+    detailLabel: "Highlights",
+
+    details: [
+      "Data Analysis Fundamentals",
+      "Data Cleaning & Preprocessing",
+      "Data Visualization",
+      "Exploratory Data Analysis",
+    ],
   },
-
-
-
-  {
-    id: 2,
-
-    type: "pdf",
-
-    file: "/certificates/web-developer.pdf",
-
-    organization: "BNSP",
-
-    title: "Web Developer Certification",
-
-    date: "July 2025",
-
-  },
-
-
-
-  {
-    id: 3,
-
-    type: "image",
-
-    file: "/certificates/advanced-excel.png",
-
-    organization: "MySkill",
-
-    title: "Advanced Microsoft Excel Certification",
-
-    date: "June 2025",
-
-  },
-
-
-
-  {
-    id: 4,
-
-    type: "image",
-
-    file: "/certificates/machine-learning.png",
-
-    organization: "MySkill",
-
-    title: "Machine Learning Certification",
-
-    date: "May 2025",
-
-  },
-
-
-
-  {
-    id: 5,
-
-    type: "pdf",
-
-    file: "/certificates/ui-ux-design.pdf",
-
-    organization: "Dian Nuswantoro University",
-
-    title: "UI/UX Design Training",
-
-    date: "April 2025",
-
-  },
-
-
 ];
