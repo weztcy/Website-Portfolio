@@ -255,8 +255,8 @@ export default function PublicationCard({
         <div
           className="
             flex
-            h-16
-            w-16
+            h-18
+            w-18
             shrink-0
 
             items-center
@@ -280,8 +280,8 @@ export default function PublicationCard({
           <JournalIcon
             size={36}
             className="
-              sm:h-6
-              sm:w-6
+              sm:h-8
+              sm:w-8
             "
           />
         </div>
