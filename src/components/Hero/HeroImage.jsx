@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import profile from "../../assets/images/profile.png";
+import profile from "../../assets/hero/profile.png";
 
 /* =========================================================
    HERO IMAGE

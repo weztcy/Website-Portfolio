@@ -1,6 +1,6 @@
-import disdukcapilLogo from "../../assets/images/experience/disdukcapil_semarang.png";
-import freelance_copywriter from "../../assets/images/experience/freelance_copywriter.png";
-import bank_mandiri from "../../assets/images/experience/bank_mandiri.png";
+import disdukcapilLogo from "../../assets/experience/disdukcapil_semarang.png";
+import freelance_copywriter from "../../assets/experience/freelance_copywriter.png";
+import bank_mandiri from "../../assets/experience/bank_mandiri.png";
 
 const experienceData = [
   {

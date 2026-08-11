@@ -2,7 +2,8 @@ import { motion } from "motion/react";
 import {
   Building2,
   CalendarDays,
-  CheckCircle2,
+  FingerprintPattern,
+  SquareCheckBig,
 } from "lucide-react";
 
 export default function CertificateDetails({
@@ -69,6 +70,7 @@ export default function CertificateDetails({
         </h2>
 
         <div className="mt-7 space-y-3">
+          {/* Organization */}
           <div className="flex items-start gap-3">
             <div
               className="
@@ -114,6 +116,7 @@ export default function CertificateDetails({
             </div>
           </div>
 
+          {/* Issued */}
           <div className="flex items-start gap-3">
             <div
               className="
@@ -158,6 +161,55 @@ export default function CertificateDetails({
               </p>
             </div>
           </div>
+
+          {/* Credential ID */}
+          {certificate.credentialID && (
+            <div className="flex items-start gap-3">
+              <div
+                className="
+                  flex
+                  h-10
+                  w-10
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-violet-50
+                  text-violet-600
+                  dark:bg-violet-500/10
+                  dark:text-violet-400
+                "
+              >
+                <FingerprintPattern size={19} />
+              </div>
+
+              <div>
+                <p
+                  className="
+                    text-xs
+                    font-semibold
+                    uppercase
+                    tracking-wider
+                    text-slate-400
+                  "
+                >
+                  Credential ID
+                </p>
+
+                <p
+                  className="
+                    mt-1
+                    break-all
+                    font-semibold
+                    text-slate-700
+                    dark:text-slate-200
+                  "
+                >
+                  {certificate.credentialID}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div
@@ -217,7 +269,7 @@ export default function CertificateDetails({
                     dark:text-slate-300
                   "
                 >
-                  <CheckCircle2
+                  <SquareCheckBig
                     size={18}
                     className="
                       mt-0.5

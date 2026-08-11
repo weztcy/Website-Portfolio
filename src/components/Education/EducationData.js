@@ -1,4 +1,4 @@
-import dian_nuswantoro from "../../assets/images/education/dian_nuswantoro.png";
+import dian_nuswantoro from "../../assets/education/dian_nuswantoro.png";
 
 const educationData = [
   {
