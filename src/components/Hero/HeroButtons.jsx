@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import {
-  Download,
+  Eye,
   Mail,
   MessageCircle,
 } from "lucide-react";
@@ -9,12 +9,21 @@ const MotionButton = motion.a;
 
 export default function HeroButtons() {
   const whatsappLink =
-    "https://wa.me/6281337272669?text=Halo%20Yohanes%20Dimas%20Pratama,%20saya%20baru%20melihat%20website%20portfolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut.";
+    "https://wa.me/6281337272669?text=Halo%20Yohanes%20Dimas%20Pratama,%20saya%20baru%20melihat%20website%20portfolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut";
+
+  const cvLink =
+    "https://drive.google.com/file/d/1nI0qyF74cXBLpUEwClnSbnLaM7bf5_PD/view?usp=sharing";
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{
+        opacity: 0,
+        y: 25,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
       transition={{
         delay: 0.4,
         duration: 0.6,
@@ -68,7 +77,11 @@ export default function HeroButtons() {
       >
         <MessageCircle
           size={20}
-          className="transition-transform duration-300 group-hover:rotate-12"
+          className="
+            transition-transform
+            duration-300
+            group-hover:rotate-12
+          "
         />
 
         Hire Me Now
@@ -97,7 +110,6 @@ export default function HeroButtons() {
           rounded-xl
           border
           border-blue-500
-
           px-6
 
           font-semibold
@@ -112,17 +124,22 @@ export default function HeroButtons() {
       >
         <Mail
           size={20}
-          className="transition-transform duration-300 group-hover:-rotate-12"
+          className="
+            transition-transform
+            duration-300
+            group-hover:-rotate-12
+          "
         />
 
         Get In Touch
       </MotionButton>
 
-      {/* Download */}
+      {/* View CV */}
 
       <MotionButton
-        href="/cv.pdf"
-        download
+        href={cvLink}
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{
           scale: 1.05,
           y: -4,
@@ -141,7 +158,6 @@ export default function HeroButtons() {
 
           rounded-xl
           bg-slate-900
-
           px-6
 
           font-semibold
@@ -156,12 +172,16 @@ export default function HeroButtons() {
           dark:text-slate-900
         "
       >
-        <Download
+        <Eye
           size={20}
-          className="transition-transform duration-300 group-hover:translate-y-1"
+          className="
+            transition-transform
+            duration-300
+            group-hover:scale-110
+          "
         />
 
-        Download CV
+        View CV
       </MotionButton>
     </motion.div>
   );
