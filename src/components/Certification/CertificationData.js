@@ -410,7 +410,6 @@ export const certifications = [
       "Introduction to Problem Solving",
       "Data Formatting dan Validation",
       "SQL Basic: Basic Clause",
-      "SQL Basic",
       "SQL Basic: Analyzing Business Data",
       "SQL For Data Analysis",
       "SQL Technical Interview Case Studies",
