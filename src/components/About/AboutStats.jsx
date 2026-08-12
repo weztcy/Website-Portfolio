@@ -26,7 +26,7 @@ const stats = [
   },
   {
     icon: BadgeCheck,
-    value: 3,
+    value: 10,
     suffix: "+",
     title: "Certifications",
     color: "from-emerald-500 to-lime-500",
