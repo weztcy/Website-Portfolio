@@ -79,20 +79,18 @@ export default function About() {
           </h2>
         </motion.div>
 
-        {/* About Heading - Full Width */}
-        <div className="w-full">
-          <AboutHeading />
-        </div>
-
         {/* Main About Content */}
         <div
           className="
-            mt-6
             grid
+            grid-cols-1
             gap-14
 
+            md:grid-cols-[1.15fr_0.85fr]
+            md:items-stretch
+            md:gap-10
+
             lg:grid-cols-[1.25fr_0.75fr]
-            lg:items-stretch
             lg:gap-20
           "
         >
@@ -118,8 +116,13 @@ export default function About() {
               self-start
             "
           >
+            {/* Heading */}
+            <AboutHeading />
+
+            {/* Description */}
             <AboutDescription />
 
+            {/* Skill Highlights */}
             <SkillHighlights />
           </motion.div>
 
@@ -127,7 +130,7 @@ export default function About() {
           <motion.div
             initial={{
               opacity: 0,
-              x: 60,
+              x: 40,
             }}
             whileInView={{
               opacity: 1,
@@ -139,11 +142,16 @@ export default function About() {
             }}
             transition={{
               duration: 0.8,
+              delay: 0.1,
             }}
             className="
               flex
               w-full
               items-center
+              justify-center
+
+              md:h-full
+              md:self-stretch
             "
           >
             <QuickInfo />

@@ -12,7 +12,7 @@ const AboutDescriptionData = [
   {
     id: 3,
     description:
-      "I have experience working on web development projects, data-driven tasks, content creation, and customer-oriented services. These experiences have helped me develop not only technical abilities but also strong communication, problem-solving, teamwork, and adaptability skills.",
+      "I have experience working on web development projects, data-driven tasks, and various digital solutions. These experiences have helped me develop not only technical abilities but also strong communication, problem-solving, teamwork, and adaptability skills.",
   },
   {
     id: 4,

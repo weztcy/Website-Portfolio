@@ -79,10 +79,10 @@ export default function AboutHeading() {
           text-slate-900
           dark:text-white
 
-          sm:text-4xl
+          sm:text-3xl
           sm:leading-tight
 
-          lg:text-5xl
+          lg:text-3xl
         "
       >
         Building Digital Solutions

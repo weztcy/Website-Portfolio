@@ -158,11 +158,8 @@ export default function HeroContent() {
           dark:text-slate-400
         "
       >
-        Informatics Engineering graduate who focuses on developing
-        digital solutions through Data Analytics, Web Development, Machine
-        Learning, and UI/UX Design. With a combination of technical skills and
-        creative thinking, I aim to build products that are efficient,
-        impactful, and meaningful.
+        Informatics Engineering graduate passionate about developing digital
+        solutions through Data Analytics, Web Development, Machine Learning, and UI/UX Design.
       </motion.p>
 
       {/* Buttons */}
