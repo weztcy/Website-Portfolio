@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import {
   BriefcaseBusiness,
   FolderGit2,
-  BadgeCheck,
+  FileBadge2,
   GraduationCap,
 } from "lucide-react";
-
 
 const stats = [
   {
@@ -15,111 +14,101 @@ const stats = [
     value: 1,
     suffix: "+",
     title: "Years Experience",
+    target: "experience",
     color: "from-blue-500 to-cyan-500",
   },
+
   {
     icon: FolderGit2,
     value: 15,
     suffix: "+",
     title: "Projects Completed",
+    target: "projects",
     color: "from-violet-500 to-fuchsia-500",
   },
+
   {
-    icon: BadgeCheck,
+    icon: FileBadge2,
     value: 10,
     suffix: "+",
     title: "Certifications",
+    target: "certification",
     color: "from-emerald-500 to-lime-500",
   },
+
   {
     icon: GraduationCap,
     value: 3.7,
     suffix: "",
     title: "GPA",
+    target: "education",
     color: "from-orange-500 to-yellow-500",
   },
 ];
 
-
-function CountUp({
-  end,
-  duration = 1200,
-  decimals = 0,
-  trigger = 0,
-}) {
+function CountUp({ end, duration = 1200, decimals = 0, trigger = 0 }) {
   const [count, setCount] = useState(0);
-
 
   useEffect(() => {
     let animationFrame;
     let startTime = null;
 
-
-    // Reset ke 0 setiap animasi dimulai
     setCount(0);
-
 
     const animate = (timestamp) => {
       if (!startTime) {
         startTime = timestamp;
       }
 
+      const progress = Math.min((timestamp - startTime) / duration, 1);
 
-      const progress = Math.min(
-        (timestamp - startTime) / duration,
-        1
-      );
-
-
-      // Ease Out Cubic
-      const easedProgress =
-        1 - Math.pow(1 - progress, 3);
-
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
 
       setCount(end * easedProgress);
 
-
       if (progress < 1) {
-        animationFrame =
-          requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       } else {
         setCount(end);
       }
     };
 
-
-    animationFrame =
-      requestAnimationFrame(animate);
-
+    animationFrame = requestAnimationFrame(animate);
 
     return () => {
       cancelAnimationFrame(animationFrame);
     };
   }, [end, duration, trigger]);
 
-
-  return decimals > 0
-    ? count.toFixed(decimals)
-    : Math.floor(count);
+  return decimals > 0 ? count.toFixed(decimals) : Math.floor(count);
 }
 
-
-
-function StatCard({
-  item,
-  index,
-}) {
-  const [countTrigger, setCountTrigger] =
-    useState(0);
-
+function StatCard({ item, index }) {
+  const [countTrigger, setCountTrigger] = useState(0);
 
   const Icon = item.icon;
-
 
   const handleMouseEnter = () => {
     setCountTrigger((prev) => prev + 1);
   };
 
+  const handleClick = () => {
+    const targetSection = document.getElementById(item.target);
+
+    if (!targetSection) {
+      return;
+    }
+
+    const navbarOffset = 90;
+
+    const targetPosition =
+      targetSection.getBoundingClientRect().top + window.scrollY - navbarOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <motion.div
@@ -127,33 +116,38 @@ function StatCard({
         opacity: 0,
         y: 40,
       }}
-
       whileInView={{
         opacity: 1,
         y: 0,
       }}
-
       viewport={{
         once: true,
         amount: 0.25,
       }}
-
       transition={{
         delay: index * 0.15,
         duration: 0.6,
       }}
-
       whileHover={{
         y: -8,
         scale: 1.02,
       }}
-
       onMouseEnter={handleMouseEnter}
-
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
       className="
         group
 
         relative
+
+        cursor-pointer
 
         overflow-hidden
 
@@ -181,6 +175,12 @@ function StatCard({
 
         hover:shadow-blue-500/20
 
+        focus:outline-none
+
+        focus:ring-2
+
+        focus:ring-blue-500/50
+
         sm:p-8
 
         dark:border-slate-800
@@ -188,8 +188,6 @@ function StatCard({
         dark:bg-slate-900/60
       "
     >
-
-
       {/* Glow */}
 
       <div
@@ -218,8 +216,6 @@ function StatCard({
         "
       />
 
-
-
       {/* Content */}
 
       <div
@@ -241,8 +237,6 @@ function StatCard({
           sm:gap-0
         "
       >
-
-
         {/* Icon */}
 
         <motion.div
@@ -250,7 +244,6 @@ function StatCard({
             scale: 1.08,
             rotate: 4,
           }}
-
           className={`
             flex
 
@@ -282,28 +275,29 @@ function StatCard({
           `}
         >
           <Icon
-            size={28}
             className="
+              h-[28px]
+
+              w-[28px]
+
               sm:h-[30px]
+
               sm:w-[30px]
             "
           />
         </motion.div>
-
-
 
         {/* Number + Title */}
 
         <div
           className="
             min-w-0
+
             flex-1
 
             sm:w-full
           "
         >
-
-
           {/* Number */}
 
           <h3
@@ -324,18 +318,12 @@ function StatCard({
             <CountUp
               end={item.value}
               duration={1200}
-              decimals={
-                item.title === "GPA"
-                  ? 2
-                  : 0
-              }
+              decimals={item.title === "GPA" ? 2 : 0}
               trigger={countTrigger}
             />
 
             {item.suffix}
           </h3>
-
-
 
           {/* Title */}
 
@@ -358,19 +346,11 @@ function StatCard({
           >
             {item.title}
           </p>
-
-
         </div>
-
-
       </div>
-
-
     </motion.div>
   );
 }
-
-
 
 export default function AboutStats() {
   return (
@@ -394,11 +374,7 @@ export default function AboutStats() {
       "
     >
       {stats.map((item, index) => (
-        <StatCard
-          key={item.title}
-          item={item}
-          index={index}
-        />
+        <StatCard key={item.title} item={item} index={index} />
       ))}
     </div>
   );
