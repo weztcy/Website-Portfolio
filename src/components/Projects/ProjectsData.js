@@ -2,19 +2,8 @@ import {
   BrainCircuit,
   Monitor,
   Palette,
-  CloudLightning,
   Database,
-  Calculator,
-  GraduationCap,
-  Gavel,
-  MessageSquareText,
-  BookOpen,
-  Wrench,
-  ShoppingCart,
-  NotebookPen,
-  Gamepad2,
-  CarFront,
-  CookingPot,
+  ServerCog,
 } from "lucide-react";
 
 // ==============================
@@ -46,7 +35,7 @@ export const projects = [
 
     images: [foodRecipeUiUx],
 
-    icon: CookingPot,
+    icon: Palette,
 
     title: "UI/UX Design for Food Recipe Application",
 
@@ -90,7 +79,7 @@ export const projects = [
 
     images: [eParkingUiUx],
 
-    icon: CarFront,
+    icon: Palette,
 
     title: "UI/UX Design for E-Parking Application",
 
@@ -180,7 +169,7 @@ export const projects = [
 
     images: [aorusGamingShop],
 
-    icon: Gamepad2,
+    icon: Monitor,
 
     title: "Aorus Gaming Shop Website",
 
@@ -224,7 +213,7 @@ export const projects = [
 
     images: [personalDataManager],
 
-    icon: NotebookPen,
+    icon: Monitor,
 
     title: "Personal Data Manager Application",
 
@@ -270,7 +259,7 @@ export const projects = [
 
     images: [wholesaleGroceries],
 
-    icon: ShoppingCart,
+    icon: Monitor,
 
     title: "Wholesale Groceries Inventory Program",
 
@@ -308,7 +297,7 @@ export const projects = [
 
     images: [carWorkshopInventory],
 
-    icon: Wrench,
+    icon: Monitor,
 
     title: "Car Workshop Inventory Application",
 
@@ -354,7 +343,7 @@ export const projects = [
 
     images: [/* pustakanesia */],
 
-    icon: BookOpen,
+    icon: Monitor,
 
     title: "Digital Library Website - Pustakanesia",
 
@@ -395,7 +384,7 @@ export const projects = [
 
     images: [hotelSentimentAnalysis],
 
-    icon: MessageSquareText,
+    icon: BrainCircuit,
 
     title: "Hotel Sentiment Analysis Review Website in Jakarta",
 
@@ -446,7 +435,7 @@ export const projects = [
 
     images: [/* sileloAuction */],
 
-    icon: Gavel,
+    icon: ServerCog,
 
     title: "Online Auction Website - SiLelo",
 
@@ -492,7 +481,7 @@ export const projects = [
 
     images: [kipEligibilityPrediction],
 
-    icon: GraduationCap,
+    icon: BrainCircuit,
 
     title: "Student Eligibility Prediction Website for KIP",
 
@@ -538,7 +527,7 @@ export const projects = [
 
     images: [centerOfMassCalculator1, centerOfMassCalculator2],
 
-    icon: Calculator,
+    icon: Database,
 
     title: "Center of Mass and Center of Mass Velocity Calculator Model",
 
@@ -577,7 +566,7 @@ export const projects = [
 
     images: [/* disasterDataApi */],
 
-    icon: Database,
+    icon: ServerCog,
 
     title: "Natural Disaster Data API",
 
@@ -621,7 +610,7 @@ export const projects = [
 
     images: [/* sibenWebsite */],
 
-    icon: CloudLightning,
+    icon: Monitor,
 
     title: "Natural Disaster Preparedness Website - Siben",
 
