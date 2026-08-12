@@ -769,7 +769,7 @@ export const projects = [
     icon: BrainCircuit,
 
     title:
-      "Diabetes Classification Model Using KNN with Implementation of Various Data Normalization Techniques",
+      "Diabetes Classification Model Using KNN with Various Data Normalization Techniques",
 
     date: "February 2025",
 
