@@ -12,7 +12,7 @@ export default function HeroButtons() {
     "https://wa.me/6281337272669?text=Halo%20Yohanes%20Dimas%20Pratama,%20saya%20baru%20melihat%20website%20portfolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut";
 
   const cvLink =
-    "https://drive.google.com/file/d/1nI0qyF74cXBLpUEwClnSbnLaM7bf5_PD/view?usp=sharing";
+    "https://drive.google.com/file/d/13tiUXeKknSH6_Hl3ONRfrOVE8Z4ZOar6/view?usp=sharing";
 
   return (
     <motion.div
