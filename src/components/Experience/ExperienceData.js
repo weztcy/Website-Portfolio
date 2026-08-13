@@ -45,25 +45,25 @@ const experienceData = [
   },
 
 
-  // {
-  //   id: 3,
+  {
+    id: 3,
 
-  //   company: "PT Bank Mandiri (Persero) Tbk.",
+    company: "PT Bank Mandiri (Persero) Tbk.",
 
-  //   logo: bank_mandiri,
+    logo: bank_mandiri,
 
-  //   position: "Bank Teller",
+    position: "Bank Teller",
 
-  //   duration: "March 2026 - August 2026",
+    duration: "March 2026 - August 2026",
 
-  //   location: "Tangerang Selatan, Indonesia",
+    location: "Tangerang Selatan, Indonesia",
 
-  //   responsibilities: [
-  //     "Processed cash deposits, withdrawals, transfers, bill payments, and other banking transactions accurately, efficiently, and in accordance with bank procedures.",
-  //     "Assisted customers by answering inquiries, providing information about Bank Mandiri's products and services, and ensuring a positive customer experience.",
-  //     "Verified daily transactions, maintained cash security, and prepared financial activity reports in compliance with audit standards and bank policies.",
-  //   ],
-  // },
+    responsibilities: [
+      "Processed cash deposits, withdrawals, transfers, bill payments, and other banking transactions accurately, efficiently, and in accordance with bank procedures.",
+      "Assisted customers by answering inquiries, providing information about Bank Mandiri's products and services, and ensuring a positive customer experience.",
+      "Verified daily transactions, maintained cash security, and prepared financial activity reports in compliance with audit standards and bank policies.",
+    ],
+  },
 ];
 
 
