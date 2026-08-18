@@ -26,7 +26,7 @@ import centerOfMassCalculator2 from "../../assets/projects/center-of-mass-calcul
 // import disasterDataApi from "../../assets/projects/disaster-data-api.png";
 // import sibenWebsite from "../../assets/projects/siben-website.png";
 // import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.png";
-// import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
+import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
 // import diabetesClassification from "../../assets/projects/diabetes-classification.png";
 
 export const projects = [
@@ -707,7 +707,7 @@ export const projects = [
   {
     id: 16,
 
-    images: [/* prajagamerWebsite */],
+    images: [prajagamerWebsite],
 
     icon: Monitor,
 
