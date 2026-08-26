@@ -11,6 +11,41 @@ import {
   LoaderCircle,
 } from "lucide-react";
 
+// ==============================
+// SECURITY HELPERS
+// ==============================
+
+function sanitizeInput(value = "") {
+  return value
+    .replace(/<script.*?>.*?<\/script>/gi, "")
+    .replace(/<.*?>/g, "")
+    .replace(/javascript:/gi, "")
+    .replace(/on\w+=/gi, "")
+    .trim();
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function containsAttackPattern(value = "") {
+  const patterns = [
+    /<script/i,
+    /javascript:/i,
+    /onerror=/i,
+    /onclick=/i,
+    /alert\(/i,
+    /document\./i,
+    /window\./i,
+  ];
+
+  return patterns.some((pattern) => pattern.test(value));
+}
+
+// ==============================
+// COMPONENT
+// ==============================
+
 export default function ContactForm() {
   const form = useRef(null);
 
@@ -23,7 +58,6 @@ export default function ContactForm() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    // Prevent multiple submissions
     if (loading || cooldown) {
       return;
     }
@@ -34,12 +68,57 @@ export default function ContactForm() {
       return;
     }
 
-    // Honeypot protection
-    // Normal users will never see or fill this field.
-    const honeypot = formElement.website?.value;
+    const rawData = {
+      name: formElement.name.value,
+      email: formElement.email.value,
+      subject: formElement.subject.value,
+      message: formElement.message.value,
+    };
+
+    // ==============================
+    // HONEYPOT
+    // ==============================
+
+    const honeypot = formElement.website.value;
 
     if (honeypot) {
-      console.warn("Spam submission detected.");
+      setStatus("Unable to send message.");
+
+      return;
+    }
+
+    // ==============================
+    // SANITIZE
+    // ==============================
+
+    const cleanData = {
+      name: sanitizeInput(rawData.name),
+
+      email: sanitizeInput(rawData.email),
+
+      subject: sanitizeInput(rawData.subject),
+
+      message: sanitizeInput(rawData.message),
+    };
+
+    // ==============================
+    // VALIDATION
+    // ==============================
+
+    if (containsAttackPattern(JSON.stringify(rawData))) {
+      setStatus("Invalid message detected.");
+
+      return;
+    }
+
+    if (!validateEmail(cleanData.email)) {
+      setStatus("Invalid email address.");
+
+      return;
+    }
+
+    if (cleanData.message.length < 10 || cleanData.message.length > 2000) {
+      setStatus("Message length is invalid.");
 
       return;
     }
@@ -49,6 +128,14 @@ export default function ContactForm() {
     setStatus("");
 
     try {
+      formElement.name.value = cleanData.name;
+
+      formElement.email.value = cleanData.email;
+
+      formElement.subject.value = cleanData.subject;
+
+      formElement.message.value = cleanData.message;
+
       await emailjs.sendForm(
         "service_4t5l0qa",
 
@@ -63,17 +150,16 @@ export default function ContactForm() {
 
       formElement.reset();
 
-      // Prevent repeated submissions
-      // from the same browser for 30 seconds.
+      // RATE LIMIT
       setCooldown(true);
 
       setTimeout(() => {
         setCooldown(false);
-      }, 30000);
+      }, 60000);
     } catch (error) {
-      console.error("EmailJS error:", error);
+      console.error("Email sending failed");
 
-      setStatus("Failed to send message. Please try again.");
+      setStatus("Failed to send message.");
     } finally {
       setLoading(false);
     }
@@ -81,44 +167,23 @@ export default function ContactForm() {
 
   const inputClass = `
     w-full
-
     rounded-2xl
-
     border
-
     border-slate-200
-
     bg-white/70
-
     px-5
-
     py-4
-
     text-slate-900
-
     outline-none
-
     transition-all
-
     duration-300
-
-
     placeholder:text-slate-400
-
-
     focus:border-blue-500
-
     focus:ring-4
-
     focus:ring-blue-500/20
-
-
     dark:border-slate-700
-
     dark:bg-slate-900/60
-
     dark:text-white
-
     dark:placeholder:text-slate-500
   `;
 
@@ -126,267 +191,101 @@ export default function ContactForm() {
     <motion.form
       ref={form}
       onSubmit={sendEmail}
-      initial={{
-        opacity: 0,
-        y: 50,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.2,
-      }}
-      transition={{
-        duration: 0.7,
-      }}
       className="
-        group
-
         relative
-
         overflow-hidden
-
-
         rounded-3xl
-
-
         border
-
-
         border-slate-200
-
-
         bg-white/70
-
-
         p-8
-
-
         shadow-xl
-
-
         backdrop-blur-xl
-
-
-        transition-all
-
-
-        duration-300
-
-
-
-        hover:shadow-2xl
-
-
-        hover:shadow-blue-500/20
-
-
-
         dark:border-slate-800
-
-
         dark:bg-slate-900/60
-
-
-
-        md:p-10
       "
     >
-      {/* Hover Glow */}
+      <div className="hidden">
+        <input name="website" autoComplete="off" tabIndex="-1" />
+      </div>
 
-      <div
-        className="
-          absolute
-
-          inset-0
-
-          bg-gradient-to-br
-
-          from-blue-500/5
-
-          via-transparent
-
-          to-cyan-500/10
-
-
-          opacity-0
-
-
-          transition-opacity
-
-
-          duration-500
-
-
-          group-hover:opacity-100
-        "
-      />
-
-      <div className="relative z-10 space-y-6">
-        {/* ==================================================
-            HONEYPOT
-            ================================================== */}
-
-        <div className="hidden" aria-hidden="true">
-          <label htmlFor="website">Website</label>
-
-          <input
-            id="website"
-            name="website"
-            type="text"
-            tabIndex="-1"
-            autoComplete="off"
-          />
-        </div>
-
-        {/* Name */}
-
+      <div className="space-y-6">
         <InputField
           icon={User}
           name="name"
           placeholder="Your name"
           type="text"
-          minLength={2}
-          maxLength={100}
+          maxLength="100"
         />
-
-        {/* Email */}
 
         <InputField
           icon={Mail}
           name="email"
           placeholder="Your email"
           type="email"
-          maxLength={150}
+          maxLength="150"
         />
-
-        {/* Subject */}
 
         <InputField
           icon={FileText}
           name="subject"
           placeholder="Subject"
           type="text"
-          minLength={3}
-          maxLength={150}
+          maxLength="150"
         />
-
-        {/* Message */}
 
         <div className="relative">
           <MessageSquare
             size={20}
             className="
               absolute
-
               left-5
-
               top-5
-
               text-slate-400
             "
           />
 
           <textarea
             name="message"
-            rows="5"
             required
-            minLength={10}
-            maxLength={2000}
+            rows="5"
+            maxLength="2000"
             placeholder="Your message"
             className={`
               ${inputClass}
-
               resize-none
-
               pl-14
             `}
           />
         </div>
 
-        {/* Button */}
-
         <motion.button
           type="submit"
-          whileHover={
-            !loading && !cooldown
-              ? {
-                  y: -3,
-                  scale: 1.02,
-                }
-              : {}
-          }
-          whileTap={
-            !loading && !cooldown
-              ? {
-                  scale: 0.97,
-                }
-              : {}
-          }
           disabled={loading || cooldown}
           className="
             flex
-
             w-full
-
             items-center
-
             justify-center
-
             gap-3
-
-
             rounded-2xl
-
-
             bg-gradient-to-r
-
-
             from-blue-600
-
-
             to-cyan-500
-
-
             px-6
-
-
             py-4
-
-
             font-bold
-
-
             text-white
-
-
-            shadow-lg
-
-
-            shadow-blue-500/30
-
-
-            transition-all
-
-
-            duration-300
-
-
-            disabled:cursor-not-allowed
-
-
             disabled:opacity-70
           "
         >
           {loading ? (
             <>
-              <LoaderCircle size={22} className="animate-spin" />
+              <LoaderCircle className="animate-spin" />
               Sending...
             </>
           ) : cooldown ? (
-            <>Message Sent</>
+            "Message Sent"
           ) : (
             <>
               Send Message
@@ -395,32 +294,17 @@ export default function ContactForm() {
           )}
         </motion.button>
 
-        {/* Status */}
-
         {status && (
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: 10,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
+          <p
             className="
-                text-center
-
-                text-sm
-
-                font-medium
-
-                text-blue-600
-
-                dark:text-cyan-300
-              "
+              text-center
+              text-sm
+              font-medium
+              text-blue-600
+            "
           >
             {status}
-          </motion.p>
+          </p>
         )}
       </div>
     </motion.form>
@@ -436,8 +320,6 @@ function InputField({
 
   type,
 
-  minLength,
-
   maxLength,
 }) {
   return (
@@ -445,70 +327,34 @@ function InputField({
       <Icon
         size={20}
         className="
-          absolute
-
-          left-5
-
-          top-1/2
-
-          -translate-y-1/2
-
-          text-slate-400
-        "
+absolute
+left-5
+top-1/2
+-translate-y-1/2
+text-slate-400
+"
       />
 
       <input
         name={name}
         type={type}
         required
-        minLength={minLength}
         maxLength={maxLength}
         placeholder={placeholder}
         className="
-          w-full
-
-          rounded-2xl
-
-          border
-
-          border-slate-200
-
-          bg-white/70
-
-          px-5
-
-          py-4
-
-          pl-14
-
-          text-slate-900
-
-          outline-none
-
-          transition-all
-
-          duration-300
-
-
-          placeholder:text-slate-400
-
-
-          focus:border-blue-500
-
-          focus:ring-4
-
-          focus:ring-blue-500/20
-
-
-          dark:border-slate-700
-
-          dark:bg-slate-900/60
-
-          dark:text-white
-
-
-          dark:placeholder:text-slate-500
-        "
+w-full
+rounded-2xl
+border
+border-slate-200
+bg-white/70
+px-5
+py-4
+pl-14
+outline-none
+dark:border-slate-700
+dark:bg-slate-900/60
+dark:text-white
+"
       />
     </div>
   );
