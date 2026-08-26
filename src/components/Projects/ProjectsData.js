@@ -471,11 +471,6 @@ export const projects = [
         color:
           "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
       },
-      {
-        name: "Backend Development",
-        color:
-          "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
-      },
     ],
   },
 
