@@ -13,7 +13,6 @@ import {
   FaFileAlt,
   FaPython,
   FaReact,
-  FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaJs,
@@ -40,6 +39,7 @@ import {
   SiGooglegemini,
   SiClaude,
   SiTailwindcss,
+  SiNextdotjs,
 } from "react-icons/si";
 
 import { BsOpenai } from "react-icons/bs";
@@ -161,8 +161,8 @@ export const technicalSkills = [
       },
 
       {
-        name: "Node.js",
-        icon: FaNodeJs,
+        name: "Next.js",
+        icon: SiNextdotjs,
       },
 
       {
