@@ -327,12 +327,12 @@ function InputField({
       <Icon
         size={20}
         className="
-absolute
-left-5
-top-1/2
--translate-y-1/2
-text-slate-400
-"
+        absolute
+        left-5
+        top-1/2
+        -translate-y-1/2
+        text-slate-400
+        "
       />
 
       <input
@@ -342,19 +342,19 @@ text-slate-400
         maxLength={maxLength}
         placeholder={placeholder}
         className="
-w-full
-rounded-2xl
-border
-border-slate-200
-bg-white/70
-px-5
-py-4
-pl-14
-outline-none
-dark:border-slate-700
-dark:bg-slate-900/60
-dark:text-white
-"
+        w-full
+        rounded-2xl
+        border
+        border-slate-200
+        bg-white/70
+        px-5
+        py-4
+        pl-14
+        outline-none
+        dark:border-slate-700
+        dark:bg-slate-900/60
+        dark:text-white
+        "
       />
     </div>
   );
