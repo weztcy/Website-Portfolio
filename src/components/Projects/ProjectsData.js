@@ -448,7 +448,7 @@ export const projects = [
       "An online auction platform featuring user registration, product management, bidding functionality, and secure digital payment integration.",
 
     detailDescription: [
-      "Collaborated with a team to develop the SiLelo online auction website using PHP and Laravel.",
+      "Collaborated with a team to develop the SiLelo online auction website using PHP and CodeIgniter.",
 
       "Responsible for backend development, including user registration, auction bidding, product management, and secure payment system integration through the Midtrans API.",
 
@@ -462,8 +462,9 @@ export const projects = [
           "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
       },
       {
-        name: "Laravel",
-        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+        name: "CodeIgniter",
+        color:
+          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
       },
       {
         name: "Midtrans API",
