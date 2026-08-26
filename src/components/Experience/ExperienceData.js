@@ -30,7 +30,7 @@ const experienceData = [
 
     logo: freelance_copywriter,
 
-    position: "Copywriter",
+    position: "Data Entry & Copywriter",
 
     duration: "July 2025 - March 2026",
 
