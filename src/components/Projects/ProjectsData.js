@@ -434,9 +434,7 @@ export const projects = [
   {
     id: 10,
 
-    images: [
-      sileloAuction
-    ],
+    images: [sileloAuction],
 
     icon: ServerCog,
 
@@ -662,9 +660,7 @@ export const projects = [
   {
     id: 15,
 
-    images: [
-      prajagamerUiUx
-    ],
+    images: [prajagamerUiUx],
 
     icon: Palette,
 
@@ -731,24 +727,19 @@ export const projects = [
 
     technologies: [
       {
-        name: "REST API",
+        name: "JavaScript",
         color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
       },
       {
-        name: "API Integration",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "Backend Development",
+        name: "Express.js",
         color:
           "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
       },
       {
-        name: "Data Management",
+        name: "REST API",
         color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
       },
     ],
   },
