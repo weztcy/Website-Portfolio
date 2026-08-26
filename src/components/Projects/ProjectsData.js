@@ -836,7 +836,7 @@ export const projects = [
           "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
       },
       {
-        name: "Machine Learning",
+        name: "Data Normalization",
         color:
           "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
       },
