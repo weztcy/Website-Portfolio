@@ -19,7 +19,7 @@ const experienceData = [
     responsibilities: [
       "Designed the UI/UX of the PRAJAGAMER website to enhance user experience and improve user interaction.",
       "Developed the PRAJAGAMER website as an internship registration platform, streamlining the registration process and improving registration efficiency by 60%.",
-      "Managed hardware inventory and handled administrative tasks to support daily operations and ensure optimal equipment availability.",
+      "Developed and integrated APIs into the PRAJAGAMER website to support data exchange between systems, enhance platform functionality, and ensure more efficient registration and data management processes.",
     ],
   },
 
