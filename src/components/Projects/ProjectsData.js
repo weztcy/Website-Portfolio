@@ -3,7 +3,9 @@ import {
   Monitor,
   Palette,
   Database,
+  Smartphone,
   ServerCog,
+  FileCodeCorner,
 } from "lucide-react";
 
 // ==============================
@@ -214,7 +216,7 @@ export const projects = [
 
     images: [personalDataManager],
 
-    icon: Monitor,
+    icon: Smartphone,
 
     title: "Personal Data Manager Application",
 
@@ -260,7 +262,7 @@ export const projects = [
 
     images: [wholesaleGroceries],
 
-    icon: Monitor,
+    icon: FileCodeCorner,
 
     title: "Wholesale Groceries Inventory Program",
 
@@ -436,7 +438,7 @@ export const projects = [
 
     images: [sileloAuction],
 
-    icon: ServerCog,
+    icon: Monitor,
 
     title: "Online Auction Website - SiLelo",
 
@@ -526,7 +528,7 @@ export const projects = [
 
     images: [centerOfMassCalculator1, centerOfMassCalculator2],
 
-    icon: Database,
+    icon: BrainCircuit,
 
     title: "Center of Mass and Center of Mass Velocity Calculator Model",
 
