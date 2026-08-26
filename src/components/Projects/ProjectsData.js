@@ -19,13 +19,14 @@ import wholesaleGroceries from "../../assets/projects/wholesale-groceries.png";
 import carWorkshopInventory from "../../assets/projects/car-workshop-inventory.png";
 // import pustakanesia from "../../assets/projects/pustakanesia.png";
 import hotelSentimentAnalysis from "../../assets/projects/hotel-sentiment-analysis.png";
-// import sileloAuction from "../../assets/projects/silelo-auction.png";
+import sileloAuction from "../../assets/projects/silelo-auction.png";
 import kipEligibilityPrediction from "../../assets/projects/kip-eligibility-prediction.png";
 import centerOfMassCalculator1 from "../../assets/projects/center-of-mass-calculator1.png";
 import centerOfMassCalculator2 from "../../assets/projects/center-of-mass-calculator2.png";
-// import disasterDataApi from "../../assets/projects/disaster-data-api.png";
+import disasterDataApi from "../../assets/projects/disaster-data-api.png";
 import sibenWebsite from "../../assets/projects/siben-website.png";
-// import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.png";
+import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.png";
+import prajagamerApi from "../../assets/projects/prajagamer-api.png";
 import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
 // import diabetesClassification from "../../assets/projects/diabetes-classification.png";
 
@@ -341,7 +342,9 @@ export const projects = [
   {
     id: 8,
 
-    images: [/* pustakanesia */],
+    images: [
+      /* pustakanesia */
+    ],
 
     icon: Monitor,
 
@@ -368,8 +371,7 @@ export const projects = [
       },
       {
         name: "Laravel",
-        color:
-          "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
       },
       {
         name: "Web Development",
@@ -409,8 +411,7 @@ export const projects = [
       },
       {
         name: "Streamlit",
-        color:
-          "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
       },
       {
         name: "SVC",
@@ -433,7 +434,9 @@ export const projects = [
   {
     id: 10,
 
-    images: [/* sileloAuction */],
+    images: [
+      sileloAuction
+    ],
 
     icon: ServerCog,
 
@@ -460,8 +463,7 @@ export const projects = [
       },
       {
         name: "Laravel",
-        color:
-          "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
       },
       {
         name: "Midtrans API",
@@ -506,8 +508,7 @@ export const projects = [
       },
       {
         name: "Streamlit",
-        color:
-          "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
       },
       {
         name: "Naive Bayes",
@@ -564,7 +565,7 @@ export const projects = [
   {
     id: 13,
 
-    images: [/* disasterDataApi */],
+    images: [disasterDataApi],
 
     icon: ServerCog,
 
@@ -661,7 +662,9 @@ export const projects = [
   {
     id: 15,
 
-    images: [/* prajagamerUiUx */],
+    images: [
+      prajagamerUiUx
+    ],
 
     icon: Palette,
 
@@ -707,6 +710,52 @@ export const projects = [
   {
     id: 16,
 
+    images: [prajagamerApi],
+
+    icon: ServerCog,
+
+    title: "Prajagamer API",
+
+    date: "September 2024",
+
+    shortDescription:
+      "A REST API developed to support data exchange, registration processes, and participant data management for the Prajagamer internship registration platform.",
+
+    detailDescription: [
+      "Developed and integrated APIs for the Prajagamer website to support efficient data exchange between the frontend application and the data management system.",
+
+      "The API supports internship registration and participant data management, enabling data to be processed, stored, retrieved, and updated more efficiently.",
+
+      "The API integration was designed to improve platform functionality, maintain data consistency, and support a more reliable and efficient internship registration process.",
+    ],
+
+    technologies: [
+      {
+        name: "REST API",
+        color:
+          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+      },
+      {
+        name: "API Integration",
+        color:
+          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+      },
+      {
+        name: "Backend Development",
+        color:
+          "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
+      },
+      {
+        name: "Data Management",
+        color:
+          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+      },
+    ],
+  },
+
+  {
+    id: 17,
+
     images: [prajagamerWebsite],
 
     icon: Monitor,
@@ -751,9 +800,11 @@ export const projects = [
   },
 
   {
-    id: 17,
+    id: 18,
 
-    images: [/* diabetesClassification */],
+    images: [
+      /* diabetesClassification */
+    ],
 
     icon: BrainCircuit,
 
