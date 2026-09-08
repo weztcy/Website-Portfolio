@@ -13,23 +13,48 @@ import {
 // ==============================
 
 import foodRecipeUiUx from "../../assets/projects/food-recipe-ui-ux.png";
+
 import eParkingUiUx from "../../assets/projects/e-parking-ui-ux.png";
+
 import aorusGamingUiUx from "../../assets/projects/aorus-gaming-ui-ux.png";
+
 import aorusGamingShop from "../../assets/projects/aorus-gaming-shop.png";
+
+import rasaNusantara from "../../assets/projects/rasa-nusantara.png";
+
+import calgeo from "../../assets/projects/calgeo.png";
+
 import personalDataManager from "../../assets/projects/personal-data-manager.png";
+
+import numora from "../../assets/projects/numora.png";
+
 import wholesaleGroceries from "../../assets/projects/wholesale-groceries.png";
+
 import carWorkshopInventory from "../../assets/projects/car-workshop-inventory.png";
-// import pustakanesia from "../../assets/projects/pustakanesia.png";
+
+import pustakanesia from "../../assets/projects/pustakanesia.png";
+
 import hotelSentimentAnalysis from "../../assets/projects/hotel-sentiment-analysis.png";
+
 import sileloAuction from "../../assets/projects/silelo-auction.png";
+
 import kipEligibilityPrediction from "../../assets/projects/kip-eligibility-prediction.png";
+
 import centerOfMassCalculator1 from "../../assets/projects/center-of-mass-calculator1.png";
 import centerOfMassCalculator2 from "../../assets/projects/center-of-mass-calculator2.png";
+
 import disasterDataApi from "../../assets/projects/disaster-data-api.png";
+
 import sibenWebsite from "../../assets/projects/siben-website.png";
+
 import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.png";
+
 import prajagamerApi from "../../assets/projects/prajagamer-api.png";
+
 import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
+
+// import poliklinikUdinus from "../../assets/projects/poliklinik-udinus.png";
+
 // import diabetesClassification from "../../assets/projects/diabetes-classification.png";
 
 export const projects = [
@@ -167,496 +192,742 @@ export const projects = [
     ],
   },
 
-  {
-    id: 4,
+{
+  id: 4,
 
-    images: [aorusGamingShop],
+  images: [aorusGamingShop],
 
-    icon: Monitor,
+  icon: Monitor,
 
-    title: "Aorus Gaming Shop Website",
+  title: "AORUS Gaming Showcase Website",
 
-    date: "January 2022",
+  date: "January 2022",
 
-    shortDescription:
-      "A responsive gaming e-commerce website focused on interactive functionality, UI/UX implementation, and consistent brand presentation.",
+  shortDescription:
+    "A responsive gaming product showcase website focused on interactive user experience, product presentation, and maintaining AORUS premium gaming identity.",
 
-    detailDescription: [
-      "Developed the Aorus Gaming Shop website using HTML, JavaScript, and Bootstrap, focusing on implementing the UI/UX design for an intuitive and engaging user experience.",
+  detailDescription: [
+    "Developed the AORUS Gaming Showcase Website using HTML, JavaScript, and Bootstrap to create a responsive platform for presenting gaming products through structured layouts and interactive interfaces.",
 
-      "Responsible for developing interactive features, optimizing responsiveness across various devices, and maintaining design consistency and quality in line with the brand identity.",
-    ],
+    "Implemented responsive design, interactive components, and consistent visual presentation across different screen sizes while adapting the interface to match the AORUS gaming brand identity.",
+  ],
 
-    technologies: [
-      {
-        name: "HTML",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "JavaScript",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Bootstrap",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "Responsive Design",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "HTML",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "Responsive Design",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+  ],
+}
 
-  {
-    id: 5,
+{
+  id: 5,
 
-    images: [personalDataManager],
+  images: [rasaNusantara],
 
-    icon: Smartphone,
+  icon: Smartphone,
 
-    title: "Personal Data Manager Application",
+  title: "Rasa Nusantara - Indonesian Food Recipe Mobile App",
 
-    date: "September 2022",
+  date: "2022",
 
-    shortDescription:
-      "An Android note-taking application for securely managing personal notes using Firebase authentication and Realm local storage.",
+  shortDescription:
+    "An Android recipe application that provides structured information about Indonesian food recipes, allowing users to explore dishes through recipe collections, detailed ingredients, cooking instructions, and an intuitive mobile interface.",
 
-    detailDescription: [
-      "Developed a Personal Data Manager mobile application for Android using Java and Android Studio.",
+  detailDescription: [
+    "Developed an Android Indonesian food recipe application using Java and Android Studio with XML for user interface design, focusing on structured recipe presentation and simple mobile user experience.",
 
-      "This app functions as a note-taking application, allowing users to securely manage and store their personal notes.",
+    "Implemented recipe collection features that allow users to browse food information including images, recipe names, cooking duration, difficulty levels, ingredients, and step-by-step cooking instructions.",
 
-      "Firebase is used for user authentication, while Realm database is utilized to store and manage the notes locally, ensuring that the data is available and efficiently organized.",
-    ],
+    "Designed a clear navigation flow between recipe lists and detailed recipe pages to provide an organized and accessible way for users to discover and read Indonesian food recipes.",
+  ],
 
-    technologies: [
-      {
-        name: "Java",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "Android Studio",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-      {
-        name: "Firebase",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Realm",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "Java",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Android Studio",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Android SDK",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "XML",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+  ],
+}
 
-  {
-    id: 6,
+{
+  id: 6,
 
-    images: [wholesaleGroceries],
+  images: [calgeo],
 
-    icon: FileCodeCorner,
+  icon: Calculator,
 
-    title: "Wholesale Groceries Inventory Program",
+  title: "Calgeo - 2D Geometry Calculator Mobile App",
 
-    date: "October 2022",
+  date: "2022",
 
-    shortDescription:
-      "A Java-based grocery transaction program for calculating product prices, processing payments, generating invoices, and managing sales calculations.",
+  shortDescription:
+    "An Android geometry calculator application designed to simplify 2D shape measurements through automated calculations, structured input handling, and an intuitive mobile interface for users.",
 
-    detailDescription: [
-      "Developed a Java program to manage wholesale transactions in a grocery store.",
+  detailDescription: [
+    "Developed a 2D geometry calculator mobile application using Java and Android Studio with XML for interface design, focusing on implementing mathematical calculation logic within an Android environment.",
 
-      "It calculates product prices, tracks sales, and handles different payment methods including cash or credit.",
+    "Implemented dynamic calculation features that allow users to select geometric shapes, input required dimensions, and automatically generate measurement results based on predefined mathematical formulas.",
 
-      "The program generates invoices, applies taxes, calculates interest for credit payments, and offers gifts based on the purchase amount.",
+    "Designed a simple and structured user interface with input validation and clear navigation to provide an efficient experience for performing various 2D geometry calculations.",
+  ],
 
-      "It provides a detailed report for each transaction.",
-    ],
-
-    technologies: [
-      {
-        name: "Java",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "Transaction System",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-    ],
-  },
-
-  {
-    id: 7,
-
-    images: [carWorkshopInventory],
-
-    icon: Monitor,
-
-    title: "Car Workshop Inventory Application",
-
-    date: "November 2022",
-
-    shortDescription:
-      "A desktop inventory management application for managing spare parts, customer data, distributors, transactions, and workshop reports.",
-
-    detailDescription: [
-      "Developed a desktop Car Workshop Inventory application using Java and NetBeans IDE with MySQL database to streamline inventory management and workshop operations.",
-
-      "Key features include spare parts stock management, managing distributor and customer data, tracking incoming and outgoing transactions, and generating transaction reports.",
-
-      "The user-friendly interface enables technicians and workshop owners to efficiently monitor inventory and optimize daily operations.",
-    ],
-
-    technologies: [
-      {
-        name: "Java",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "NetBeans",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "MySQL",
-        color:
-          "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
-      },
-      {
-        name: "Desktop Application",
-        color:
-          "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "Java",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Android Studio",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Android SDK",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "XML",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+  ],
+}
 
   {
-    id: 8,
+  id: 7,
 
-    images: [
-      /* pustakanesia */
-    ],
+  images: [personalDataManager],
 
-    icon: Monitor,
+  icon: Smartphone,
 
-    title: "Digital Library Website - Pustakanesia",
+  title: "Privena - Personal Data Manager Mobile App",
 
-    date: "March 2023",
+  date: "September 2022",
 
-    shortDescription:
-      "A digital library website providing book search, catalog management, digital borrowing, and user authentication features.",
+  shortDescription:
+    "An Android personal data management application designed to securely manage personal notes through Firebase authentication and local data storage using Realm.",
 
-    detailDescription: [
-      "Collaborated with a team to develop the Pustakanesia digital library website using PHP and Laravel.",
+  detailDescription: [
+    "Developed an Android personal data management application using Java and Android Studio, focusing on secure note management and structured mobile data handling.",
 
-      "Responsible for developing key features such as book search, catalog management, digital borrowing system, and user authentication.",
+    "Implemented user authentication using Firebase Authentication and developed note management features including creating, viewing, updating, and organizing personal notes.",
 
-      "The website is designed to be secure, responsive, and easily accessible, ensuring an optimal user experience.",
-    ],
+    "Integrated Realm Database for local data persistence, allowing users to securely store and manage notes efficiently while maintaining reliable access to personal information on the device.",
+  ],
 
-    technologies: [
-      {
-        name: "PHP",
-        color:
-          "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
-      },
-      {
-        name: "Laravel",
-        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
-      },
-      {
-        name: "Web Development",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "Java",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Android Studio",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Android SDK",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "XML",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Firebase Authentication",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "Realm",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+  ],
+}
 
-  {
-    id: 9,
+{
+  id: 8,
 
-    images: [hotelSentimentAnalysis],
+  images: [numora],
 
-    icon: BrainCircuit,
+  icon: Calculator,
 
-    title: "Hotel Sentiment Analysis Review Website in Jakarta",
+  title: "Numora - Calculator Mobile App",
 
-    date: "May 2023",
+  date: "2024",
 
-    shortDescription:
-      "A machine learning web application for analyzing customer sentiment from hotel reviews in Jakarta using Support Vector Classifier.",
+  shortDescription:
+    "A modern Android calculator application that provides basic and scientific calculation features through a clean interface, responsive layout, and smooth user interaction using modern Android development practices.",
 
-    detailDescription: [
-      "Developed a sentiment analysis website for hotel reviews in Jakarta using Python and Streamlit.",
+  detailDescription: [
+    "Developed a modern calculator mobile application using Kotlin, Android Studio, and Jetpack Compose, focusing on declarative UI development, reusable components, and responsive mobile interface design.",
 
-      "The dataset was collected through web scraping with SerpAPI, and the model was trained using Support Vector Classifier (SVC).",
+    "Implemented basic and scientific calculation features including arithmetic operations, trigonometric functions, square root, power operations, factorial, and mathematical constants with dynamic calculation handling.",
 
-      "This website provides accurate real-time sentiment analysis, helping users easily understand customer perceptions of hotels, with a simple and user-friendly interface.",
-    ],
+    "Applied MVVM architecture and state management using Kotlin StateFlow to create a structured application flow with maintainable code organization and efficient user interaction management.",
 
-    technologies: [
-      {
-        name: "Python",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "Streamlit",
-        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
-      },
-      {
-        name: "SVC",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "SerpAPI",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-      {
-        name: "Web Scraping",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-    ],
-  },
+    "Designed a premium dark-themed interface using Material 3 Design System with interactive calculator buttons, animations, and responsive layouts to provide a smooth user experience across different screen sizes.",
+  ],
 
-  {
-    id: 10,
-
-    images: [sileloAuction],
-
-    icon: Monitor,
-
-    title: "Online Auction Website - SiLelo",
-
-    date: "August 2023",
-
-    shortDescription:
-      "An online auction platform featuring user registration, product management, bidding functionality, and secure digital payment integration.",
-
-    detailDescription: [
-      "Collaborated with a team to develop the SiLelo online auction website using PHP and CodeIgniter.",
-
-      "Responsible for backend development, including user registration, auction bidding, product management, and secure payment system integration through the Midtrans API.",
-
-      "The website is designed to be responsive, user-friendly, and high-performance, ensuring a secure and efficient online auction experience.",
-    ],
-
-    technologies: [
-      {
-        name: "PHP",
-        color:
-          "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
-      },
-      {
-        name: "CodeIgniter",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "Midtrans API",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "Kotlin",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "Android Studio",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Jetpack Compose",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "Material 3",
+      color:
+        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+    },
+    {
+      name: "Android SDK",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "MVVM",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "StateFlow",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+  ],
+}
 
   {
-    id: 11,
+  id: 9,
 
-    images: [kipEligibilityPrediction],
+  images: [wholesaleGroceries],
 
-    icon: BrainCircuit,
+  icon: FileCodeCorner,
 
-    title: "Student Eligibility Prediction Website for KIP",
+  title: "Wholesale Grocery Transaction Management Program",
 
-    date: "January 2024",
+  date: "October 2022",
 
-    shortDescription:
-      "A machine learning web application for predicting student eligibility for the KIP assistance program using the Naive Bayes classification algorithm.",
+  shortDescription:
+    "A Java-based transaction management program designed to record and process wholesale grocery data, including product information, pricing calculations, payment handling, and structured transaction reporting.",
 
-    detailDescription: [
-      "Developed a website to predict student eligibility for the KIP (Kartu Indonesia Pintar) program using Python and Streamlit.",
+  detailDescription: [
+    "Developed a Java-based wholesale grocery transaction management program to organize product data and automate basic transaction processing.",
 
-      "The website uses data from SMP Sepuluh November 02 Semarang and applies the Naive Bayes algorithm for classification.",
+    "Implemented transaction features including invoice recording, product information management, purchase and selling price calculation, and payment method handling for cash and credit transactions.",
 
-      "This platform helps schools quickly and accurately determine which students are eligible for assistance, with a simple and user-friendly interface.",
-    ],
+    "Developed calculation logic for transaction processing, including tax calculation, credit payment interest, and purchase-based gift conditions.",
 
-    technologies: [
-      {
-        name: "Python",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "Streamlit",
-        color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
-      },
-      {
-        name: "Naive Bayes",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "Machine Learning",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-    ],
-  },
+    "Created structured transaction reports to present detailed information from each completed transaction in an organized format.",
+  ],
 
-  {
-    id: 12,
+  technologies: [
+    {
+      name: "Java",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Transaction System",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+}
 
-    images: [centerOfMassCalculator1, centerOfMassCalculator2],
+ {
+  id: 10,
 
-    icon: BrainCircuit,
+  images: [carWorkshopInventory],
 
-    title: "Center of Mass and Center of Mass Velocity Calculator Model",
+  icon: Monitor,
 
-    date: "April 2024",
+  title: "Car Workshop Inventory Desktop App",
 
-    shortDescription:
-      "A Python-based interactive model for calculating and visualizing the center of mass and center of mass velocity in 2D and 3D.",
+  date: "November 2022",
 
-    detailDescription: [
-      "Developed a Python model to calculate the center of mass and center of mass velocity, with 2D and 3D visualization capabilities.",
+  shortDescription:
+    "A desktop-based inventory management application designed to support car workshop operations through spare parts management, customer and distributor data management, transaction processing, and structured reporting.",
 
-      "This model allows users to input multiple objects as needed, making it easier to understand physics concepts interactively and intuitively.",
-    ],
+  detailDescription: [
+    "Developed a desktop-based Car Workshop Inventory application using Java, NetBeans IDE, and MySQL to centralize workshop data management and improve operational efficiency.",
 
-    technologies: [
-      {
-        name: "Python",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "2D Visualization",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-      {
-        name: "3D Visualization",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-    ],
-  },
+    "Implemented inventory management features including spare parts stock monitoring, product data organization, customer and distributor management, and database-driven transaction recording.",
 
-  {
-    id: 13,
+    "Developed incoming and outgoing transaction management with structured reporting features to help workshop owners monitor inventory activity and review operational data.",
 
-    images: [disasterDataApi],
+    "Designed a user-friendly desktop interface using Java Swing with JDBC integration to provide efficient interaction between application features and MySQL database management.",
+  ],
 
-    icon: ServerCog,
-
-    title: "Natural Disaster Data API",
-
-    date: "May 2024",
-
-    shortDescription:
-      "A REST API service providing structured natural disaster data including disaster time, location, causes, and impacts.",
-
-    detailDescription: [
-      "Developed a Natural Disaster Data API using JavaScript and Express.js to provide structured data on various types of disasters, including time, location, causes, and impacts.",
-
-      "This API is deployed on Vercel to ensure availability and scalability, making it easy for developers to access real-time disaster data and integrate it with other applications.",
-    ],
-
-    technologies: [
-      {
-        name: "JavaScript",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Express.js",
-        color:
-          "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
-      },
-      {
-        name: "REST API",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "Vercel",
-        color:
-          "bg-gray-100 text-gray-700 dark:bg-gray-700/40 dark:text-gray-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "Java",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "NetBeans",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "MySQL",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "Java Swing",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "JDBC",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+}
 
   {
-    id: 14,
+  id: 11,
 
-    images: [sibenWebsite],
+  images: [
+    pustakanesia
+  ],
 
-    icon: Monitor,
+  icon: Monitor,
 
-    title: "Natural Disaster Preparedness Website - Siben",
+  title: "Pustakanesia - Digital Library Website",
 
-    date: "June 2024",
+  date: "March 2023",
 
-    shortDescription:
-      "A disaster preparedness information website providing disaster management guidance, disaster data, news, and weather forecasts through multiple API integrations.",
+  shortDescription:
+    "A digital library web application designed to provide structured access to book resources through catalog management, book search, digital borrowing, and user authentication features.",
 
-    detailDescription: [
-      "Developed the Siben website using JavaScript, React.js, and Bootstrap to provide information and knowledge related to natural disasters.",
+  detailDescription: [
+    "Collaborated with a team to develop the Pustakanesia digital library website using PHP, Laravel, and Bootstrap with a focus on building an accessible and responsive library management platform.",
 
-      "The content is divided into four main categories: Disaster Management, Disaster Data, Disaster News, and Weather Forecasts.",
+    "Developed core features including user authentication, book search functionality, catalog management, digital borrowing workflow, and structured library data management.",
 
-      "Disaster data is managed through an API, news is obtained from the Detik.com API, and weather forecasts use the BMKG API.",
+    "Implemented responsive interface design using Bootstrap and integrated backend functionality to provide secure access, organized navigation, and efficient user interaction within the digital library system.",
 
-      "The website aims to provide real-time access to information and effective disaster preparedness guidance.",
-    ],
+    "Integrated MySQL database management to support structured storage and processing of user, book catalog, and borrowing transaction data.",
+  ],
 
-    technologies: [
-      {
-        name: "React",
-        color:
-          "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
-      },
-      {
-        name: "JavaScript",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Bootstrap",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "REST API",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "BMKG API",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "PHP",
+      color:
+        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+    },
+    {
+      name: "Laravel",
+      color:
+        "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "MySQL",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+  ],
+}
+
+ {
+  id: 12,
+
+  images: [hotelSentimentAnalysis],
+
+  icon: BrainCircuit,
+
+  title: "Jakarta Hotel Review Sentiment Analysis Website",
+
+  date: "May 2023",
+
+  shortDescription:
+    "A machine learning web application designed to analyze customer sentiment from Jakarta hotel reviews using text processing, Support Vector Classifier modeling, and an interactive Streamlit interface.",
+
+  detailDescription: [
+    "Developed a hotel review sentiment analysis web application using Python and Streamlit to classify customer opinions based on collected review data.",
+
+    "Collected hotel review datasets through web scraping using SerpAPI, then performed data processing and integrated a Support Vector Classifier model for sentiment prediction.",
+
+    "Implemented a machine learning workflow that processes user review input, applies the trained classification model, and presents sentiment analysis results through an interactive web interface.",
+
+    "Designed a simple and accessible Streamlit application to demonstrate the implementation of machine learning models in analyzing customer feedback and extracting sentiment insights.",
+  ],
+
+  technologies: [
+    {
+      name: "Python",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "Streamlit",
+      color:
+        "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+    },
+    {
+      name: "Scikit-learn",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "SVC",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "Pandas",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "SerpAPI",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+}
+
+ {
+  id: 13,
+
+  images: [sileloAuction],
+
+  icon: Monitor,
+
+  title: "SiLelo - Online Auction Website",
+
+  date: "August 2023",
+
+  shortDescription:
+    "An online auction web application designed to support digital bidding activities through user management, product management, auction transactions, and secure payment integration.",
+
+  detailDescription: [
+    "Collaborated with a team to develop the SiLelo online auction website using PHP, CodeIgniter, and Bootstrap to create a structured platform for managing auction activities.",
+
+    "Developed backend functionality including user authentication, product management, bidding workflows, and auction transaction processing to support the core platform operations.",
+
+    "Integrated Midtrans API for secure payment processing and created a structured transaction flow between completed auctions and digital payments.",
+
+    "Implemented responsive interface design using Bootstrap to provide a consistent and accessible user experience across different devices.",
+  ],
+
+  technologies: [
+    {
+      name: "PHP",
+      color:
+        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+    },
+    {
+      name: "CodeIgniter",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "MySQL",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "Midtrans API",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+}
+
+ {
+  id: 14,
+
+  images: [kipEligibilityPrediction],
+
+  icon: BrainCircuit,
+
+  title: "KIP Student Eligibility Prediction Website",
+
+  date: "January 2024",
+
+  shortDescription:
+    "A machine learning web application designed to predict student eligibility for the KIP assistance program using student data processing, Naive Bayes classification, and an interactive Streamlit interface.",
+
+  detailDescription: [
+    "Developed a student eligibility prediction web application using Python and Streamlit to support classification of KIP assistance program candidates based on student data.",
+
+    "Processed student datasets from SMP Sepuluh November 02 Semarang and implemented data preprocessing and Naive Bayes classification to generate eligibility predictions.",
+
+    "Integrated the trained machine learning model into a Streamlit-based interface that allows users to input student information and receive structured prediction results.",
+
+    "Designed a simple and accessible application workflow to demonstrate the implementation of machine learning classification for educational decision-support systems.",
+  ],
+
+  technologies: [
+    {
+      name: "Python",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "Streamlit",
+      color:
+        "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+    },
+    {
+      name: "Scikit-learn",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Naive Bayes",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "Pandas",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+  ],
+}
 
   {
-    id: 15,
+  id: 15,
+
+  images: [centerOfMassCalculator1, centerOfMassCalculator2],
+
+  icon: BrainCircuit,
+
+  title: "Center of Mass and Velocity Calculator Program",
+
+  date: "April 2024",
+
+  shortDescription:
+    "A Python-based physics computation application designed to calculate and visualize the center of mass and center-of-mass velocity of multiple objects through interactive input and 2D and 3D visualization.",
+
+  detailDescription: [
+    "Developed a Python-based computational model to calculate the center of mass and center-of-mass velocity for systems containing multiple objects with different physical parameters.",
+
+    "Implemented dynamic object input processing that allows users to define object properties including mass, position, and velocity for automated physics calculations.",
+
+    "Integrated numerical computation and visualization features using Python libraries to display object configurations and calculated center points in 2D and 3D environments.",
+
+    "Created an interactive visualization model to improve understanding of physics concepts by presenting calculation results through structured graphical representations.",
+  ],
+
+  technologies: [
+    {
+      name: "Python",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "NumPy",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Matplotlib",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "2D & 3D Visualization",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+  ],
+}
+
+ {
+  id: 16,
+
+  images: [disasterDataApi],
+
+  icon: ServerCog,
+
+  title: "Siben API",
+
+  date: "May 2024",
+
+  shortDescription:
+    "A REST API service developed to provide structured natural disaster information through accessible endpoints, enabling applications to retrieve disaster data including type, location, causes, impacts, and event details.",
+
+  detailDescription: [
+    "Developed Siben API using JavaScript and Node.js to provide structured natural disaster information through accessible API endpoints.",
+
+    "Implemented structured disaster data management including disaster types, event timestamps, locations, causes, and impacts using JSON-based responses.",
+
+    "Designed the API as a reusable data service that allows integration with client applications for dynamic disaster information delivery.",
+
+    "Deployed the API using Vercel to provide accessible and reliable service availability for external application integration.",
+  ],
+
+  technologies: [
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "Node.js",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "JSON",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "REST API",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Vercel",
+      color:
+        "bg-gray-100 text-gray-700 dark:bg-gray-700/40 dark:text-gray-300",
+    },
+  ],
+}
+
+  {
+  id: 17,
+
+  images: [sibenWebsite],
+
+  icon: Monitor,
+
+  title: "Siben - Disaster Preparedness Website",
+
+  date: "June 2024",
+
+  shortDescription:
+    "A disaster preparedness web platform that provides disaster management information, disaster data, news, and weather forecasts through API integrations within a responsive and user-friendly interface.",
+
+  detailDescription: [
+    "Developed Siben disaster preparedness website using JavaScript, React.js, and Bootstrap to provide accessible information and guidance related to natural disasters.",
+
+    "Implemented structured content categories including Disaster Management, Disaster Data, Disaster News, and Weather Forecasts to organize disaster-related information efficiently.",
+
+    "Integrated multiple APIs to deliver dynamic information, including Siben API for disaster data, Detik.com API for disaster news, and BMKG API for weather forecast information.",
+
+    "Designed a responsive component-based interface using React.js and Bootstrap to provide consistent access to disaster information across different devices.",
+  ],
+
+  technologies: [
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "React.js",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "REST API",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Siben API",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Detik.com API",
+      color:
+        "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+    },
+    {
+      name: "BMKG API",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+  ],
+}
+
+  {
+    id: 18,
 
     images: [prajagamerUiUx],
 
@@ -701,95 +972,157 @@ export const projects = [
     ],
   },
 
-  {
-    id: 16,
+ {
+  id: 19,
 
-    images: [prajagamerApi],
+  images: [prajagamerApi],
 
-    icon: ServerCog,
+  icon: ServerCog,
 
-    title: "Prajagamer API",
+  title: "Prajagamer API",
 
-    date: "September 2024",
+  date: "September 2024",
 
-    shortDescription:
-      "A REST API developed to support data exchange, registration processes, and participant data management for the Prajagamer internship registration platform.",
+  shortDescription:
+    "A REST API service developed to support internship registration and participant data management through structured data exchange between frontend applications and backend systems.",
 
-    detailDescription: [
-      "Developed and integrated APIs for the Prajagamer website to support efficient data exchange between the frontend application and the data management system.",
+  detailDescription: [
+    "Developed Prajagamer API using JavaScript and Node.js as a backend service to support data communication between the frontend application and the platform data management system.",
 
-      "The API supports internship registration and participant data management, enabling data to be processed, stored, retrieved, and updated more efficiently.",
+    "Implemented API functionality for internship registration processing, participant data retrieval, and participant information updates through structured endpoints.",
 
-      "The API integration was designed to improve platform functionality, maintain data consistency, and support a more reliable and efficient internship registration process.",
-    ],
+    "Designed consistent API responses and data workflows to improve application reliability, maintain data synchronization, and support efficient registration management.",
 
-    technologies: [
-      {
-        name: "JavaScript",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Express.js",
-        color:
-          "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-300",
-      },
-      {
-        name: "REST API",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-    ],
-  },
+    "Built the API as a scalable backend service to support future platform development and additional data integration requirements.",
+  ],
 
-  {
-    id: 17,
-
-    images: [prajagamerWebsite],
-
-    icon: Monitor,
-
-    title: "Internship Registration Website - Prajagamer",
-
-    date: "September 2024",
-
-    shortDescription:
-      "A web-based internship self-registration system designed to automate registration, participant data management, and internship administration processes.",
-
-    detailDescription: [
-      "Along with the team, developed the Prajagamer website, a self-registration system for internships, using JavaScript with ReactJS and Tailwind CSS.",
-
-      "This website is designed to simplify the internship registration process at the Semarang City Disdukcapil, featuring online registration, participant data management, and API integration for efficient data storage and access.",
-
-      "Prajagamer aims to automate internship administration, reduce data errors, and enhance the efficiency of the registration process.",
-    ],
-
-    technologies: [
-      {
-        name: "React",
-        color:
-          "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
-      },
-      {
-        name: "JavaScript",
-        color:
-          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-      },
-      {
-        name: "Tailwind CSS",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "API Integration",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-    ],
-  },
+  technologies: [
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "Node.js",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "REST API",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+  ],
+}
 
   {
-    id: 18,
+  id: 20,
+
+  images: [prajagamerWebsite],
+
+  icon: Monitor,
+
+  title: "Prajagamer - Internship Registration Website",
+
+  date: "September 2024",
+
+  shortDescription:
+    "A web-based internship registration platform designed to streamline applicant registration, participant data management, and administrative workflows through a responsive interface and integration with Prajagamer API.",
+
+  detailDescription: [
+    "Collaborated with a team to develop Prajagamer, an internship self-registration website using JavaScript, ReactJS, and Tailwind CSS to simplify the internship application process.",
+
+    "Implemented online registration features, participant data management, and integration with Prajagamer API to support efficient data submission, retrieval, and processing within the platform.",
+
+    "Developed a responsive and component-based frontend architecture using ReactJS with Tailwind CSS to provide a structured and user-friendly registration experience.",
+
+    "The platform was designed to reduce manual administration processes, minimize data handling errors, and improve efficiency in internship registration management.",
+  ],
+
+  technologies: [
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "ReactJS",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "Tailwind CSS",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "REST API",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Prajagamer API",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+}
+
+{
+  id: 21,
+
+  images: [/* poliklinikUdinus */],
+
+  icon: Monitor,
+
+  title: "Poliklinik Udinus Website",
+
+  date: "2024",
+
+  shortDescription:
+    "A web-based clinic management system developed to support healthcare workflows through role-based access, patient registration, doctor management, examination processes, medicine management, and centralized clinical data management.",
+
+  detailDescription: [
+    "Developed a web-based Poliklinik Udinus management system using PHP, MySQL, and Bootstrap as part of the BNSP Web Developer certification project.",
+
+    "Implemented role-based functionality for administrators, patients, and doctors, including authentication, data management, registration workflows, and examination processes.",
+
+    "Developed clinic management features such as doctor management, patient management, medicine management, examination scheduling, patient history tracking, and examination cost calculation.",
+
+    "Designed a responsive interface using Bootstrap and a centralized database system using MySQL to maintain structured clinical data and support efficient healthcare operational workflows.",
+  ],
+
+  technologies: [
+    {
+      name: "PHP",
+      color:
+        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+    },
+    {
+      name: "MySQL",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "HTML",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+ ],
+}
+
+  {
+    id: 22,
 
     images: [
       /* diabetesClassification */
@@ -816,31 +1149,55 @@ export const projects = [
     ],
 
     technologies: [
-      {
-        name: "Python",
-        color:
-          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-      },
-      {
-        name: "KNN",
-        color:
-          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-      },
-      {
-        name: "Random Forest",
-        color:
-          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-      },
-      {
-        name: "Data Normalization",
-        color:
-          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-      },
-      {
-        name: "Statistical Testing",
-        color:
-          "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
-      },
-    ],
+  {
+    name: "Python",
+    color:
+      "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
   },
+  {
+    name: "Pandas",
+    color:
+      "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+  },
+  {
+    name: "NumPy",
+    color:
+      "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+  },
+  {
+    name: "Scikit-learn",
+    color:
+      "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+  },
+  {
+    name: "SciPy",
+    color:
+      "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+  },
+  {
+    name: "Matplotlib",
+    color:
+      "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300",
+  },
+  {
+    name: "KNN",
+    color:
+      "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+  },
+  {
+    name: "Random Forest",
+    color:
+      "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+  },
+  {
+    name: "Data Normalization",
+    color:
+      "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+  },
+  {
+    name: "Statistical Testing",
+    color:
+      "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
+  },
+],
 ];
