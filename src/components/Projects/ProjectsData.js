@@ -873,13 +873,13 @@ export const projects = [
     "A disaster preparedness web platform that provides disaster management information, disaster data, news, and weather forecasts through API integrations within a responsive and user-friendly interface.",
 
   detailDescription: [
-    "Developed Siben disaster preparedness website using JavaScript, React.js, and Bootstrap to provide accessible information and guidance related to natural disasters.",
+    "Developed Siben disaster preparedness website using JavaScript, ReactJS, and Bootstrap to provide accessible information and guidance related to natural disasters.",
 
     "Implemented structured content categories including Disaster Management, Disaster Data, Disaster News, and Weather Forecasts to organize disaster-related information efficiently.",
 
     "Integrated multiple APIs to deliver dynamic information, including Siben API for disaster data, Detik.com API for disaster news, and BMKG API for weather forecast information.",
 
-    "Designed a responsive component-based interface using React.js and Bootstrap to provide consistent access to disaster information across different devices.",
+    "Designed a responsive component-based interface using ReactJS and Bootstrap to provide consistent access to disaster information across different devices.",
   ],
 
   technologies: [
@@ -889,7 +889,7 @@ export const projects = [
         "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
     },
     {
-      name: "React.js",
+      name: "ReactJS",
       color:
         "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
     },
