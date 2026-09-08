@@ -228,13 +228,8 @@ export const projects = [
       color:
         "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
     },
-    {
-      name: "Responsive Design",
-      color:
-        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-    },
   ],
-}
+},
 
 {
   id: 5,
@@ -280,14 +275,14 @@ export const projects = [
         "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
     },
   ],
-}
+},
 
 {
   id: 6,
 
   images: [calgeo],
 
-  icon: Calculator,
+  icon: Smartphone,
 
   title: "Calgeo - 2D Geometry Calculator Mobile App",
 
@@ -326,7 +321,7 @@ export const projects = [
         "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
     },
   ],
-}
+},
 
   {
   id: 7,
@@ -382,14 +377,14 @@ export const projects = [
         "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
     },
   ],
-}
+},
 
 {
   id: 8,
 
   images: [numora],
 
-  icon: Calculator,
+  icon: Smartphone,
 
   title: "Numora - Calculator Mobile App",
 
@@ -409,43 +404,43 @@ export const projects = [
   ],
 
   technologies: [
-    {
-      name: "Kotlin",
-      color:
-        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-    },
-    {
-      name: "Android Studio",
-      color:
-        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-    },
-    {
-      name: "Jetpack Compose",
-      color:
-        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
-    },
-    {
-      name: "Material 3",
-      color:
-        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
-    },
-    {
-      name: "Android SDK",
-      color:
-        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-    },
-    {
-      name: "MVVM",
-      color:
-        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-    },
-    {
-      name: "StateFlow",
-      color:
-        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
-    },
-  ],
-}
+  {
+    name: "Kotlin",
+    color:
+      "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+  },
+  {
+    name: "Android Studio",
+    color:
+      "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+  },
+  {
+    name: "Jetpack Compose",
+    color:
+      "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+  },
+  {
+    name: "Material 3",
+    color:
+      "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+  },
+  {
+    name: "Android SDK",
+    color:
+      "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+  },
+  {
+    name: "MVVM",
+    color:
+      "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+  },
+  {
+    name: "StateFlow",
+    color:
+      "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
+  },
+],
+},
 
   {
   id: 9,
@@ -483,7 +478,7 @@ export const projects = [
         "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
     },
   ],
-}
+},
 
  {
   id: 10,
@@ -536,7 +531,7 @@ export const projects = [
         "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
     },
   ],
-}
+},
 
   {
   id: 11,
@@ -591,7 +586,7 @@ export const projects = [
         "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
     },
   ],
-}
+},
 
  {
   id: 12,
@@ -649,7 +644,7 @@ export const projects = [
         "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
     },
   ],
-}
+},
 
  {
   id: 13,
@@ -707,7 +702,7 @@ export const projects = [
         "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
     },
   ],
-}
+},
 
  {
   id: 14,
@@ -760,7 +755,7 @@ export const projects = [
         "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
     },
   ],
-}
+},
 
   {
   id: 15,
@@ -808,7 +803,7 @@ export const projects = [
         "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
     },
   ],
-}
+},
 
  {
   id: 16,
@@ -861,7 +856,7 @@ export const projects = [
         "bg-gray-100 text-gray-700 dark:bg-gray-700/40 dark:text-gray-300",
     },
   ],
-}
+},
 
   {
   id: 17,
@@ -924,7 +919,7 @@ export const projects = [
         "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
     },
   ],
-}
+},
 
   {
     id: 18,
@@ -1013,7 +1008,7 @@ export const projects = [
         "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
     },
   ],
-}
+},
 
   {
   id: 20,
@@ -1066,7 +1061,7 @@ export const projects = [
         "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
     },
   ],
-}
+},
 
 {
   id: 21,
@@ -1119,7 +1114,7 @@ export const projects = [
         "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
     },
  ],
-}
+},
 
   {
     id: 22,
@@ -1131,7 +1126,7 @@ export const projects = [
     icon: BrainCircuit,
 
     title:
-      "Diabetes Classification Model Using KNN with Various Data Normalization Techniques",
+      "Diabetes Classification Using KNN with Data Normalization",
 
     date: "February 2025",
 
@@ -1199,5 +1194,6 @@ export const projects = [
     color:
       "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
   },
-],
+    ],
+  },
 ];
