@@ -20,7 +20,7 @@ const stats = [
 
   {
     icon: FolderGit2,
-    value: 15,
+    value: 20,
     suffix: "+",
     title: "Projects Completed",
     target: "projects",
