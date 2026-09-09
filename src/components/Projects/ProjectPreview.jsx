@@ -58,7 +58,7 @@ export default function ProjectPreview({
 
         relative
 
-        aspect-[16/10]
+        aspect-[16/9]
 
         overflow-hidden
 

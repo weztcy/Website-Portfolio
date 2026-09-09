@@ -53,6 +53,8 @@ import prajagamerApi from "../../assets/projects/prajagamer-api.png";
 
 import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
 
+import bpbdKebumen from "../../assets/projects/bpbd-kebumen.png";
+
 // import poliklinikUdinus from "../../assets/projects/poliklinik-udinus.png";
 
 // import diabetesClassification from "../../assets/projects/diabetes-classification.png";
@@ -157,7 +159,7 @@ export const projects = [
 
     title: "UI/UX Design for Aorus Gaming Shop Application",
 
-    date: "December 2021",
+    date: "November 2021",
 
     shortDescription:
       "A UI/UX design for a gaming e-commerce application featuring product discovery, filtering, product details, and a simplified checkout experience.",
@@ -201,7 +203,7 @@ export const projects = [
 
   title: "AORUS Gaming Showcase Website",
 
-  date: "January 2022",
+  date: "December 2021",
 
   shortDescription:
     "A responsive gaming product showcase website focused on interactive user experience, product presentation, and maintaining AORUS premium gaming identity.",
@@ -240,7 +242,7 @@ export const projects = [
 
   title: "Rasa Nusantara - Indonesian Food Recipe Mobile App",
 
-  date: "2022",
+  date: "February 2022",
 
   shortDescription:
     "An Android recipe application that provides structured information about Indonesian food recipes, allowing users to explore dishes through recipe collections, detailed ingredients, cooking instructions, and an intuitive mobile interface.",
@@ -286,7 +288,7 @@ export const projects = [
 
   title: "Calgeo - 2D Geometry Calculator Mobile App",
 
-  date: "2022",
+  date: "March 2022",
 
   shortDescription:
     "An Android geometry calculator application designed to simplify 2D shape measurements through automated calculations, structured input handling, and an intuitive mobile interface for users.",
@@ -332,7 +334,7 @@ export const projects = [
 
   title: "Privena - Personal Data Manager Mobile App",
 
-  date: "September 2022",
+  date: "June 2022",
 
   shortDescription:
     "An Android personal data management application designed to securely manage personal notes through Firebase authentication and local data storage using Realm.",
@@ -388,7 +390,7 @@ export const projects = [
 
   title: "Numora - Calculator Mobile App",
 
-  date: "2024",
+  date: "July 2022",
 
   shortDescription:
     "A modern Android calculator application that provides basic and scientific calculation features through a clean interface, responsive layout, and smooth user interaction using modern Android development practices.",
@@ -451,7 +453,7 @@ export const projects = [
 
   title: "Wholesale Grocery Transaction Management Program",
 
-  date: "October 2022",
+  date: "August 2023",
 
   shortDescription:
     "A Java-based transaction management program designed to record and process wholesale grocery data, including product information, pricing calculations, payment handling, and structured transaction reporting.",
@@ -489,7 +491,7 @@ export const projects = [
 
   title: "Car Workshop Inventory Desktop App",
 
-  date: "November 2022",
+  date: "September 2023",
 
   shortDescription:
     "A desktop-based inventory management application designed to support car workshop operations through spare parts management, customer and distributor data management, transaction processing, and structured reporting.",
@@ -533,8 +535,70 @@ export const projects = [
   ],
 },
 
-  {
+ {
   id: 11,
+
+  images: [sileloAuction],
+
+  icon: Monitor,
+
+  title: "SiLelo - Online Auction Website",
+
+  date: "May 2023",
+
+  shortDescription:
+    "An online auction web application designed to support digital bidding activities through user management, product management, auction transactions, and secure payment integration.",
+
+  detailDescription: [
+    "Collaborated with a team to develop the SiLelo online auction website using PHP, CodeIgniter, and Bootstrap to create a structured platform for managing auction activities.",
+
+    "Developed backend functionality including user authentication, product management, bidding workflows, and auction transaction processing to support the core platform operations.",
+
+    "Integrated Midtrans API for secure payment processing and created a structured transaction flow between completed auctions and digital payments.",
+
+    "Implemented responsive interface design using Bootstrap to provide a consistent and accessible user experience across different devices.",
+  ],
+
+  technologies: [
+    {
+      name: "PHP",
+      color:
+        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+    },
+    {
+      name: "CodeIgniter",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+    {
+      name: "Bootstrap",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "JavaScript",
+      color:
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+    },
+    {
+      name: "MySQL",
+      color:
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+    },
+    {
+      name: "Midtrans API",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+  ],
+},
+
+  
+
+
+
+{
+  id: 12,
 
   images: [
     pustakanesia
@@ -544,7 +608,7 @@ export const projects = [
 
   title: "Pustakanesia - Digital Library Website",
 
-  date: "March 2023",
+  date: "June 2023",
 
   shortDescription:
     "A digital library web application designed to provide structured access to book resources through catalog management, book search, digital borrowing, and user authentication features.",
@@ -588,8 +652,56 @@ export const projects = [
   ],
 },
 
+{
+  id: 13,
+
+  images: [centerOfMassCalculator1, centerOfMassCalculator2],
+
+  icon: BrainCircuit,
+
+  title: "Center of Mass and Velocity Calculator Program",
+
+  date: "August 2023",
+
+  shortDescription:
+    "A Python-based physics computation application designed to calculate and visualize the center of mass and center-of-mass velocity of multiple objects through interactive input and 2D and 3D visualization.",
+
+  detailDescription: [
+    "Developed a Python-based computational model to calculate the center of mass and center-of-mass velocity for systems containing multiple objects with different physical parameters.",
+
+    "Implemented dynamic object input processing that allows users to define object properties including mass, position, and velocity for automated physics calculations.",
+
+    "Integrated numerical computation and visualization features using Python libraries to display object configurations and calculated center points in 2D and 3D environments.",
+
+    "Created an interactive visualization model to improve understanding of physics concepts by presenting calculation results through structured graphical representations.",
+  ],
+
+  technologies: [
+    {
+      name: "Python",
+      color:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+    },
+    {
+      name: "NumPy",
+      color:
+        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+    },
+    {
+      name: "Matplotlib",
+      color:
+        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+    },
+    {
+      name: "2D & 3D Visualization",
+      color:
+        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+    },
+  ],
+},
+
  {
-  id: 12,
+  id: 14,
 
   images: [hotelSentimentAnalysis],
 
@@ -597,7 +709,7 @@ export const projects = [
 
   title: "Jakarta Hotel Review Sentiment Analysis Website",
 
-  date: "May 2023",
+  date: "September 2023",
 
   shortDescription:
     "A machine learning web application designed to analyze customer sentiment from Jakarta hotel reviews using text processing, Support Vector Classifier modeling, and an interactive Streamlit interface.",
@@ -647,65 +759,7 @@ export const projects = [
 },
 
  {
-  id: 13,
-
-  images: [sileloAuction],
-
-  icon: Monitor,
-
-  title: "SiLelo - Online Auction Website",
-
-  date: "August 2023",
-
-  shortDescription:
-    "An online auction web application designed to support digital bidding activities through user management, product management, auction transactions, and secure payment integration.",
-
-  detailDescription: [
-    "Collaborated with a team to develop the SiLelo online auction website using PHP, CodeIgniter, and Bootstrap to create a structured platform for managing auction activities.",
-
-    "Developed backend functionality including user authentication, product management, bidding workflows, and auction transaction processing to support the core platform operations.",
-
-    "Integrated Midtrans API for secure payment processing and created a structured transaction flow between completed auctions and digital payments.",
-
-    "Implemented responsive interface design using Bootstrap to provide a consistent and accessible user experience across different devices.",
-  ],
-
-  technologies: [
-    {
-      name: "PHP",
-      color:
-        "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
-    },
-    {
-      name: "CodeIgniter",
-      color:
-        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
-    },
-    {
-      name: "Bootstrap",
-      color:
-        "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-    },
-    {
-      name: "JavaScript",
-      color:
-        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
-    },
-    {
-      name: "MySQL",
-      color:
-        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
-    },
-    {
-      name: "Midtrans API",
-      color:
-        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
-    },
-  ],
-},
-
- {
-  id: 14,
+  id: 15,
 
   images: [kipEligibilityPrediction],
 
@@ -713,7 +767,7 @@ export const projects = [
 
   title: "KIP Student Eligibility Prediction Website",
 
-  date: "January 2024",
+  date: "October 2023",
 
   shortDescription:
     "A machine learning web application designed to predict student eligibility for the KIP assistance program using student data processing, Naive Bayes classification, and an interactive Streamlit interface.",
@@ -757,56 +811,53 @@ export const projects = [
   ],
 },
 
-  {
-  id: 15,
+  
 
-  images: [centerOfMassCalculator1, centerOfMassCalculator2],
+{
+  id: 16,
 
-  icon: BrainCircuit,
+  images: [bpbdKebumen],
 
-  title: "Center of Mass and Velocity Calculator Program",
+  icon: Monitor,
+
+  title: "BPBD Kebumen Web Replication",
 
   date: "April 2024",
 
   shortDescription:
-    "A Python-based physics computation application designed to calculate and visualize the center of mass and center-of-mass velocity of multiple objects through interactive input and 2D and 3D visualization.",
+    "A frontend web replication project that recreates the BPBD Kabupaten Kebumen website interface using ReactJS and Bootstrap with a component-based architecture, reusable UI elements, and responsive design implementation.",
 
   detailDescription: [
-    "Developed a Python-based computational model to calculate the center of mass and center-of-mass velocity for systems containing multiple objects with different physical parameters.",
+    "Developed a frontend web replication of the BPBD Kabupaten Kebumen website using ReactJS and JavaScript to recreate the original interface structure and user experience.",
 
-    "Implemented dynamic object input processing that allows users to define object properties including mass, position, and velocity for automated physics calculations.",
+    "Implemented a component-based architecture with reusable UI components and props-based data handling to maintain organized and scalable frontend development.",
 
-    "Integrated numerical computation and visualization features using Python libraries to display object configurations and calculated center points in 2D and 3D environments.",
+    "Applied Bootstrap responsive design principles to ensure consistent layouts, navigation behavior, and interface presentation across different screen sizes.",
 
-    "Created an interactive visualization model to improve understanding of physics concepts by presenting calculation results through structured graphical representations.",
+    "Focused on creating a modular frontend structure that demonstrates modern React development practices through reusable components and structured page composition.",
   ],
 
   technologies: [
     {
-      name: "Python",
+      name: "ReactJS",
       color:
-        "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+        "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
     },
     {
-      name: "NumPy",
+      name: "JavaScript",
       color:
-        "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
     },
     {
-      name: "Matplotlib",
+      name: "Bootstrap",
       color:
         "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
-    },
-    {
-      name: "2D & 3D Visualization",
-      color:
-        "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
     },
   ],
 },
 
  {
-  id: 16,
+  id: 17,
 
   images: [disasterDataApi],
 
@@ -859,7 +910,7 @@ export const projects = [
 },
 
   {
-  id: 17,
+  id: 18,
 
   images: [sibenWebsite],
 
@@ -922,7 +973,7 @@ export const projects = [
 },
 
   {
-    id: 18,
+    id: 19,
 
     images: [prajagamerUiUx],
 
@@ -968,7 +1019,7 @@ export const projects = [
   },
 
  {
-  id: 19,
+  id: 20,
 
   images: [prajagamerApi],
 
@@ -1011,7 +1062,7 @@ export const projects = [
 },
 
   {
-  id: 20,
+  id: 21,
 
   images: [prajagamerWebsite],
 
@@ -1064,7 +1115,7 @@ export const projects = [
 },
 
 {
-  id: 21,
+  id: 22,
 
   images: [/* poliklinikUdinus */],
 
@@ -1072,7 +1123,7 @@ export const projects = [
 
   title: "Poliklinik Udinus Website",
 
-  date: "2024",
+  date: "January 2025",
 
   shortDescription:
     "A web-based clinic management system developed to support healthcare workflows through role-based access, patient registration, doctor management, examination processes, medicine management, and centralized clinical data management.",
@@ -1117,7 +1168,7 @@ export const projects = [
 },
 
   {
-    id: 22,
+    id: 23,
 
     images: [
       /* diabetesClassification */
@@ -1128,7 +1179,7 @@ export const projects = [
     title:
       "Diabetes Classification Using KNN with Data Normalization",
 
-    date: "February 2025",
+    date: "March 2025",
 
     shortDescription:
       "A machine learning classification project using KNN to predict diabetes while comparing multiple data normalization techniques and evaluating their impact on model performance.",
