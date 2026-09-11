@@ -55,7 +55,8 @@ import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
 
 import bpbdKebumen from "../../assets/projects/bpbd-kebumen.png";
 
-// import poliklinikUdinus from "../../assets/projects/poliklinik-udinus.png";
+import poliklinikUdinus1 from "../../assets/projects/poliklinik-udinus1.png";
+import poliklinikUdinus2 from "../../assets/projects/poliklinik-udinus2.png";
 
 // import diabetesClassification from "../../assets/projects/diabetes-classification.png";
 
@@ -1117,7 +1118,7 @@ export const projects = [
 {
   id: 22,
 
-  images: [/* poliklinikUdinus */],
+  images: [poliklinikUdinus1, poliklinikUdinus2],
 
   icon: Monitor,
 
