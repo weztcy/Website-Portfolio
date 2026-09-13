@@ -1,19 +1,26 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
-import {
-  CalendarDays,
-  Award,
-} from "lucide-react";
+import { CalendarDays, Award } from "lucide-react";
 
-function CountUp({
-  end,
-  duration = 1200,
-  trigger = 0,
-}) {
+// ===============================
+// CONFIG DELAY
+// ===============================
+
+const GPA_COUNT_DELAY = 0;
+
+// ===============================
+// COUNT UP
+// ===============================
+
+function CountUp({ end, duration = 1200, trigger = 0 }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (trigger === 0) {
+      return;
+    }
+
     let animationFrame;
     let startTime = null;
 
@@ -24,271 +31,212 @@ function CountUp({
         startTime = timestamp;
       }
 
-      const progress = Math.min(
-        (timestamp - startTime) / duration,
-        1
-      );
+      const progress = Math.min((timestamp - startTime) / duration, 1);
 
-      // smooth easing
-      const ease =
-        1 - Math.pow(1 - progress, 3);
+      const ease = 1 - Math.pow(1 - progress, 3);
 
       setCount(end * ease);
 
       if (progress < 1) {
-        animationFrame =
-          requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       } else {
         setCount(end);
       }
     };
 
-    animationFrame =
-      requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
 
     return () => {
       cancelAnimationFrame(animationFrame);
     };
-  }, [
-    end,
-    duration,
-    trigger,
-  ]);
+  }, [trigger, end, duration]);
 
   return count.toFixed(2);
 }
 
+// ===============================
+// EDUCATION CARD
+// ===============================
+
 export default function EducationCard({ data }) {
-  const [gpaTrigger, setGpaTrigger] =
-    useState(0);
+  const cardRef = useRef(null);
+
+  const isInView = useInView(cardRef, {
+    once: true,
+    amount: 0.2,
+  });
+
+  const gpaStarted = useRef(false);
+
+  const [gpaTrigger, setGpaTrigger] = useState(0);
+
+  // ===============================
+  // FIRST VIEWPORT TRIGGER
+  // ===============================
+
+  const startGPAAnimation = () => {
+    if (!isInView || gpaStarted.current) {
+      return;
+    }
+
+    gpaStarted.current = true;
+
+    setTimeout(() => {
+      setGpaTrigger(Date.now());
+    }, GPA_COUNT_DELAY);
+  };
+
+  // ===============================
+  // HOVER TRIGGER
+  // ===============================
 
   const replayGPA = () => {
-    setGpaTrigger(
-      (prev) => prev + 1
-    );
+    setGpaTrigger(Date.now());
   };
 
   return (
     <motion.div
-      onMouseEnter={replayGPA}
-
+      ref={cardRef}
       initial={{
         opacity: 0,
         y: 50,
       }}
-
       whileInView={{
         opacity: 1,
         y: 0,
       }}
-
       viewport={{
         once: true,
         amount: 0.2,
       }}
-
       transition={{
         duration: 0.7,
       }}
-
+      onAnimationComplete={startGPAAnimation}
+      onMouseEnter={replayGPA}
       whileHover={{
         y: -8,
       }}
-
       className="
         group
         relative
         overflow-hidden
+
         rounded-3xl
+
         border
         border-slate-200
+
         bg-white/90
+
         p-8
+
         shadow-lg
+
         backdrop-blur-xl
+
         transition-all
+
         duration-300
 
+
         hover:border-blue-500/40
+
         hover:shadow-2xl
+
         hover:shadow-blue-500/20
 
+
         dark:border-slate-800
+
         dark:bg-slate-900/80
       "
     >
-
-      {/* Hover Glow */}
+      {/* Glow */}
 
       <div
         className="
           pointer-events-none
+
           absolute
+
           inset-0
+
           opacity-0
+
           transition-opacity
+
           duration-500
+
 
           group-hover:opacity-100
 
+
           bg-gradient-to-br
+
           from-blue-400/10
+
           via-transparent
+
           to-violet-400/10
 
+
           dark:from-blue-500/10
+
           dark:to-violet-500/10
         "
       />
 
-      {/* Header */}
+      {/* HEADER */}
 
       <div
         className="
           relative
+
           z-10
 
           flex
+
           flex-col
+
           gap-8
 
+
           lg:flex-row
+
           lg:items-start
+
           lg:justify-between
         "
       >
-
-        {/* University Information */}
+        {/* UNIVERSITY */}
 
         <div>
-
-          {/* MOBILE */}
-
           <div
             className="
-              lg:hidden
-            "
-          >
+              flex
 
-            {/* Row 1: Logo + Institution */}
-
-            <div
-              className="
-                flex
-                items-center
-                gap-5
-              "
-            >
-
-              {/* Logo */}
-
-              <motion.div
-                whileHover={{
-                  scale: 1.1,
-                  rotate: 5,
-                }}
-
-                className="
-                  flex
-                  h-20
-                  w-20
-                  shrink-0
-
-                  items-center
-                  justify-center
-
-                  overflow-hidden
-
-                  rounded-full
-
-                  border
-                  border-slate-200
-
-                  bg-slate-100
-
-                  shadow-md
-
-                  dark:border-slate-700
-                  dark:bg-slate-800
-                "
-              >
-                <img
-                  src={data.logo}
-                  alt={data.institution}
-
-                  className="
-                    h-full
-                    w-full
-                    object-cover
-                  "
-                />
-              </motion.div>
-
-              {/* Institution */}
-
-              <h3
-                className="
-                  text-2xl
-                  font-bold
-
-                  text-slate-900
-
-                  dark:text-white
-
-                  md:text-2xl
-                "
-              >
-                {data.institution}
-              </h3>
-
-            </div>
-
-            {/* Row 2: Major */}
-
-            <p
-              className="
-                mt-4
-
-                text-lg
-
-                font-bold
-
-                text-blue-500
-              "
-            >
-              {data.major}
-            </p>
-
-          </div>
-
-
-          {/* DESKTOP */}
-
-          <div
-            className="
-              hidden
               items-center
-              gap-5
 
-              lg:flex
+              gap-5
             "
           >
-
-            {/* Logo */}
-
             <motion.div
               whileHover={{
                 scale: 1.1,
                 rotate: 5,
               }}
-
               className="
                 flex
+
                 h-20
+
                 w-20
+
                 shrink-0
 
                 items-center
+
                 justify-center
 
                 overflow-hidden
@@ -296,42 +244,35 @@ export default function EducationCard({ data }) {
                 rounded-full
 
                 border
-                border-slate-200
 
                 bg-slate-100
 
                 shadow-md
-
-                dark:border-slate-700
-                dark:bg-slate-800
               "
             >
               <img
                 src={data.logo}
                 alt={data.institution}
-
                 className="
                   h-full
+
                   w-full
+
                   object-cover
                 "
               />
             </motion.div>
 
-            {/* Name */}
-
             <div>
-
               <h3
                 className="
-                  text-xl
+                  text-2xl
+
                   font-bold
 
                   text-slate-900
 
                   dark:text-white
-
-                  md:text-2xl
                 "
               >
                 {data.institution}
@@ -350,11 +291,8 @@ export default function EducationCard({ data }) {
               >
                 {data.major}
               </p>
-
             </div>
-
           </div>
-
         </div>
 
         {/* GPA */}
@@ -363,7 +301,6 @@ export default function EducationCard({ data }) {
           whileHover={{
             scale: 1.08,
           }}
-
           className="
             flex
 
@@ -386,17 +323,11 @@ export default function EducationCard({ data }) {
             text-white
 
             shadow-lg
-
-            shadow-blue-500/30
           "
         >
-
-          <Award
-            size={32}
-          />
+          <Award size={32} />
 
           <div>
-
             <p
               className="
                 text-xs
@@ -420,24 +351,13 @@ export default function EducationCard({ data }) {
                 leading-none
               "
             >
-              <CountUp
-                end={
-                  Number(data.gpa)
-                }
-
-                trigger={
-                  gpaTrigger
-                }
-              />
+              <CountUp end={Number(data.gpa)} trigger={gpaTrigger} />
             </p>
-
           </div>
-
         </motion.div>
-
       </div>
 
-      {/* Period */}
+      {/* PERIOD */}
 
       <div
         className="
@@ -462,7 +382,6 @@ export default function EducationCard({ data }) {
       >
         <CalendarDays
           size={18}
-
           className="
             text-blue-500
           "
@@ -471,7 +390,7 @@ export default function EducationCard({ data }) {
         {data.period}
       </div>
 
-      {/* Activities */}
+      {/* ACTIVITIES */}
 
       <ul
         className="
@@ -484,34 +403,24 @@ export default function EducationCard({ data }) {
           space-y-3
         "
       >
-        {
-          data.activities.map(
-            (
-              activity,
-              index
-            ) => (
-              <motion.li
-                key={index}
-
-                initial={{
-                  opacity: 0,
-                  x: -15,
-                }}
-
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-
-                viewport={{
-                  once: true,
-                }}
-
-                transition={{
-                  delay: index * 0.1,
-                }}
-
-                className="
+        {data.activities.map((activity, index) => (
+          <motion.li
+            key={index}
+            initial={{
+              opacity: 0,
+              x: -15,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              delay: index * 0.1,
+            }}
+            className="
                   flex
 
                   gap-3
@@ -520,10 +429,9 @@ export default function EducationCard({ data }) {
 
                   dark:text-slate-300
                 "
-              >
-
-                <span
-                  className="
+          >
+            <span
+              className="
                     mt-2
 
                     h-2
@@ -536,18 +444,12 @@ export default function EducationCard({ data }) {
 
                     bg-blue-500
                   "
-                />
+            />
 
-                <span>
-                  {activity}
-                </span>
-
-              </motion.li>
-            )
-          )
-        }
+            <span>{activity}</span>
+          </motion.li>
+        ))}
       </ul>
-
     </motion.div>
   );
 }

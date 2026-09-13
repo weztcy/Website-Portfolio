@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   BriefcaseBusiness,
@@ -7,6 +7,7 @@ import {
   FileBadge2,
   GraduationCap,
 } from "lucide-react";
+
 
 const stats = [
   {
@@ -46,115 +47,349 @@ const stats = [
   },
 ];
 
-function CountUp({ end, duration = 1200, decimals = 0, trigger = 0 }) {
+
+
+// =============================
+// COUNT UP COMPONENT
+// =============================
+
+function CountUp({
+  end,
+  duration = 1200,
+  decimals = 0,
+  trigger,
+}) {
+
   const [count, setCount] = useState(0);
 
+
   useEffect(() => {
-    let animationFrame;
-    let startTime = null;
 
-    setCount(0);
 
-    const animate = (timestamp) => {
-      if (!startTime) {
-        startTime = timestamp;
-      }
-
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-
-      setCount(end * easedProgress);
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(animationFrame);
-    };
-  }, [end, duration, trigger]);
-
-  return decimals > 0 ? count.toFixed(decimals) : Math.floor(count);
-}
-
-function StatCard({ item, index }) {
-  const [countTrigger, setCountTrigger] = useState(0);
-
-  const Icon = item.icon;
-
-  const handleMouseEnter = () => {
-    setCountTrigger((prev) => prev + 1);
-  };
-
-  const handleClick = () => {
-    const targetSection = document.getElementById(item.target);
-
-    if (!targetSection) {
+    if (trigger === 0) {
       return;
     }
 
-    const navbarOffset = 90;
 
-    const targetPosition =
-      targetSection.getBoundingClientRect().top + window.scrollY - navbarOffset;
+    let frame;
+    let startTime = null;
 
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth",
-    });
+
+    setCount(0);
+
+
+
+    const animate = (time) => {
+
+
+      if (!startTime) {
+        startTime = time;
+      }
+
+
+
+      const progress = Math.min(
+        (time - startTime) / duration,
+        1
+      );
+
+
+
+      const ease =
+        1 - Math.pow(1 - progress, 3);
+
+
+
+      setCount(
+        end * ease
+      );
+
+
+
+      if (progress < 1) {
+
+
+        frame =
+          requestAnimationFrame(
+            animate
+          );
+
+
+      } else {
+
+
+        setCount(end);
+
+
+      }
+
+
+    };
+
+
+
+    frame =
+      requestAnimationFrame(
+        animate
+      );
+
+
+
+    return () => {
+
+      cancelAnimationFrame(frame);
+
+    };
+
+
+  }, [
+    trigger,
+    end,
+    duration
+  ]);
+
+
+
+
+  return decimals > 0
+    ? count.toFixed(decimals)
+    : Math.floor(count);
+
+}
+
+
+
+
+
+
+
+// =============================
+// STAT CARD
+// =============================
+
+function StatCard({
+  item,
+  index,
+}) {
+
+
+  const cardRef = useRef(null);
+
+
+  const countStarted = useRef(false);
+
+
+
+  const [countTrigger, setCountTrigger] =
+    useState(0);
+
+
+
+  const isInView = useInView(
+    cardRef,
+    {
+      once:true,
+      amount:0.3,
+    }
+  );
+
+
+
+  // trigger setelah card selesai muncul
+
+  const handleCardAnimationComplete = () => {
+
+
+    if (
+      !isInView ||
+      countStarted.current
+    ) {
+      return;
+    }
+
+
+
+    countStarted.current = true;
+
+
+
+    setTimeout(() => {
+
+
+      setCountTrigger(
+        Date.now()
+      );
+
+
+    },0);
+
+
   };
 
+
+
+
+
+  // trigger ketika hover
+
+  const handleMouseEnter = () => {
+
+
+    setCountTrigger(
+      Date.now()
+    );
+
+
+  };
+
+
+
+
+
+  const Icon = item.icon;
+
+
+
+
+
+  const handleClick = () => {
+
+
+    const target =
+      document.getElementById(
+        item.target
+      );
+
+
+    if (!target) {
+      return;
+    }
+
+
+
+    const navbarOffset = 90;
+
+
+
+    const position =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      navbarOffset;
+
+
+
+    window.scrollTo({
+
+      top: position,
+
+      behavior:"smooth",
+
+    });
+
+
+  };
+
+
+
+
+
+
   return (
+
+
     <motion.div
+
+
+      ref={cardRef}
+
+
+
       initial={{
-        opacity: 0,
-        y: 40,
+        opacity:0,
+        y:40,
       }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.25,
-      }}
-      transition={{
-        delay: index * 0.15,
-        duration: 0.6,
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
-      }}
-      onMouseEnter={handleMouseEnter}
-      onClick={handleClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          handleClick();
+
+
+
+      animate={
+        isInView
+        ?
+        {
+          opacity:1,
+          y:0,
         }
+        :
+        {}
+      }
+
+
+
+      transition={{
+        delay:index * 0.15,
+        duration:0.6,
       }}
+
+
+
+      onAnimationComplete={
+        handleCardAnimationComplete
+      }
+
+
+
+      whileHover={{
+        y:-8,
+        scale:1.02,
+      }}
+
+
+
+      onMouseEnter={
+        handleMouseEnter
+      }
+
+
+
+      onClick={
+        handleClick
+      }
+
+
+
+      role="button"
+
+      tabIndex={0}
+
+
+
+      onKeyDown={(e)=>{
+
+
+        if(
+          e.key === "Enter" ||
+          e.key === " "
+        ){
+
+          e.preventDefault();
+
+          handleClick();
+
+        }
+
+
+      }}
+
+
+
       className="
         group
-
         relative
-
         cursor-pointer
-
         overflow-hidden
 
         rounded-3xl
 
         border
-
         border-slate-200
 
         bg-white/70
@@ -169,34 +404,39 @@ function StatCard({ item, index }) {
 
         duration-300
 
+
         hover:border-blue-500/40
 
         hover:shadow-2xl
 
         hover:shadow-blue-500/20
 
-        focus:outline-none
-
-        focus:ring-2
-
-        focus:ring-blue-500/50
 
         sm:p-8
+
 
         dark:border-slate-800
 
         dark:bg-slate-900/60
       "
+
     >
+
+
+
+
+
       {/* Glow */}
 
       <div
+
         className="
           pointer-events-none
 
           absolute
 
           inset-0
+
 
           bg-gradient-to-br
 
@@ -206,22 +446,30 @@ function StatCard({ item, index }) {
 
           to-cyan-500/10
 
+
           opacity-0
+
 
           transition-opacity
 
+
           duration-500
+
 
           group-hover:opacity-100
         "
+
       />
 
-      {/* Content */}
+
+
+
+
 
       <div
+
         className="
           relative
-
           z-10
 
           flex
@@ -230,20 +478,32 @@ function StatCard({ item, index }) {
 
           gap-5
 
+
           sm:flex-col
 
           sm:items-start
 
           sm:gap-0
         "
+
       >
-        {/* Icon */}
+
+
+
+
+
+        {/* ICON */}
 
         <motion.div
+
+
           whileHover={{
-            scale: 1.08,
-            rotate: 4,
+            scale:1.08,
+            rotate:4,
           }}
+
+
+
           className={`
             flex
 
@@ -257,15 +517,20 @@ function StatCard({ item, index }) {
 
             justify-center
 
+
             rounded-2xl
+
 
             bg-gradient-to-r
 
             ${item.color}
 
+
             text-white
 
+
             shadow-lg
+
 
             sm:mb-6
 
@@ -273,34 +538,40 @@ function StatCard({ item, index }) {
 
             sm:w-16
           `}
+
+
         >
+
+
           <Icon
             className="
-              h-[28px]
-
-              w-[28px]
-
-              sm:h-[30px]
-
-              sm:w-[30px]
+              h-7
+              w-7
             "
           />
+
+
         </motion.div>
 
-        {/* Number + Title */}
+
+
+
+
+
+
+        {/* CONTENT */}
 
         <div
           className="
-            min-w-0
-
             flex-1
 
             sm:w-full
           "
         >
-          {/* Number */}
+
 
           <h3
+
             className="
               text-3xl
 
@@ -308,53 +579,114 @@ function StatCard({ item, index }) {
 
               leading-none
 
+
               text-slate-900
+
 
               sm:text-4xl
 
+
               dark:text-white
             "
+
           >
+
+
             <CountUp
-              end={item.value}
-              duration={1200}
-              decimals={item.title === "GPA" ? 2 : 0}
-              trigger={countTrigger}
+
+              end={
+                item.value
+              }
+
+
+              duration={
+                1200
+              }
+
+
+              decimals={
+                item.title === "GPA"
+                ? 2
+                : 0
+              }
+
+
+              trigger={
+                countTrigger
+              }
+
             />
 
-            {item.suffix}
+
+            {
+              item.suffix
+            }
+
+
           </h3>
 
-          {/* Title */}
+
+
+
 
           <p
+
             className="
-              mt-1.5
+              mt-2
 
               text-sm
 
               font-medium
 
+
               text-slate-500
 
-              sm:mt-3
-
-              sm:text-base
 
               dark:text-slate-400
             "
+
           >
-            {item.title}
+
+            {
+              item.title
+            }
+
           </p>
+
+
         </div>
+
+
+
       </div>
+
+
+
+
     </motion.div>
+
+
   );
+
 }
 
-export default function AboutStats() {
+
+
+
+
+
+
+// =============================
+// MAIN COMPONENT
+// =============================
+
+export default function AboutStats(){
+
+
   return (
+
     <div
+
       className="
         mt-12
 
@@ -364,18 +696,51 @@ export default function AboutStats() {
 
         gap-4
 
+
         sm:mt-20
 
         sm:grid-cols-2
 
         sm:gap-6
 
+
         xl:grid-cols-4
       "
+
     >
-      {stats.map((item, index) => (
-        <StatCard key={item.title} item={item} index={index} />
-      ))}
+
+      {
+        stats.map(
+          (
+            item,
+            index
+          ) => (
+
+            <StatCard
+
+              key={
+                item.title
+              }
+
+
+              item={
+                item
+              }
+
+
+              index={
+                index
+              }
+
+            />
+
+          )
+        )
+      }
+
+
     </div>
+
   );
+
 }
