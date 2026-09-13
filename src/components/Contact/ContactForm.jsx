@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+
 import emailjs from "@emailjs/browser";
 
 import {
@@ -31,11 +32,17 @@ function validateEmail(email) {
 function containsAttackPattern(value = "") {
   const patterns = [
     /<script/i,
+
     /javascript:/i,
+
     /onerror=/i,
+
     /onclick=/i,
+
     /alert\(/i,
+
     /document\./i,
+
     /window\./i,
   ];
 
@@ -70,14 +77,15 @@ export default function ContactForm() {
 
     const rawData = {
       name: formElement.name.value,
+
       email: formElement.email.value,
+
       subject: formElement.subject.value,
+
       message: formElement.message.value,
     };
 
-    // ==============================
     // HONEYPOT
-    // ==============================
 
     const honeypot = formElement.website.value;
 
@@ -86,10 +94,6 @@ export default function ContactForm() {
 
       return;
     }
-
-    // ==============================
-    // SANITIZE
-    // ==============================
 
     const cleanData = {
       name: sanitizeInput(rawData.name),
@@ -100,10 +104,6 @@ export default function ContactForm() {
 
       message: sanitizeInput(rawData.message),
     };
-
-    // ==============================
-    // VALIDATION
-    // ==============================
 
     if (containsAttackPattern(JSON.stringify(rawData))) {
       setStatus("Invalid message detected.");
@@ -150,7 +150,6 @@ export default function ContactForm() {
 
       formElement.reset();
 
-      // RATE LIMIT
       setCooldown(true);
 
       setTimeout(() => {
@@ -166,43 +165,95 @@ export default function ContactForm() {
   };
 
   const inputClass = `
+
     w-full
+
     rounded-2xl
+
     border
+
     border-slate-200
+
     bg-white/70
+
     px-5
+
     py-4
+
     text-slate-900
+
     outline-none
+
     transition-all
+
     duration-300
+
     placeholder:text-slate-400
+
     focus:border-blue-500
+
     focus:ring-4
+
     focus:ring-blue-500/20
+
     dark:border-slate-700
+
     dark:bg-slate-900/60
+
     dark:text-white
+
     dark:placeholder:text-slate-500
+
   `;
 
   return (
     <motion.form
       ref={form}
       onSubmit={sendEmail}
+      initial={{
+        opacity: 0,
+
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.7,
+
+        ease: "easeOut",
+      }}
       className="
+
         relative
+
         overflow-hidden
+
         rounded-3xl
+
         border
+
         border-slate-200
+
         bg-white/70
+
         p-8
+
         shadow-xl
+
         backdrop-blur-xl
+
         dark:border-slate-800
+
         dark:bg-slate-900/60
+
       "
     >
       <div className="hidden">
@@ -238,10 +289,15 @@ export default function ContactForm() {
           <MessageSquare
             size={20}
             className="
+
               absolute
+
               left-5
+
               top-5
+
               text-slate-400
+
             "
           />
 
@@ -252,9 +308,13 @@ export default function ContactForm() {
             maxLength="2000"
             placeholder="Your message"
             className={`
+
               ${inputClass}
+
               resize-none
+
               pl-14
+
             `}
           />
         </div>
@@ -262,26 +322,55 @@ export default function ContactForm() {
         <motion.button
           type="submit"
           disabled={loading || cooldown}
+          whileHover={{
+            scale: 1.02,
+          }}
+          whileTap={{
+            scale: 0.97,
+          }}
           className="
+
             flex
+
             w-full
+
             items-center
+
             justify-center
+
             gap-3
+
             rounded-2xl
+
             bg-gradient-to-r
+
             from-blue-600
+
             to-cyan-500
+
             px-6
+
             py-4
+
             font-bold
+
             text-white
+
+            shadow-lg
+
+            shadow-blue-500/30
+
             disabled:opacity-70
+
           "
         >
           {loading ? (
             <>
-              <LoaderCircle className="animate-spin" />
+              <LoaderCircle
+                className="
+                  animate-spin
+                "
+              />
               Sending...
             </>
           ) : cooldown ? (
@@ -294,18 +383,38 @@ export default function ContactForm() {
           )}
         </motion.button>
 
-        {status && (
-          <p
-            className="
-              text-center
-              text-sm
-              font-medium
-              text-blue-600
-            "
-          >
-            {status}
-          </p>
-        )}
+        <AnimatePresence>
+          {status && (
+            <motion.p
+              initial={{
+                opacity: 0,
+
+                y: -10,
+              }}
+              animate={{
+                opacity: 1,
+
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              className="
+
+                  text-center
+
+                  text-sm
+
+                  font-medium
+
+                  text-blue-600
+
+                "
+            >
+              {status}
+            </motion.p>
+          )}
+        </AnimatePresence>
       </div>
     </motion.form>
   );
@@ -327,11 +436,17 @@ function InputField({
       <Icon
         size={20}
         className="
-        absolute
-        left-5
-        top-1/2
-        -translate-y-1/2
-        text-slate-400
+
+          absolute
+
+          left-5
+
+          top-1/2
+
+          -translate-y-1/2
+
+          text-slate-400
+
         "
       />
 
@@ -342,18 +457,41 @@ function InputField({
         maxLength={maxLength}
         placeholder={placeholder}
         className="
-        w-full
-        rounded-2xl
-        border
-        border-slate-200
-        bg-white/70
-        px-5
-        py-4
-        pl-14
-        outline-none
-        dark:border-slate-700
-        dark:bg-slate-900/60
-        dark:text-white
+
+          w-full
+
+          rounded-2xl
+
+          border
+
+          border-slate-200
+
+          bg-white/70
+
+          px-5
+
+          py-4
+
+          pl-14
+
+          outline-none
+
+          transition-all
+
+          duration-300
+
+          focus:border-blue-500
+
+          focus:ring-4
+
+          focus:ring-blue-500/20
+
+          dark:border-slate-700
+
+          dark:bg-slate-900/60
+
+          dark:text-white
+
         "
       />
     </div>
