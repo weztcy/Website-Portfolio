@@ -13,6 +13,7 @@ import {
   FaFileAlt,
   FaPython,
   FaReact,
+  FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaJs,
@@ -163,6 +164,11 @@ export const technicalSkills = [
       {
         name: "Next.js",
         icon: SiNextdotjs,
+      },
+
+      {
+        name: "Node.js",
+        icon: FaNodeJs,
       },
 
       {
