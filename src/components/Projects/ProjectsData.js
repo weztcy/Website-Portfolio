@@ -58,7 +58,8 @@ import bpbdKebumen from "../../assets/projects/bpbd-kebumen.png";
 import poliklinikUdinus1 from "../../assets/projects/poliklinik-udinus1.png";
 import poliklinikUdinus2 from "../../assets/projects/poliklinik-udinus2.png";
 
-// import diabetesClassification from "../../assets/projects/diabetes-classification.png";
+import diabetesClassification1 from "../../assets/projects/diabetes-classification1.png";
+import diabetesClassification2 from "../../assets/projects/diabetes-classification2.png";
 
 export const projects = [
   {
@@ -1172,7 +1173,8 @@ export const projects = [
     id: 23,
 
     images: [
-      /* diabetesClassification */
+      diabetesClassification1,
+      diabetesClassification2,
     ],
 
     icon: BrainCircuit,
