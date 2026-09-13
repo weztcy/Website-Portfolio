@@ -32,7 +32,7 @@ export default function CertificatePreview({
       className="
         group
         relative
-        aspect-[16/10]
+        aspect-[16/9]
         overflow-hidden
         rounded-2xl
         bg-slate-100
