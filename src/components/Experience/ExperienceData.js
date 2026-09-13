@@ -32,7 +32,7 @@ const experienceData = [
 
     position: "Data Entry & Copywriter",
 
-    duration: "July 2025 - March 2026",
+    duration: "January 2026 - Present",
 
     location: "Semarang, Indonesia",
 
@@ -47,28 +47,28 @@ const experienceData = [
     ],
   },
 
-  {
-    id: 3,
+  // {
+  //   id: 3,
 
-    company: "PT Bank Mandiri (Persero) Tbk.",
+  //   company: "PT Bank Mandiri (Persero) Tbk.",
 
-    logo: bank_mandiri,
+  //   logo: bank_mandiri,
 
-    position: "Bank Teller",
+  //   position: "Bank Teller",
 
-    duration: "March 2026 - August 2026",
+  //   duration: "March 2026 - August 2026",
 
-    location: "Tangerang Selatan, Indonesia",
+  //   location: "Tangerang Selatan, Indonesia",
 
-    responsibilities: [
-      // "Processed cash deposits, withdrawals, transfers, bill payments, and other banking transactions accurately, efficiently, and in accordance with bank procedures.",
-      // "Assisted customers by answering inquiries, providing information about Bank Mandiri's products and services, and ensuring a positive customer experience.",
-      // "Verified daily transactions, maintained cash security, and prepared financial activity reports in compliance with audit standards and bank policies.",
-      "Served ±50–150 customers per day for cash deposits, withdrawals, transfers, payments, and other banking services, maintaining a 99% transaction accuracy rate in accordance with Bank Mandiri procedures.",
-      "Processed ±100–250 daily transactions while ensuring service efficiency, transaction security, and consistency between system records and supporting documents.",
-      "Responsible for transaction verification, reconciliation, and routine financial reporting, maintaining report accuracy, ensuring transaction data consistency, and supporting smooth audit processes.",
-    ],
-  },
+  //   responsibilities: [
+  //     // "Processed cash deposits, withdrawals, transfers, bill payments, and other banking transactions accurately, efficiently, and in accordance with bank procedures.",
+  //     // "Assisted customers by answering inquiries, providing information about Bank Mandiri's products and services, and ensuring a positive customer experience.",
+  //     // "Verified daily transactions, maintained cash security, and prepared financial activity reports in compliance with audit standards and bank policies.",
+  //     "Served ±50–150 customers per day for cash deposits, withdrawals, transfers, payments, and other banking services, maintaining a 99% transaction accuracy rate in accordance with Bank Mandiri procedures.",
+  //     "Processed ±100–250 daily transactions while ensuring service efficiency, transaction security, and consistency between system records and supporting documents.",
+  //     "Responsible for transaction verification, reconciliation, and routine financial reporting, maintaining report accuracy, ensuring transaction data consistency, and supporting smooth audit processes.",
+  //   ],
+  // },
 ];
 
 export default experienceData;
