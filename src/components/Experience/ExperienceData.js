@@ -32,7 +32,7 @@ const experienceData = [
 
     position: "Data Entry & Copywriter",
 
-    duration: "January 2026 - Present",
+    duration: "July 2025 - Present",
 
     location: "Semarang, Indonesia",
 
