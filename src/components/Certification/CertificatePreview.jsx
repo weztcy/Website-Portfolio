@@ -200,7 +200,7 @@ export default function CertificatePreview({
         className="
           absolute
           right-3
-          top-3
+          bottom-3
           z-20
           flex
           h-10
