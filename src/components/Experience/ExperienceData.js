@@ -46,7 +46,7 @@ const experienceData = [
       "Managed 1,000–5,000+ data records per project through data entry, data processing, data cleaning, data validation, and data updating processes using spreadsheets and databases while ensuring data accuracy, consistency, and integrity.",
       "Performed data quality control through data verification, duplicate removal, error correction, and format standardization to deliver clean, structured, and reliable datasets.",
       "Processed and transformed raw data into organized data formats ready for reporting, analysis, and operational needs by implementing documentation and efficient data workflows.",
-      "Completed 20+ freelance data management projects by delivering high-quality datasets on time according to client specifications and quality standards.",
+      "Completed 20+ freelance projects by delivering high-quality datasets on time according to client specifications and quality standards.",
     ],
   },
 
