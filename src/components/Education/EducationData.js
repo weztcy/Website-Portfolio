@@ -17,7 +17,7 @@ const educationData = [
     activities: [
       "Selected for Kelas Unggulan '2021, an exclusive program for top-performing students majoring in Informatics Engineering.",
       "Developed web-based applications, responsive UI/UX designs, machine learning, and data analysis projects.",
-      "Actively participated in campus organizations and workshops to enhance soft skills, including communication, teamwork, time management, and effective problem-solving.",
+      "Actively participated in organizations and workshops to enhance soft skills, including communication, teamwork, time management, and effective problem-solving.",
     ],
   },
 
