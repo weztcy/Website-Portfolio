@@ -1,6 +1,5 @@
 import disdukcapilLogo from "../../assets/experience/disdukcapil_semarang.png";
-import freelance_copywriter from "../../assets/experience/freelance_copywriter.png";
-import bank_mandiri from "../../assets/experience/bank_mandiri.png";
+import data_management_specialist from "../../assets/experience/data_management_specialist.png";
 
 const experienceData = [
   {
@@ -28,9 +27,9 @@ const experienceData = [
 
     company: "Freelance",
 
-    logo: freelance_copywriter,
+    logo: data_management_specialist,
 
-    position: "Data Entry & Copywriter",
+    position: "Data Management Specialist",
 
     duration: "July 2025 - Present",
 
@@ -40,10 +39,14 @@ const experienceData = [
       // "Wrote articles, blog posts, product descriptions, advertising materials, and copy for social media, websites, and landing pages based on client requirements.",
       // "Adapted writing style to match the target audience and brand identity, creating engaging and effective content.",
       // "Conducted topic research and revised content based on client feedback to ensure quality, accuracy, and overall effectiveness.",
-      "Managed ±1,000–5,000 data records per project through data entry, processing, validation, and updating using spreadsheets and databases, while maintaining a high level of accuracy in line with client requirements.",
-      "Completed 20+ freelance data entry projects, ensuring consistent formatting, complete information, and timely delivery according to project deadlines.",
-      "Produced 30+ pieces of content per month, including blog articles, product descriptions, advertising materials, and social media copy, adapting the writing style to each client’s target audience and brand identity.",
-      "Conducted research and optimized content based on audience insights and client feedback to improve content relevance and support digital marketing strategies.",
+      // "Managed ±1,000–5,000 data records per project through data entry, processing, validation, and updating using spreadsheets and databases, while maintaining a high level of accuracy in line with client requirements.",
+      // "Completed 20+ freelance data entry projects, ensuring consistent formatting, complete information, and timely delivery according to project deadlines.",
+      // "Produced 30+ pieces of content per month, including blog articles, product descriptions, advertising materials, and social media copy, adapting the writing style to each client’s target audience and brand identity.",
+      // "Conducted research and optimized content based on audience insights and client feedback to improve content relevance and support digital marketing strategies.",
+      "Managed 1,000–5,000+ data records per project through data entry, data processing, data cleaning, data validation, and data updating processes using spreadsheets and databases while ensuring data accuracy, consistency, and integrity.",
+      "Performed data quality control through data verification, duplicate removal, error correction, and format standardization to deliver clean, structured, and reliable datasets.",
+      "Processed and transformed raw data into organized data formats ready for reporting, analysis, and operational needs by implementing documentation and efficient data workflows.",
+      "Completed 20+ freelance data management projects by delivering high-quality datasets on time according to client specifications and quality standards.",
     ],
   },
 
