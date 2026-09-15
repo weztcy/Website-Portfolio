@@ -26,6 +26,8 @@ import {
   FaFilePowerpoint,
 } from "react-icons/fa";
 
+import { FaHexagonNodes } from "react-icons/fa6";
+
 import {
   SiMysql,
   SiStreamlit,
@@ -38,14 +40,13 @@ import {
   SiGmail,
   SiGoogledocs,
   SiGooglegemini,
-  SiClaude,
   SiTailwindcss,
   SiNextdotjs,
+  SiOllama,
+  SiLmstudio
 } from "react-icons/si";
 
-import { BsOpenai } from "react-icons/bs";
-
-import { GiBananaPeeled } from "react-icons/gi";
+import { LuBrainCircuit } from "react-icons/lu";
 
 /*
 |--------------------------------------------------------------------------
@@ -221,34 +222,34 @@ export const technicalSkills = [
   {
     id: 4,
 
-    title: "Prompt Engineering & Generative AI",
+    title: "Artificial Intelligence",
 
     icon: FaRobot,
 
     skills: [
       {
-        name: "ChatGPT",
-        icon: BsOpenai,
+        name: "LLM",
+        icon: LuBrainCircuit,
       },
 
       {
-        name: "Claude",
-        icon: SiClaude,
+        name: "AI Agents",
+        icon: FaHexagonNodes,
       },
 
       {
-        name: "Google Gemini",
+        name: "Ollama",
+        icon: SiOllama,
+      },
+
+      {
+        name: "LM Studio",
+        icon: SiLmstudio,
+      },
+
+      {
+        name: "Google Antigravity",
         icon: SiGooglegemini,
-      },
-
-      {
-        name: "DALL-E",
-        icon: BsOpenai,
-      },
-
-      {
-        name: "Nano Banana",
-        icon: GiBananaPeeled,
       },
     ],
   },
