@@ -12,54 +12,58 @@ import {
 // PROJECT IMAGES
 // ==============================
 
-import foodRecipeUiUx from "../../assets/projects/food-recipe-ui-ux.png";
+import foodRecipeUiUx from "../../assets/projects/food-recipe-ui-ux.webp";
 
-import eParkingUiUx from "../../assets/projects/e-parking-ui-ux.png";
+import eParkingUiUx from "../../assets/projects/e-parking-ui-ux.webp";
 
-import aorusGamingUiUx from "../../assets/projects/aorus-gaming-ui-ux.png";
+import aorusGamingUiUx from "../../assets/projects/aorus-gaming-ui-ux.webp";
 
-import aorusGamingShop from "../../assets/projects/aorus-gaming-shop.png";
+import aorusGamingShop from "../../assets/projects/aorus-gaming-shop.webp";
 
-import rasaNusantara from "../../assets/projects/rasa-nusantara.png";
+import rasaNusantara from "../../assets/projects/rasa-nusantara.webp";
 
-import calgeo from "../../assets/projects/calgeo.png";
+import calgeo from "../../assets/projects/calgeo.webp";
 
-import personalDataManager from "../../assets/projects/personal-data-manager.png";
+import personalDataManager from "../../assets/projects/personal-data-manager.webp";
 
-import numora from "../../assets/projects/numora.png";
+import numora from "../../assets/projects/numora.webp";
 
-import wholesaleGroceries from "../../assets/projects/wholesale-groceries.png";
+import wholesaleGroceries from "../../assets/projects/wholesale-groceries.webp";
 
-import carWorkshopInventory from "../../assets/projects/car-workshop-inventory.png";
+import carWorkshopInventory from "../../assets/projects/car-workshop-inventory.webp";
 
-import pustakanesia from "../../assets/projects/pustakanesia.png";
+import pustakanesia from "../../assets/projects/pustakanesia.webp";
 
-import hotelSentimentAnalysis from "../../assets/projects/hotel-sentiment-analysis.png";
+import hotelSentimentAnalysis from "../../assets/projects/hotel-sentiment-analysis.webp";
 
-import sileloAuction from "../../assets/projects/silelo-auction.png";
+import sileloAuction from "../../assets/projects/silelo-auction.webp";
 
-import kipEligibilityPrediction from "../../assets/projects/kip-eligibility-prediction.png";
+import kipEligibilityPrediction from "../../assets/projects/kip-eligibility-prediction.webp";
 
-import centerOfMassCalculator1 from "../../assets/projects/center-of-mass-calculator1.png";
-import centerOfMassCalculator2 from "../../assets/projects/center-of-mass-calculator2.png";
+import centerOfMassCalculator1 from "../../assets/projects/center-of-mass-calculator1.webp";
+import centerOfMassCalculator2 from "../../assets/projects/center-of-mass-calculator2.webp";
 
-import disasterDataApi from "../../assets/projects/disaster-data-api.png";
+import SibenApi from "../../assets/projects/siben-api.webp";
 
-import sibenWebsite from "../../assets/projects/siben-website.png";
+import sibenWebsite from "../../assets/projects/siben-website.webp";
 
-import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.png";
+import prajagamerUiUx from "../../assets/projects/prajagamer-ui-ux.webp";
 
-import prajagamerApi from "../../assets/projects/prajagamer-api.png";
+import prajagamerApi from "../../assets/projects/prajagamer-api.webp";
 
-import prajagamerWebsite from "../../assets/projects/prajagamer-website.png";
+import prajagamerWebsite from "../../assets/projects/prajagamer-website.webp";
 
-import bpbdKebumen from "../../assets/projects/bpbd-kebumen.png";
+import bpbdKebumen from "../../assets/projects/bpbd-kebumen.webp";
 
-import poliklinikUdinus1 from "../../assets/projects/poliklinik-udinus1.png";
-import poliklinikUdinus2 from "../../assets/projects/poliklinik-udinus2.png";
+import poliklinikUdinus1 from "../../assets/projects/poliklinik-udinus1.webp";
+import poliklinikUdinus2 from "../../assets/projects/poliklinik-udinus2.webp";
 
-import diabetesClassification1 from "../../assets/projects/diabetes-classification1.png";
-import diabetesClassification2 from "../../assets/projects/diabetes-classification2.png";
+import diabetesClassification1 from "../../assets/projects/diabetes-classification1.webp";
+import diabetesClassification2 from "../../assets/projects/diabetes-classification2.webp";
+
+import gadgetflowApi from "../../assets/projects/gadgetflow-api.webp";
+
+import retailCrmSystemApi from "../../assets/projects/retail-crm-system-api.webp";
 
 export const projects = [
   {
@@ -247,7 +251,7 @@ export const projects = [
     date: "February 2022",
 
     shortDescription:
-      "An Android recipe application that provides structured information about Indonesian food recipes, allowing users to explore dishes through recipe collections, detailed ingredients, cooking instructions, and an intuitive mobile interface.",
+      "An Android recipe app for Indonesian food that helps users explore recipes with collections, ingredients, cooking steps, and an intuitive mobile interface.",
 
     detailDescription: [
       "Developed an Android Indonesian food recipe application using Java and Android Studio with XML for user interface design, focusing on structured recipe presentation and simple mobile user experience.",
@@ -293,7 +297,7 @@ export const projects = [
     date: "March 2022",
 
     shortDescription:
-      "An Android geometry calculator application designed to simplify 2D shape measurements through automated calculations, structured input handling, and an intuitive mobile interface for users.",
+      "An Android geometry calculator app that simplifies 2D shape measurements through automated calculations, structured inputs, and an intuitive interface.",
 
     detailDescription: [
       "Developed a 2D geometry calculator mobile application using Java and Android Studio with XML for interface design, focusing on implementing mathematical calculation logic within an Android environment.",
@@ -395,7 +399,7 @@ export const projects = [
     date: "July 2022",
 
     shortDescription:
-      "A modern Android calculator application that provides basic and scientific calculation features through a clean interface, responsive layout, and smooth user interaction using modern Android development practices.",
+      "A modern Android calculator app with basic and scientific calculation features through a clean interface, responsive layout, and smooth interaction.",
 
     detailDescription: [
       "Developed a modern calculator mobile application using Kotlin, Android Studio, and Jetpack Compose, focusing on declarative UI development, reusable components, and responsive mobile interface design.",
@@ -458,7 +462,7 @@ export const projects = [
     date: "August 2023",
 
     shortDescription:
-      "A Java-based transaction management program designed to record and process wholesale grocery data, including product information, pricing calculations, payment handling, and structured transaction reporting.",
+      "A Java-based wholesale grocery transaction program for managing products, pricing, payments, and structured transaction reports.",
 
     detailDescription: [
       "Developed a Java-based wholesale grocery transaction management program to organize product data and automate basic transaction processing.",
@@ -496,7 +500,7 @@ export const projects = [
     date: "September 2023",
 
     shortDescription:
-      "A desktop-based inventory management application designed to support car workshop operations through spare parts management, customer and distributor data management, transaction processing, and structured reporting.",
+      "A desktop inventory management app for car workshops supporting spare parts, customer data, transactions, and operational reporting.",
 
     detailDescription: [
       "Developed a desktop-based Car Workshop Inventory application using Java, NetBeans IDE, and MySQL to centralize workshop data management and improve operational efficiency.",
@@ -549,7 +553,7 @@ export const projects = [
     date: "May 2023",
 
     shortDescription:
-      "An online auction web application designed to support digital bidding activities through user management, product management, auction transactions, and secure payment integration.",
+      "An online auction web app supporting digital bidding through user management, product management, transactions, and secure payments.",
 
     detailDescription: [
       "Collaborated with a team to develop the SiLelo online auction website using PHP, CodeIgniter, and Bootstrap to create a structured platform for managing auction activities.",
@@ -607,7 +611,7 @@ export const projects = [
     date: "June 2023",
 
     shortDescription:
-      "A digital library web application designed to provide structured access to book resources through catalog management, book search, digital borrowing, and user authentication features.",
+      "A digital library web app providing book access through catalog management, search, borrowing features, and user authentication.",
 
     detailDescription: [
       "Collaborated with a team to develop the Pustakanesia digital library website using PHP, Laravel, and Bootstrap with a focus on building an accessible and responsive library management platform.",
@@ -659,7 +663,7 @@ export const projects = [
     date: "August 2023",
 
     shortDescription:
-      "A Python-based physics computation application designed to calculate and visualize the center of mass and center-of-mass velocity of multiple objects through interactive input and 2D and 3D visualization.",
+      "A Python physics application to calculate and visualize center of mass and velocity through interactive input and 2D/3D visualization.",
 
     detailDescription: [
       "Developed a Python-based computational model to calculate the center of mass and center-of-mass velocity for systems containing multiple objects with different physical parameters.",
@@ -707,7 +711,7 @@ export const projects = [
     date: "September 2023",
 
     shortDescription:
-      "A machine learning web application designed to analyze customer sentiment from Jakarta hotel reviews using text processing, Support Vector Classifier modeling, and an interactive Streamlit interface.",
+      "A machine learning web app analyzing Jakarta hotel review sentiment using text processing, SVC modeling, and Streamlit interface.",
 
     detailDescription: [
       "Developed a hotel review sentiment analysis web application using Python and Streamlit to classify customer opinions based on collected review data.",
@@ -764,7 +768,7 @@ export const projects = [
     date: "October 2023",
 
     shortDescription:
-      "A machine learning web application designed to predict student eligibility for the KIP assistance program using student data processing, Naive Bayes classification, and an interactive Streamlit interface.",
+      "A machine learning web app predicting KIP assistance eligibility using student data processing, Naive Bayes, and Streamlit interface.",
 
     detailDescription: [
       "Developed a student eligibility prediction web application using Python and Streamlit to support classification of KIP assistance program candidates based on student data.",
@@ -816,7 +820,7 @@ export const projects = [
     date: "April 2024",
 
     shortDescription:
-      "A frontend web replication project that recreates the BPBD Kabupaten Kebumen website interface using ReactJS and Bootstrap with a component-based architecture, reusable UI elements, and responsive design implementation.",
+      "A frontend web replication project recreating the BPBD Kebumen website using ReactJS, Bootstrap, reusable components, and responsive design.",
 
     detailDescription: [
       "Developed a frontend web replication of the BPBD Kabupaten Kebumen website using ReactJS and JavaScript to recreate the original interface structure and user experience.",
@@ -850,7 +854,7 @@ export const projects = [
   {
     id: 17,
 
-    images: [disasterDataApi],
+    images: [SibenApi],
 
     icon: ServerCog,
 
@@ -859,7 +863,7 @@ export const projects = [
     date: "May 2024",
 
     shortDescription:
-      "A REST API service developed to provide structured natural disaster information through accessible endpoints, enabling applications to retrieve disaster data including type, location, causes, impacts, and event details.",
+      "A REST API service providing structured natural disaster information through accessible endpoints for type, location, causes, and impacts.",
 
     detailDescription: [
       "Developed Siben API using JavaScript and Node.js to provide structured natural disaster information through accessible API endpoints.",
@@ -912,7 +916,7 @@ export const projects = [
     date: "June 2024",
 
     shortDescription:
-      "A disaster preparedness web platform that provides disaster management information, disaster data, news, and weather forecasts through API integrations within a responsive and user-friendly interface.",
+      "A disaster preparedness web platform providing disaster information, news, and weather forecasts through API integrations.",
 
     detailDescription: [
       "Developed Siben disaster preparedness website using JavaScript, ReactJS, and Bootstrap to provide accessible information and guidance related to natural disasters.",
@@ -1020,7 +1024,7 @@ export const projects = [
     date: "September 2024",
 
     shortDescription:
-      "A REST API service developed to support internship registration and participant data management through structured data exchange between frontend applications and backend systems.",
+      "A REST API service supporting internship registration and participant data management through structured frontend-backend communication.",
 
     detailDescription: [
       "Developed Prajagamer API using JavaScript and Node.js as a backend service to support data communication between the frontend application and the platform data management system.",
@@ -1044,6 +1048,11 @@ export const projects = [
           "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
       },
       {
+        name: "Prisma",
+        color:
+          "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+      },
+      {
         name: "REST API",
         color:
           "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
@@ -1063,7 +1072,7 @@ export const projects = [
     date: "September 2024",
 
     shortDescription:
-      "A web-based internship registration platform designed to streamline applicant registration, participant data management, and administrative workflows through a responsive interface and integration with Prajagamer API.",
+      "A web-based internship registration platform streamlining applicants, participant data, and administrative workflows with API integration.",
 
     detailDescription: [
       "Collaborated with a team to develop Prajagamer, an internship self-registration website using JavaScript, ReactJS, and Tailwind CSS to simplify the internship application process.",
@@ -1116,7 +1125,7 @@ export const projects = [
     date: "January 2025",
 
     shortDescription:
-      "A web-based clinic management system developed to support healthcare workflows through role-based access, patient registration, doctor management, examination processes, medicine management, and centralized clinical data management.",
+      "A clinic management web system supporting healthcare workflows through access roles, registration, doctor management, and clinical data.",
 
     detailDescription: [
       "Developed a web-based Poliklinik Udinus management system using PHP, MySQL, and Bootstrap as part of the BNSP Web Developer certification project.",
@@ -1168,7 +1177,7 @@ export const projects = [
     date: "March 2025",
 
     shortDescription:
-      "A machine learning classification project using KNN to predict diabetes while comparing multiple data normalization techniques and evaluating their impact on model performance.",
+      "A machine learning project using KNN to classify diabetes while comparing normalization techniques and evaluating model performance.",
 
     detailDescription: [
       "Developed a machine learning project using Python to classify diabetes in the Pima Indians Diabetes dataset.",
@@ -1229,6 +1238,205 @@ export const projects = [
         name: "Statistical Testing",
         color:
           "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
+      },
+    ],
+  },
+  {
+    id: 24,
+
+    images: [gadgetflowApi],
+
+    icon: ServerCog,
+
+    title: "GadgetFlow API",
+
+    date: "",
+
+    shortDescription:
+      "A REST API for smartphone product, order, and warehouse inventory management with secure authentication and serial number tracking.",
+
+    detailDescription: [
+      "Developed GadgetFlow API using Next.js and TypeScript as the backend foundation for a smartphone product and order management system, providing RESTful endpoints with JSON-based communication.",
+
+      "Organized the backend into API routes, services, validation, middleware, and database layers to separate responsibilities and support maintainable development. Integrated Prisma ORM with MySQL to manage relational data across users, products, categories, customers, suppliers, warehouses, and transactions.",
+
+      "Implemented smartphone product and category management with image uploads, pagination, product search, price filtering, and sorting. Applied timestamp-based soft deletion for products and validation to prevent deleting categories associated with existing products.",
+
+      "Built JWT-based authentication with access tokens, refresh token rotation, HttpOnly cookie storage, and role-based authorization for USER and ADMIN roles. Implemented bcrypt password hashing, protected endpoints, and session revocation during password resets.",
+
+      "Integrated Nodemailer for welcome emails and account recovery, including password reset requests, expiring reset tokens, password validation, and token deletion after successful use.",
+
+      "Developed multi-warehouse inventory management with warehouse status management, stock availability validation, low stock monitoring, and controlled stock adjustments. Recorded purchase, sale, and adjustment movements with previous and updated quantities, transaction references, and timestamps.",
+
+      "Implemented supplier and purchase transaction management with automatic stock updates, alongside customer order processing that validates availability, reduces inventory, and generates sale movement records. Used Prisma database transactions to maintain consistency during multi-step order creation.",
+
+      "Added smartphone serial number and IMEI tracking across purchases, warehouses, inventory, and orders. Supported AVAILABLE, RESERVED, SOLD, REPAIR, and DAMAGED statuses, with automatic SOLD status updates when a serial number is included in an order.",
+
+      "Applied Zod request validation, input sanitization, centralized error handling, standardized API responses, and consistent HTTP status handling. Implemented audit logs for authentication activities and operational changes, capturing user information, previous and updated data, IP addresses, and user agents.",
+
+      "Documented API endpoints using Swagger OpenAPI to support endpoint exploration, request testing, and frontend integration across authentication, catalog management, warehouse operations, inventory, purchases, orders, and auditing.",
+    ],
+
+    technologies: [
+      {
+        name: "Next.js",
+        color:
+          "bg-slate-100 text-slate-700 dark:bg-slate-500/20 dark:text-slate-300",
+      },
+      {
+        name: "TypeScript",
+        color:
+          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+      },
+      {
+        name: "Node.js",
+        color:
+          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+      },
+      {
+        name: "Prisma",
+        color:
+          "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+      },
+      {
+        name: "MySQL",
+        color:
+          "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+      },
+      {
+        name: "JWT",
+        color:
+          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+      },
+      {
+        name: "bcrypt",
+        color:
+          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+      },
+      {
+        name: "Zod",
+        color:
+          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+      },
+      {
+        name: "Nodemailer",
+        color:
+          "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300",
+      },
+      {
+        name: "REST API",
+        color:
+          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+      },
+      {
+        name: "JSON",
+        color:
+          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
+      },
+      {
+        name: "Swagger OpenAPI",
+        color:
+          "bg-lime-100 text-lime-700 dark:bg-lime-500/20 dark:text-lime-300",
+      },
+    ],
+  },
+
+  {
+    id: 25,
+
+    images: [retailCrmSystemApi],
+
+    icon: ServerCog,
+
+    title: "Retail CRM System API",
+
+    date: "",
+
+    shortDescription:
+      "A retail CRM API for customer accounts, products, transactions, membership, loyalty tracking, and operational dashboards.",
+
+    detailDescription: [
+      "Developed Retail CRM System API using Next.js and Prisma as a centralized backend for retail operations and customer relationship management. Connected customer records, products, transactions, customer activities, inventory movements, and loyalty accounts through structured JSON endpoints.",
+
+      "Implemented separate authentication flows for internal users and customers, including customer registration, login, access token handling, token refresh, and logout. Applied role-based permissions to selected internal operations for administrators, managers, sales staff, and customer service staff.",
+
+      "Built customer account management with profile retrieval and updates, contact information management, account deactivation, transaction history, and activity recording. Customer registration initializes a BRONZE membership and a loyalty account with a zero-point balance.",
+
+      "Implemented product creation, retrieval, updates, and deactivation, preserving underlying records when products are removed from active use. Supported product search, category and status filters, stock filtering, sorting, and pagination for retail catalog management.",
+
+      "Developed retail transaction operations connecting customers, internal users, and purchased product items. Maintained transaction and payment statuses separately, with cancellation handling for stock restoration, inventory movement recording, loyalty point rollback, and recorded spending adjustments. Cancelling a transaction does not automatically mark its payment as refunded.",
+
+      "Integrated BRONZE, SILVER, GOLD, and PLATINUM membership levels with customer loyalty accounts and transaction-linked loyalty history. Provided endpoints for point balances, earned and rolled-back points, membership details, and spending-based progress toward the next membership level.",
+
+      "Created internal dashboard endpoints for operational summaries, sales analytics, customer growth, product performance, loyalty activity, consolidated reporting, audit monitoring, and team performance. Reporting includes sales trends, payment method breakdowns, top-selling products, membership distribution, stock quantities and values, and staff revenue rankings.",
+
+      "Built customer dashboard endpoints that identify the customer directly from the access token. Delivered account summaries, transaction history, purchase analytics, loyalty history, membership progress, and product recommendations based on preferred categories and available stock.",
+
+      "Preserved distinct reporting criteria across dashboard areas. Internal sales metrics use transactions marked both COMPLETED and PAID, while team performance and customer purchase analytics use COMPLETED transactions without requiring PAID status. Account spending and membership progress use the spending value stored on the customer record.",
+
+      "Provided GET endpoints with structured responses for frontend charts, summaries, lists, and reports. Dashboard reporting periods and result limits follow endpoint implementations rather than custom date-range or pagination parameters. Applied request validation with Zod and used Prisma with a MariaDB adapter for database integration.",
+    ],
+
+    technologies: [
+      {
+        name: "Next.js",
+        color:
+          "bg-slate-100 text-slate-700 dark:bg-slate-500/20 dark:text-slate-300",
+      },
+      {
+        name: "TypeScript",
+        color:
+          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+      },
+      {
+        name: "Node.js",
+        color:
+          "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300",
+      },
+      {
+        name: "Prisma",
+        color:
+          "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300",
+      },
+      {
+        name: "MySQL",
+        color:
+          "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300",
+      },
+      {
+        name: "JWT",
+        color:
+          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+      },
+      {
+        name: "bcrypt",
+        color:
+          "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300",
+      },
+      {
+        name: "Zod",
+        color:
+          "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300",
+      },
+      {
+        name: "jose",
+        color:
+          "bg-pink-100 text-pink-700 dark:bg-pink-500/20 dark:text-pink-300",
+      },
+      {
+        name: "jsonwebtoken",
+        color:
+          "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300",
+      },
+      {
+        name: "REST API",
+        color:
+          "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300",
+      },
+      {
+        name: "JSON",
+        color:
+          "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-300",
       },
     ],
   },
