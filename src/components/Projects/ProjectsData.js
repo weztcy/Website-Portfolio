@@ -459,7 +459,7 @@ export const projects = [
 
     title: "Wholesale Grocery Transaction Management Program",
 
-    date: "August 2023",
+    date: "March 2023",
 
     shortDescription:
       "A Java-based wholesale grocery transaction program for managing products, pricing, payments, and structured transaction reports.",
@@ -497,7 +497,7 @@ export const projects = [
 
     title: "Car Workshop Inventory Desktop App",
 
-    date: "September 2023",
+    date: "April 2023",
 
     shortDescription:
       "A desktop inventory management app for car workshops supporting spare parts, customer data, transactions, and operational reporting.",
@@ -1069,7 +1069,7 @@ export const projects = [
 
     title: "Prajagamer - Internship Registration Website",
 
-    date: "September 2024",
+    date: "October 2024",
 
     shortDescription:
       "A web-based internship registration platform streamlining applicants, participant data, and administrative workflows with API integration.",
@@ -1250,7 +1250,7 @@ export const projects = [
 
     title: "GadgetFlow API",
 
-    date: "",
+    date: "August 2025",
 
     shortDescription:
       "A REST API for smartphone product, order, and warehouse inventory management with secure authentication and serial number tracking.",
@@ -1350,7 +1350,7 @@ export const projects = [
 
     title: "Retail CRM System API",
 
-    date: "",
+    date: "September 2025",
 
     shortDescription:
       "A retail CRM API for customer accounts, products, transactions, membership, loyalty tracking, and operational dashboards.",
